@@ -5,36 +5,24 @@ import moment from 'moment';
 let index = 0
 
 class AppStore extends singleton{
-    @observable list = []
-    @observable list2 = []
+    @observable user = null;
+    @observable list = [];
+    @observable list2 = [];
 
     constructor() {
         super();
 
     }
-
-    addListItem (item) {
-        this.list.push({
-            name: item, 
-            items: [],
-            index
-        })
-        index++
+    // Login
+    @computed get isLoggedIn() {
+        return !!this.user;
     }
 
-    removeListItem (item) {
-        this.list = this.list.filter((l) => {
-            return l.index !== item.index
-        })
-    } 
-
-    addItem(item, name) {
-        this.list.forEach((l) => {
-            if (l.index === item.index) {
-                l.items.push(name)
-            }
-        })
+    // Leaders
+    @action getLeaders(){
+        console.log("Some leaderboard info")
     }
+
 }
 
 

@@ -5,8 +5,9 @@ import {
     Image,
     View,
     Platform,
+    TouchableHighlight,
 } from 'react-native';
-
+import { Actions } from 'react-native-router-flux';
 export default class Login extends React.Component {
 
 	componentDidMount() {
@@ -15,7 +16,9 @@ export default class Login extends React.Component {
 	render(){
 		return(
 			<View style={styles.container}>
-				<Text>Hi2</Text>
+				<TouchableHighlight onPress={()=>{Actions.leaders()}}>
+					<Text>Hi</Text>
+				</TouchableHighlight>
 			</View>
 		)
 	}
