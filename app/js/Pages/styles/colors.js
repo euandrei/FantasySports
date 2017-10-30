@@ -1,20 +1,35 @@
 import React from "react";
 
 export const colors = {
-  "greenishTurquoise": '#00e9ac',
-  "brightTeal": '#00FFBD',
+  "transparent": 'rgba(0,0,0,0)',
+  "white": 'rgba(255,255,255,1)',
 
-  "watermelon": '#ff4b6a',
-  "watermelonTwo": '#FF4C6A',
+  // GREEN
+  "greenishTurquoise": 'rgba(0, 233, 172, 1)',
+  "brightTeal": 'rgba(0, 255, 189, 1)',
 
-  "metallicBlue": '#516b81',
-  "metallicBlueTwo": '#506B82',
-  "neonBlue": '#00E5FF',
-  "darkGreyBlue": '#2B4B66',
-  "bluishGrey": '#768B9C',
-  "blueyGrey": '#9BAAB7',
-  "marine": '#062C4B',
-  "twilightBlue": '#094779',
+  // RED
+  "watermelon": 'rgba(255, 75, 106, 1)',
+  "watermelonTwo": 'rgba(255, 76, 106, 1)',
 
-  "sunnyYellow": '#FFF421',
+  // BLUE
+  "metallicBlue": 'rgba(81, 107, 129, 1)',
+  "metallicBlueTwo": 'rgba(80, 107, 130, 1)',
+  "neonBlue": 'rgba(0, 229, 255, 1)',
+  "darkGreyBlue": 'rgba(43, 75, 102, 1)',
+  "bluishGrey": 'rgba(118, 139, 156, 1)',
+  "blueyGrey": 'rgba(155, 170, 183, 1)',
+  "marine": 'rgba(6, 44, 75, 1)',
+  "marineTwo": 'rgba(6, 38, 63, 1)',
+  "twilightBlue": 'rgba(9, 71, 121, 1)',
+
+  // YELLOW
+  "sunnyYellow": 'rgba(255, 244, 33, 1)',
+  
+  // BACKGROUND COLORS
+  "neonBlueBg": 'rgba(0, 229, 255, 0.3)',
+  "watermelonBg": 'rgba(255, 75, 106, 0.3)',
+  "greenishTurquoiseBg": 'rgba(0, 233, 172, 0.3)',
+  "sunnyYellowBg": 'rgba(255, 244, 33, 0.3)',
+  
 };

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Filter</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M343,176.000941 L357,176.000941 L352.625,178.625793 L352.284625,181.688121 L347.715375,181.688121 L347.375,178.625793 L343,176.000941 Z M347.910062,183.437672 L352.089937,183.437672 L351.749562,186.5 L348.250437,186.5 L347.910062,183.437672 Z M343,176.000678 L343,172.5 L357,172.5 L357,176.000678 L343,176.000678 Z" id="path-1"></path>
+    </defs>
+    <g id="Wireframes-II" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.000.9" transform="translate(-343.000000, -172.000000)">
+            <g id="Filter">
+                <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                <use fill="#00E5FF" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
