@@ -17,12 +17,15 @@ import {
 	Actions,
 } from 'react-native-router-flux';
 
+// ONBOARDING
+// import Onboarding from "./Pages/Onboarding/index"
 // LEADERS
-import Leaders from "./Pages/Leaders/index"
+// import Leaders from "./Pages/Leaders/index"
 
 // USER SETTINGS / LOGIN COMPONENTS
-import Login from "./Pages/Login/Login";
+// import Login from "./Pages/Login/Login";
 
+import Test from "./Pages/screens/testFile";
 
 export default class App extends React.Component {
 	
@@ -30,22 +33,13 @@ export default class App extends React.Component {
 		const scenes = Actions.create(
 			<Scene key="root" 
 				AppStore={AppStore} 
-				hideNavBar={true}
+				hideNavBar={true}>
 				
-			>
-		      	<Scene key="login" 
-					component={Login}
-					title={"login"}
-				/>
-
-				<Scene key="leaders" 
-					initial
-					component={Leaders}
-				/>
+				<Scene key="test" initial component={Test}/>
 
 
 		    </Scene>
-			);
+		);
 		return(
 			<Router scenes={scenes}/>
 

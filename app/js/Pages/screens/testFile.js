@@ -7,12 +7,14 @@ import {
     Platform,
 } from 'react-native';
 
-export default class Leaders extends React.Component {
+import * as Styles from "../styles";
+
+export default class Test extends React.Component {
 
 	render(){
 		return(
 			<View style={styles.container}>
-				<Text>Leaders</Text>
+
 			</View>
 		)
 	}
@@ -20,9 +22,9 @@ export default class Leaders extends React.Component {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 12,
-		backgroundColor: '#fff',
+		flex: 1,
+		backgroundColor: 'red',
 		alignItems: 'center',
-		justifyContent: 'flex-start',
+		justifyContent: 'center',
 	},
 });

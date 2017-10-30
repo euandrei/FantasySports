@@ -5,25 +5,18 @@ import {
     Image,
     View,
     Platform,
-    TouchableHighlight,
 } from 'react-native';
-import { Actions } from 'react-native-router-flux';
-export default class Login extends React.Component {
 
-	componentDidMount() {
-		console.log("Mounted here are dem props",this.props)
-	}
+export default class Header extends React.Component {
+
 	render(){
 		return(
 			<View style={styles.container}>
-				<TouchableHighlight onPress={()=>{Actions.leaders()}}>
-					<Text>Hi</Text>
-				</TouchableHighlight>
+				<Text>Default</Text>
 			</View>
 		)
 	}
 }
-
 
 const styles = StyleSheet.create({
 	container: {
