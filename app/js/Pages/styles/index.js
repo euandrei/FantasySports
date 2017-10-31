@@ -5,11 +5,13 @@ import { colors } from "./colors.js"
 
 import { gridStyle } from "./gridStyle.js"
 import { gridSectionStyle } from "./gridSectionStyle.js"
+import { headerStyle } from "./headerStyle.js"
 
 export {
 	colors,
 	gridStyle,
-	gridSectionStyle
+	gridSectionStyle,
+	headerStyle
 }
 
 

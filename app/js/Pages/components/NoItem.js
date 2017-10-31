@@ -38,6 +38,9 @@ const styles = StyleSheet.create ({
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
+		backgroundColor: colors.marineTwo,
+		paddingTop: 30,
+		paddingBottom: 30,
 	},
 	contentWrapper:{
 		width: '40%',
@@ -49,7 +52,5 @@ const styles = StyleSheet.create ({
 		fontSize: 14,
 		marginBottom: 10,
 	}
-
-
 
 })
