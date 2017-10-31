@@ -5,14 +5,13 @@ import { colors } from "./colors.js"
 export const gridStyle = StyleSheet.create({
 	container:{
 		flex: 1,
-		margin: 8,
+		marginBottom: 8,
 		alignSelf: 'stretch',
 	},
 	grid:{
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'space-between',
-		padding: 8,
 
 	},
 	linearGradient:{

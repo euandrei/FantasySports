@@ -4,10 +4,12 @@ import {StyleSheet} from "react-native";
 import { colors } from "./colors.js"
 
 import { gridStyle } from "./gridStyle.js"
+import { gridSectionStyle } from "./gridSectionStyle.js"
 
 export {
 	colors,
-	gridStyle
+	gridStyle,
+	gridSectionStyle
 }
 
 
