@@ -12,7 +12,6 @@ export const gridStyle = StyleSheet.create({
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'space-between',
-
 	},
 	linearGradient:{
 	    flex: 1,
@@ -96,15 +95,7 @@ export const gridStyle = StyleSheet.create({
 		alignSelf: 'stretch',
 		flex: 1, 
 	},
-	tiltButtonWrapper:{
-		flex: 0.23,
-		alignSelf: 'stretch',
-		marginLeft: 8,
-		marginRight: 8,
-		marginBottom: 5,
-		paddingBottom: 4,
-	}
-
+	
 
 
 

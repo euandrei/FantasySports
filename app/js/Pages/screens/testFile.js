@@ -12,50 +12,73 @@ import GridCellWrapper from "../components/GridCellWrapper.js"
 import GridSection from "../components/GridSection.js"
 import NoItem from "../components/NoItem.js"
 import Header from "../components/Header.js"
+import SmallTabbar from "../components/SmallTabbar.js"
+import BigTabbar from "../components/BigTabbar.js"
+import Tab from "../components/Tab.js"
+
+import OnBoardMessage from "../templates/OnBoardMessage.js"
 
 import { colors } from "../styles";
 
 export default class Test extends React.Component {
-
+	constructor(props){
+		super(props);
+		this.state = {
+			activeTab: 1,
+			activeBigTab: 0,
+		}
+	}
 	render(){
+		
+
 		return(
 			<ScrollView style={styles.container}>
-				<Header 
-					leftIcon={require('../../../assets/back.png')}
-					title={"BELIEVETHEHYPE"}
-					subtitle={"LEGENDARY"}
-					filter={require('../../../assets/filter.png')}
-				/>
-				<Header 
-					leftIcon={require('../../../assets/back.png')}
-					title={"BELIEVETHEHYPE"}
-					subtitle={"LEGENDARY"}
-					logo={require('../../../assets/logo.png')}
-					settings={require('../../../assets/settings.png')}
-				/>
-				<Header 
-					leftIcon={require('../../../assets/back.png')}
-					title={"BELIEVETHEHYPE"}
-					subtitle={"LEGENDARY"}
-					circle={"4"}
-					settings={require('../../../assets/settings.png')}
-				/>
-				<Header 
-					leftIcon={require('../../../assets/back.png')}
-					button={"SAVE"}
-				/>
-				<Header 
-					leftIcon={require('../../../assets/back.png')}
-					title={"CHANGE PASSWORD"}
-					button={"NEXT"}
-					onPress={()=>{}}
-				/>
+				
 				<Header 
 					leftIcon={require('../../../assets/back.png')}
 					title={"BELIEVETHEHYPE"}
 					subtitle={"LEGENDARY"}
 					circle={"12"}
 				/>
+				
+				
+				
+				<SmallTabbar
+					activeTab={this.state.activeTab}
+					onChange={(id)=>{this.setState({activeTab: id})}}
+				>
+					<Tab 
+						tabTitle={"PLS WORK"}
+					>
+						<Image source={require('../../../assets/back.png')} style={{width: 200 ,height: 200, backgroundColor: 'red', alignItems: 'center',
+		justifyContent: 'center',}}><Text style={{color: 'white'}}>IS working</Text></Image>
+					</Tab>
+
+					<Tab 
+						tabTitle={"Is WORKING BUOII"}
+					>
+						<Text style={{color: 'white'}}>SOmething nice</Text>
+					</Tab>					
+				</SmallTabbar>
+
+				<BigTabbar 
+					activeTab={this.state.activeBigTab}
+					onChange={(id)=>{this.setState({activeBigTab: id})}}
+				>
+					<Tab 
+						tabTitle={"PUBLIC"}
+					>
+						<Text style={{color: 'white'}}>SOmething PUBLIC</Text>
+					</Tab>
+					<Tab 
+						tabTitle={"PRIVATE"}
+					>
+						<Text style={{color: 'white'}}>SOmething PRIVATE</Text>
+					</Tab>
+
+				</BigTabbar>
+
+
 				<GridSection
 					title={"Title"}
 					titlePosition={"center"}
@@ -96,7 +119,9 @@ export default class Test extends React.Component {
 				
 
 			</ScrollView>
-		)
+			)
+			
+		
 	}
 }
 
@@ -105,7 +130,7 @@ export default class Test extends React.Component {
 const styles = StyleSheet.create({
 	container: {
 
-		backgroundColor: 'rgb(6, 44, 75)',
+		backgroundColor: colors.marine,
 		paddingRight: 10,
 		paddingLeft: 10,
 	},

@@ -41,7 +41,6 @@ export default class Header extends React.Component{
 	}
 
 	_renderRightButton(){
-		console.log("PROPS",this.props)
 		if(this.props.filter){
 			return (
 				<TouchableOpacity>
@@ -95,7 +94,7 @@ export default class Header extends React.Component{
 		return (
 			<View style={headerStyle.container}>
 				<View style={headerStyle.leftComponent}>
-					<TouchableOpacity>
+					<TouchableOpacity onPress={this.props.onPressLeft}>
 						{this.props.leftIcon && <Image style={{width: 10}} source={this.props.leftIcon} resizeMode='contain' />}
 					</TouchableOpacity>
 				</View>

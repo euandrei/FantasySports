@@ -32,5 +32,6 @@ export const colors = {
   "watermelonBg": 'rgba(255, 75, 106, 0.3)',
   "greenishTurquoiseBg": 'rgba(0, 233, 172, 0.3)',
   "sunnyYellowBg": 'rgba(255, 244, 33, 0.3)',
+  "marineBg": 'rgba(6, 44, 75, 0.62)',
   
 };

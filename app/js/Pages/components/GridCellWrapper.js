@@ -61,18 +61,24 @@ export default class GridCellWrapper extends React.Component {
 									image={this.props.image ? this.props.image : null}
 									type={this.props.type ? this.props.type : null}
 								/>
-								<TiltButton 
-									text={"INFO"}
-									borderColor={colors.sunnyYellow}
-									backgroundColor={colors.sunnyYellowBg}
-									onPress={()=>{}}
-								/>
-								<TiltButton 
-									text={"USE"}
-									borderColor={colors.neonBlue}
-									backgroundColor={colors.neonBlueBg}
-									onPress={()=>{}}
-								/>
+								<View style={{flex: 0.55, height: 50}}>
+									<View style={{flex: 1, marginBottom: 10}}>
+										<TiltButton 
+											text={"INFO"}
+											borderColor={colors.sunnyYellow}
+											backgroundColor={colors.sunnyYellowBg}
+											onPress={()=>{}}
+										/>
+									</View>
+									<View style={{flex: 1}}>
+										<TiltButton 
+											text={"USE"}
+											borderColor={colors.neonBlue}
+											backgroundColor={colors.neonBlueBg}
+											onPress={()=>{}}
+										/>
+									</View>
+								</View>
 							</View>
 
 						</TouchableOpacity>

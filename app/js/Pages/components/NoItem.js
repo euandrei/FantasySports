@@ -18,15 +18,14 @@ export default class NoItem extends React.Component{
 			<View style={styles.container}>
 				<View style={styles.contentWrapper}>
 					<Text style={styles.text}>{this.props.message}</Text>
-
-					<TiltButton 
-						text={this.props.buttonText}
-						borderColor={colors.neonBlue}
-						backgroundColor={colors.neonBlueBg}
-						onPress={this.props.onPress}
-					/>
-
-
+					<View style={{height: 50, flex: 1, alignSelf: 'stretch',}}>
+						<TiltButton 
+							text={this.props.buttonText}
+							borderColor={colors.neonBlue}
+							backgroundColor={colors.neonBlueBg}
+							onPress={this.props.onPress}
+						/>
+					</View>
 				</View>
 			</View>
 		)

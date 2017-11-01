@@ -6,31 +6,46 @@ import { colors } from "./colors.js"
 import { gridStyle } from "./gridStyle.js"
 import { gridSectionStyle } from "./gridSectionStyle.js"
 import { headerStyle } from "./headerStyle.js"
+import { smallTabStyle } from "./smallTabStyle.js"
+import { bigTabStyle } from "./bigTabStyle.js"
+import { onBoardMessageStyle } from "./onBoardMessageStyle.js"
 
 export {
 	colors,
 	gridStyle,
 	gridSectionStyle,
-	headerStyle
+	headerStyle,
+	smallTabStyle,
+	bigTabStyle,
+	onBoardMessageStyle,
 }
 
 
 export const tiltButton = StyleSheet.create({
-
+	tiltButtonWrapper:{
+		flex: 1,
+		alignSelf: 'stretch',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	gradient:{
+		alignSelf: 'stretch',
+		alignItems: 'center',
+		justifyContent: 'center',
+		
+	},
 	button:{
 		flex: 1, 
-		borderWidth: 2,
-		padding: 8,
+		flexDirection:'column',
 		alignSelf: 'stretch',
+		borderWidth: 2,
 		borderRadius: 8,
 		alignItems: 'center',
 		justifyContent: 'center',
-
 	},
 	buttonText:{
-		flex: 1,
 		color: colors.white,
-		fontWeight: 'bold'
+		fontWeight: 'bold',
 	}
 
 })
