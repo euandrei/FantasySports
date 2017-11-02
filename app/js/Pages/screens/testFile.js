@@ -15,6 +15,8 @@ import Header from "../components/Header.js"
 import SmallTabbar from "../components/SmallTabbar.js"
 import BigTabbar from "../components/BigTabbar.js"
 import Tab from "../components/Tab.js"
+import MatchupCards from "../components/MatchupCards.js"
+import MatchHeader from "../components/MatchHeader.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
@@ -33,7 +35,24 @@ export default class Test extends React.Component {
 
 		return(
 			<ScrollView style={styles.container}>
-				
+				<MatchHeader />
+				<MatchupCards 
+					leftHead={require('../../../assets/heads/h_gry_left.png')}
+					leftName={"You"}
+					rightHead={require('../../../assets/heads/h_red_right.png')}
+					rightName={"Somedude"}
+
+					week={14}
+					bet={'25,000'}
+
+					scoreRight={'124.2'}
+					scoreLeft={'248.8'}
+
+					gameStatus={'live'}
+					gameTime={'2d 4hr'}
+				/>
+
+				{/*
 				<Header 
 					leftIcon={require('../../../assets/back.png')}
 					title={"BELIEVETHEHYPE"}
@@ -117,7 +136,7 @@ export default class Test extends React.Component {
 					/>
 				</GridSection>
 				
-
+*/}
 			</ScrollView>
 			)
 			

@@ -9,6 +9,8 @@ import { headerStyle } from "./headerStyle.js"
 import { smallTabStyle } from "./smallTabStyle.js"
 import { bigTabStyle } from "./bigTabStyle.js"
 import { onBoardMessageStyle } from "./onBoardMessageStyle.js"
+import { matchupCardsStyle } from "./matchupCardsStyle.js"
+import { matchHeaderStyle } from "./matchHeaderStyle.js"
 
 export {
 	colors,
@@ -18,6 +20,8 @@ export {
 	smallTabStyle,
 	bigTabStyle,
 	onBoardMessageStyle,
+	matchupCardsStyle,
+	matchHeaderStyle,
 }
 
 
