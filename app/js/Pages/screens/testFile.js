@@ -35,7 +35,16 @@ export default class Test extends React.Component {
 
 		return(
 			<ScrollView style={styles.container}>
-				<MatchHeader />
+				<MatchHeader 
+					username={"USERNAME"}
+					streak={8}
+
+					gold={'43.6K'}
+					level={"ROOKIE"}
+					levelProgress={'80%'}
+					freePackTimer={'4h 38mins...'}
+					getFreePack={()=>{}}
+				/>
 				<MatchupCards 
 					leftHead={require('../../../assets/heads/h_gry_left.png')}
 					leftName={"You"}
