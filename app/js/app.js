@@ -8,8 +8,13 @@ import {
 } from 'react-native';
 
 import AppStore from './Store/AppStore.js';
-
-
+import {setCustomText} from 'react-native-global-props';
+const customTextProps = {
+  style: {
+    fontFamily: 'UniformItalicXcon',
+  }
+};
+setCustomText(customTextProps);
 
 import {
 	Scene,
@@ -30,6 +35,7 @@ import Test from "./Pages/screens/testFile";
 export default class App extends React.Component {
 	
 	render() {
+		
 		const scenes = Actions.create(
 			<Scene key="root" 
 				AppStore={AppStore} 

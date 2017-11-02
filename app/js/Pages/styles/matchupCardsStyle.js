@@ -83,6 +83,8 @@ export const matchupCardsStyle = StyleSheet.create({
 		backgroundColor: colors.sunnyYellow,
 		borderRadius: 30,
 		zIndex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
 	wonText:{
 		color: colors.marine,

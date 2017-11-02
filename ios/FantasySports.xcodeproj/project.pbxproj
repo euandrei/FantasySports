@@ -38,6 +38,12 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		F7956D40E7E340CBA58D54F4 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 353772FF50CB4511987C4EA0 /* libBVLinearGradient.a */; };
 		7428717ED46E4FB1B67596FA /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C874CDC22243FE9CEEA418 /* libRNSVG.a */; };
+		3456CC952E6349CDB13A3B66 /* Miller Type Foundry - UniformItalicXcon-Blk.otf in Resources */ = {isa = PBXBuildFile; fileRef = FEC99A4B690040C2A00F802E /* Miller Type Foundry - UniformItalicXcon-Blk.otf */; };
+		BC144F8EFA9F4947B161FC5E /* Miller Type Foundry - UniformItalicXcon-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 501695D6AB024215B784365C /* Miller Type Foundry - UniformItalicXcon-Bold.otf */; };
+		20C726725EDA40178831929B /* Miller Type Foundry - UniformItalicXcon-Lgt.otf in Resources */ = {isa = PBXBuildFile; fileRef = D9EDB7A8D14046C092CC411D /* Miller Type Foundry - UniformItalicXcon-Lgt.otf */; };
+		D158EDD64AD04DADB7FC1CDE /* Miller Type Foundry - UniformItalicXcon-Med.otf in Resources */ = {isa = PBXBuildFile; fileRef = 095AA6E4E9994AAD8FAFFE9D /* Miller Type Foundry - UniformItalicXcon-Med.otf */; };
+		115A2390AFCA40D2BF4B4852 /* Miller Type Foundry - UniformItalicXcon-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE116FDEADE440358FCF01E9 /* Miller Type Foundry - UniformItalicXcon-Reg.otf */; };
+		4842699F1CDC45E5BF655D35 /* Miller Type Foundry - UniformItalicXcon-Ult.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8EB28EFF159A4F2AA8287BDD /* Miller Type Foundry - UniformItalicXcon-Ult.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +275,12 @@
 		353772FF50CB4511987C4EA0 /* libBVLinearGradient.a */ = {isa = PBXFileReference; name = "libBVLinearGradient.a"; path = "libBVLinearGradient.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		82EA5B73E5104344A6AA8A1A /* RNSVG.xcodeproj */ = {isa = PBXFileReference; name = "RNSVG.xcodeproj"; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		01C874CDC22243FE9CEEA418 /* libRNSVG.a */ = {isa = PBXFileReference; name = "libRNSVG.a"; path = "libRNSVG.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		FEC99A4B690040C2A00F802E /* Miller Type Foundry - UniformItalicXcon-Blk.otf */ = {isa = PBXFileReference; name = "Miller Type Foundry - UniformItalicXcon-Blk.otf"; path = "../app/assets/fonts/Miller Type Foundry - UniformItalicXcon-Blk.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		501695D6AB024215B784365C /* Miller Type Foundry - UniformItalicXcon-Bold.otf */ = {isa = PBXFileReference; name = "Miller Type Foundry - UniformItalicXcon-Bold.otf"; path = "../app/assets/fonts/Miller Type Foundry - UniformItalicXcon-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D9EDB7A8D14046C092CC411D /* Miller Type Foundry - UniformItalicXcon-Lgt.otf */ = {isa = PBXFileReference; name = "Miller Type Foundry - UniformItalicXcon-Lgt.otf"; path = "../app/assets/fonts/Miller Type Foundry - UniformItalicXcon-Lgt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		095AA6E4E9994AAD8FAFFE9D /* Miller Type Foundry - UniformItalicXcon-Med.otf */ = {isa = PBXFileReference; name = "Miller Type Foundry - UniformItalicXcon-Med.otf"; path = "../app/assets/fonts/Miller Type Foundry - UniformItalicXcon-Med.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE116FDEADE440358FCF01E9 /* Miller Type Foundry - UniformItalicXcon-Reg.otf */ = {isa = PBXFileReference; name = "Miller Type Foundry - UniformItalicXcon-Reg.otf"; path = "../app/assets/fonts/Miller Type Foundry - UniformItalicXcon-Reg.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8EB28EFF159A4F2AA8287BDD /* Miller Type Foundry - UniformItalicXcon-Ult.otf */ = {isa = PBXFileReference; name = "Miller Type Foundry - UniformItalicXcon-Ult.otf"; path = "../app/assets/fonts/Miller Type Foundry - UniformItalicXcon-Ult.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -489,6 +501,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* FantasySportsTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				EB73D5A051B74065B898532E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -513,6 +526,20 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		EB73D5A051B74065B898532E /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				FEC99A4B690040C2A00F802E /* Miller Type Foundry - UniformItalicXcon-Blk.otf */,
+				501695D6AB024215B784365C /* Miller Type Foundry - UniformItalicXcon-Bold.otf */,
+				D9EDB7A8D14046C092CC411D /* Miller Type Foundry - UniformItalicXcon-Lgt.otf */,
+				095AA6E4E9994AAD8FAFFE9D /* Miller Type Foundry - UniformItalicXcon-Med.otf */,
+				DE116FDEADE440358FCF01E9 /* Miller Type Foundry - UniformItalicXcon-Reg.otf */,
+				8EB28EFF159A4F2AA8287BDD /* Miller Type Foundry - UniformItalicXcon-Ult.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -883,6 +910,12 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				3456CC952E6349CDB13A3B66 /* Miller Type Foundry - UniformItalicXcon-Blk.otf in Resources */,
+				BC144F8EFA9F4947B161FC5E /* Miller Type Foundry - UniformItalicXcon-Bold.otf in Resources */,
+				20C726725EDA40178831929B /* Miller Type Foundry - UniformItalicXcon-Lgt.otf in Resources */,
+				D158EDD64AD04DADB7FC1CDE /* Miller Type Foundry - UniformItalicXcon-Med.otf in Resources */,
+				115A2390AFCA40D2BF4B4852 /* Miller Type Foundry - UniformItalicXcon-Reg.otf in Resources */,
+				4842699F1CDC45E5BF655D35 /* Miller Type Foundry - UniformItalicXcon-Ult.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,9 +22,7 @@ export const matchHeaderStyle = StyleSheet.create({
 		width: 32,
 		borderRadius: 5,
 		backgroundColor: 'rgba(255,255,255,0.31)',
-		margin: 4,
 		marginRight: 5,
-		marginLeft: 0,
 	},
 	usernameText:{
 		color: colors.white,
