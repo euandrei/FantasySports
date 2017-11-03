@@ -5,7 +5,8 @@ import {
     Image,
     View,
     Platform,
-    ScrollView
+    ScrollView,
+    TextInput
 } from 'react-native';
 
 import TiltButton from "../components/TiltButton";
@@ -19,7 +20,9 @@ export default class OnBoardMessage extends React.Component {
 	}
 	render(){
 		return(
+			
 			<View style={onBoardMessageStyle.container}>
+
 				<View style={onBoardMessageStyle.topPart}>
 					{this.props.versus ?
 						<Versus
@@ -37,6 +40,7 @@ export default class OnBoardMessage extends React.Component {
 						</View>
 					}
 				</View>
+			
 				<View style={onBoardMessageStyle.bottomPart}>
 					<View style={onBoardMessageStyle.bottomTextView}>
 						{this.props.bottomTitle && <Text style={onBoardMessageStyle.bottomTitle}>{this.props.bottomTitle.toUpperCase()}</Text>}
@@ -51,13 +55,15 @@ export default class OnBoardMessage extends React.Component {
 									backgroundColor={colors.neonBlueBg}
 									onPress={this.props.onPress}
 								/>
+								{this.props.tutorial && this.props.overButton && <View style={{height:30,width:30,position:'absolute',top:-10,right:-15,borderRadius:20,backgroundColor:'rgba(255,244,33,.5)'}}/>}
 							</View>
 						}
 					</View>
 				</View>
+					
 				<View style={onBoardMessageStyle.skip}>
 					{this.props.skip && 
-						<TouchableOpacity>
+						<TouchableOpacity onPress={this.props.onSkip}>
 							<Text style={onBoardMessageStyle.skipText}>SKIP</Text>
 						</TouchableOpacity>
 					}
@@ -81,7 +87,7 @@ class Versus extends React.Component{
 						<Text style={onBoardMessageStyle.nameText}>YOU</Text>
 					</View>	
 					<View style={onBoardMessageStyle.versusRight}>
-						<Image source={require("../../../assets/heads/h_lav_right.png")} style={onBoardMessageStyle.versusImage} />
+						<Image source={this.props.versus.image} style={onBoardMessageStyle.versusImage} />
 						<Text style={onBoardMessageStyle.nameText}>{this.props.versus.name}</Text>
 					</View>
 					

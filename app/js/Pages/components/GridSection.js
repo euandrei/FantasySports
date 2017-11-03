@@ -16,18 +16,16 @@ export default class GridSection extends React.Component {
 	}
 
 	_renderTitle(){
-		console.log("YO BOYYY",this.props)
 		if(this.props.titlePosition === 'center'){
 			return (
 				<View style={gridSectionStyle.titleWrapper}>
-					{this.props.lines && <View style={gridSectionStyle.leftLine} />}
-					<Text style={gridSectionStyle.titleText}>{this.props.title}</Text>
-					{this.props.lines && <View style={gridSectionStyle.rightLine} />}
+					{this.props.line && <View style={gridSectionStyle.leftLine} />}
+					<Text style={gridSectionStyle.titleText}>{this.props.title.toUpperCase()}</Text>
+					{this.props.line && <View style={gridSectionStyle.rightLine} />}
 				</View>
 			)
 		}
 		else if(this.props.titlePosition === 'left'){
-			console.log("well fk ",this.props.titlePosition)
 			return (
 				<View style={gridSectionStyle.titleWrapperLeft}>
 					<Text style={gridSectionStyle.titleText}>{this.props.title}</Text>
@@ -36,7 +34,6 @@ export default class GridSection extends React.Component {
 		}
 	}
 	render(){
-		console.log("this.props.children",this.props.children)
 		return(
 			<View style={gridSectionStyle.container}>
 				{ this.props.title && this._renderTitle() }
@@ -50,7 +47,12 @@ export default class GridSection extends React.Component {
 						{this.props.children && this.props.children.length > 0 ? 
 
 							this.props.children.map((item,key)=>{
-								return <View key={key} style={gridSectionStyle.sectionCellWrapper}>{item}</View>
+								if(this.props.main && key == 0){
+									return <View key={key} style={{width: '100%',alignItems: 'center',justifyContent: 'center'}}><View style={[gridSectionStyle.sectionCellWrapper]}>{item}</View></View>
+								}
+								else {
+									return <View key={key} style={gridSectionStyle.sectionCellWrapper}>{item}</View>
+								}
 							})
 
 						:''}

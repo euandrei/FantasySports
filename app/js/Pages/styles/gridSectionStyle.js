@@ -12,7 +12,7 @@ export const gridSectionStyle = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'center',
-		marginBottom: 20,
+		marginBottom: 30,
 	},
 	titleText:{
 		color: colors.bluishGrey,
@@ -47,10 +47,11 @@ export const gridSectionStyle = StyleSheet.create({
 		marginRight: -8,
 	},
 	sectionCellWrapper:{
+		marginBottom: 10,
 		flexDirection: 'row',
     	flexGrow: 0,
     	width: '33%',
-    	height: 170,
+    	height: 140,
     	paddingLeft: 8,
     	paddingRight: 8,
 	},

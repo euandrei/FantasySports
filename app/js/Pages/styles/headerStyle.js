@@ -7,7 +7,8 @@ export const headerStyle = StyleSheet.create({
 		alignSelf: 'stretch',
 		height: 50,
 		flexDirection: 'row',
-		marginBottom: 10,
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
 	leftComponent:{
 		flex: 1,
@@ -32,16 +33,15 @@ export const headerStyle = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	titleText:{
-		paddingTop: 12,
 		color: colors.white,
 		fontSize: 20,
 		fontWeight: 'bold',
-		marginBottom: -5,
 	},
 	subtitleText:{
 		color: colors.sunnyYellow,
 		fontSize: 13,
 		fontWeight: 'bold',
+		marginTop: -5,
 	},
 	logo:{
 		width: '50%',

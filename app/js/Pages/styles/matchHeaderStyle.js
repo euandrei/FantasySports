@@ -5,8 +5,6 @@ import { colors } from "./colors.js"
 
 export const matchHeaderStyle = StyleSheet.create({
 	container:{
-		marginBottom: 15,
-		marginTop: 15,
 	},
 	headerWrapper:{
 		flex: 1,

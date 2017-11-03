@@ -9,7 +9,7 @@ import GridCell from "./GridCell.js"
 import TiltButton from "./TiltButton.js"
 import { gridStyle, colors } from "../styles"
 import {BoxShadow} from 'react-native-shadow'
-
+import {Actions} from 'react-native-router-flux';
 export default class GridCellWrapper extends React.Component {
 	constructor(props){
 		super(props);
@@ -20,15 +20,22 @@ export default class GridCellWrapper extends React.Component {
 	}
 
 	handleCellClick(){
-		this.setState({
-			active: !this.state.active
-		})
+		if(this.props.tutorial && (this.props.overPlayer || this.props.overBuff || this.props.overNerf)){
+			console.log("this.props.tutorial",this.props.tutorial)
+			Actions[this.props.tutorial]();
+		}
+		// TODO HANDLE IF THE CARD IS EMPTY
+		if(this.props.image){
+			this.setState({
+				active: !this.state.active
+			})
+		}
 	}
 	render(){
 		
 		return(
 			<View style={[gridStyle.wrapperContainer ]}>
-
+				{this.props.tutorial && (this.props.overPlayer || this.props.overBuff || this.props.overNerf) && <View style={{height:30,width:30,position:'absolute',top:-10,right:0,borderRadius:20,backgroundColor:'rgba(255,244,33,.5)'}}/>}
 				<TouchableOpacity style={[gridStyle.topPart, this.state.active ? gridStyle.gridActive : '']} onPress={this.handleCellClick}>
 					<GridCell
 						bgColor={this.props.bgColor ? this.props.bgColor : null}
@@ -50,7 +57,7 @@ export default class GridCellWrapper extends React.Component {
 					</View>
 				}
 
-				{this.state.active && 
+				{this.state.active &&  
 					
 						<TouchableOpacity style={gridStyle.dropdownWrapper} onPress={()=>{this.setState({active: !this.state.active})}}>
 

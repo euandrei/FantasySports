@@ -11,24 +11,24 @@ import { gridStyle, colors } from "../styles";
 export default class GridImage extends React.Component {
 	render(){
 		let windowWidth = Dimensions.get("window").width;
-		let newWidth =  (windowWidth) / 5 ;
+		let newWidth =  (windowWidth) / 4.5 ;
 
 		switch(this.props.type){
-			case "power-up": 
-
+			case "buff": 
 				return (<View style={gridStyle.imageWrapper}>
-					  		{this.props.image && <Image style={{width: newWidth}} source={this.props.image} resizeMode='contain' />}
+					  		{<Image style={{width: newWidth}} source={this.props.image ? this.props.image : require('../../../assets/buffs/plus.png')} resizeMode='contain' />}
 						</View>
 					)
-				
-			case "plus":
+			case "nerf":
 				return (<View style={gridStyle.imageWrapper}>
-					  		{this.props.image && <Image style={gridStyle.imagePlus} source={this.props.image} resizeMode='contain' />}
+					  		{<Image style={{width: newWidth}} source={this.props.image ? this.props.image : require('../../../assets/nerfs/plus.png')} resizeMode='contain' />}
 						</View>
 					)
 			case "player":
 				return (
-						<Text>NEED TESTING</Text>
+						<View style={gridStyle.imageWrapper}>
+					  		{<Image style={{width: newWidth}} source={this.props.image ? this.props.image : require('../../../assets/players/plus.png')} resizeMode='contain' />}
+						</View>
 					)
 			
 		}

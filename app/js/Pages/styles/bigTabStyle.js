@@ -7,7 +7,6 @@ import { colors } from "./colors.js"
 export const bigTabStyle = StyleSheet.create({
 	container:{
 		flex: 1,
-		marginBottom: 10,
 	},
 	tabWrapper:{
 		flex: 1,

@@ -54,11 +54,13 @@ export default class Test extends React.Component {
 					week={14}
 					bet={'25,000'}
 
-					scoreRight={'124.2'}
 					scoreLeft={'248.8'}
+					scoreRight={'124.2'}
 
 					gameStatus={'live'}
 					gameTime={'2d 4hr'}
+
+					buttons
 				/>
 
 				{/*

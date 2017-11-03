@@ -11,6 +11,9 @@ import { bigTabStyle } from "./bigTabStyle.js"
 import { onBoardMessageStyle } from "./onBoardMessageStyle.js"
 import { matchupCardsStyle } from "./matchupCardsStyle.js"
 import { matchHeaderStyle } from "./matchHeaderStyle.js"
+import { matchTemplateStyle } from "./matchTemplateStyle.js"
+import { teamTemplateStyle } from "./teamTemplateStyle.js"
+import { selectionTemplateStyle } from "./selectionTemplateStyle.js"
 
 export {
 	colors,
@@ -22,6 +25,9 @@ export {
 	onBoardMessageStyle,
 	matchupCardsStyle,
 	matchHeaderStyle,
+	matchTemplateStyle,
+	teamTemplateStyle,
+	selectionTemplateStyle,
 }
 
 
@@ -50,6 +56,7 @@ export const tiltButton = StyleSheet.create({
 	buttonText:{
 		color: colors.white,
 		fontWeight: 'bold',
+		fontSize: 20,
 	}
 
 })

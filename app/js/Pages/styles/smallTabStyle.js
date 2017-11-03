@@ -7,11 +7,11 @@ import { colors } from "./colors.js"
 export const smallTabStyle = StyleSheet.create({
 	container:{
 		flex: 1,
-		marginBottom: 10,
 	},
 	tabWrapper:{
 		flex: 1,
 		flexDirection: 'row',
+		marginBottom: 30,
 	},
 	tabs:{
 		flex: 2,

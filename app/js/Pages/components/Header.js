@@ -18,6 +18,7 @@ export default class Header extends React.Component{
 		this._renderRightButton = this._renderRightButton.bind(this);
 	}
 	_renderTitle(){
+		console.log("th", this.props.logo)
 		if(this.props.logo){
 			return (
 				<Image style={{width: 10}} source={this.props.logo} resizeMode='contain' style={headerStyle.logo} />
@@ -26,15 +27,15 @@ export default class Header extends React.Component{
 		else if(this.props.subtitle){
 			return (
 				<View style={headerStyle.titleWithSubtitle}>
-					<Text style={headerStyle.titleText} >{this.props.title}</Text>
-					<Text style={headerStyle.subtitleText}>{this.props.subtitle}</Text>
+					{this.props.title && <Text style={headerStyle.titleText} >{this.props.title.toUpperCase()}</Text>}
+					{this.props.subtitle && <Text style={headerStyle.subtitleText}>{this.props.subtitle.toUpperCase()}</Text>}
 				</View>
 			)
 		}
 		else{
 			return (
 				<View style={headerStyle.title}>
-					<Text style={headerStyle.titleText}>{this.props.title}</Text>
+					{this.props.title && <Text style={headerStyle.titleText}>{this.props.title.toUpperCase()}</Text>}
 				</View>
 			)
 		}
@@ -51,7 +52,7 @@ export default class Header extends React.Component{
 		else if(this.props.circle && this.props.settings){
 			return (
 				<View style={headerStyle.circleAndSettings}>
-					<TouchableOpacity>
+					<TouchableOpacity onPress={this.props.onSettings}>
 						<Image source={this.props.settings} resizeMode='contain' style={headerStyle.settingsIcon} />
 					</TouchableOpacity>
 					<View style={{width:31, height: 31, marginLeft: 15}}>
@@ -77,14 +78,14 @@ export default class Header extends React.Component{
 		}
 		else if(this.props.button){
 			return (
-				<TouchableOpacity style={headerStyle.button} onPress={this.props.onPress}>
+				<TouchableOpacity style={[headerStyle.button, {zIndex: 5}]} onPress={this.props.onPress}>
 					<Text style={headerStyle.buttonText}>{this.props.button}</Text>
 				</TouchableOpacity>
 			)
 		}
 		else if(this.props.settings){
 			return (
-				<TouchableOpacity>
+				<TouchableOpacity onPress={this.props.onSettings}>
 					<Image source={this.props.settings} resizeMode='contain' style={headerStyle.settingsIcon} />
 				</TouchableOpacity>
 			)
@@ -95,11 +96,11 @@ export default class Header extends React.Component{
 			<View style={headerStyle.container}>
 				<View style={headerStyle.leftComponent}>
 					<TouchableOpacity onPress={this.props.onPressLeft}>
-						{this.props.leftIcon && <Image style={{width: 10}} source={this.props.leftIcon} resizeMode='contain' />}
+						{this.props.leftIcon && <Image style={{width: 18, height: 18,}} source={this.props.leftIcon} resizeMode='contain' />}
 					</TouchableOpacity>
 				</View>
 				<View style={headerStyle.centerComponent}>
-					{this.props.title && this._renderTitle()}
+					{this._renderTitle()}
 				</View>
 				<View style={headerStyle.rightComponent}>
 					{this._renderRightButton()}

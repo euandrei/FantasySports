@@ -25,7 +25,7 @@ export const onBoardMessageStyle = StyleSheet.create({
 	titleWeek:{
 		color: colors.blueyGrey,
 		fontWeight: 'bold',
-		fontSize: 15
+		fontSize: 16
 	},
 	titleText:{
 		color: colors.white,
@@ -37,7 +37,7 @@ export const onBoardMessageStyle = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	titleValueText:{
-		fontSize: 50,
+		fontSize: 72,
 		fontWeight: 'bold',
 	},
 	bottomPart:{
@@ -50,18 +50,18 @@ export const onBoardMessageStyle = StyleSheet.create({
 		alignSelf: 'stretch',
 		alignItems: 'flex-start',
 		justifyContent: 'flex-start',
-		padding: 30,
+		padding: 40,
 		
 	},
 	bottomTitle:{
 		color: colors.sunnyYellow,
 		fontWeight: "bold",
-		fontSize: 15,
-		marginBottom: 10,
+		fontSize: 17,
+		marginBottom: 15,
 	},
 	bottomText:{
 		color: colors.white,
-		fontSize: 26,
+		fontSize: 36,
 		fontWeight: 'bold',
 
 	},
@@ -85,6 +85,7 @@ export const onBoardMessageStyle = StyleSheet.create({
 	skipText:{
 		color: colors.white,
 		fontWeight: 'bold',
+		fontSize: 14,
 	},
 
 
@@ -118,7 +119,7 @@ export const onBoardMessageStyle = StyleSheet.create({
 		alignItems: 'center'
 	},
 	vsText:{
-		fontSize: 24,
+		fontSize: 34,
 		fontWeight: 'bold',
 		color: colors.white,
 	},
@@ -129,7 +130,7 @@ export const onBoardMessageStyle = StyleSheet.create({
 	},
 	nameText:{
 		color: colors.white,
-		fontSize: 18,
+		fontSize: 24,
 		fontWeight: "bold",
 	}
 

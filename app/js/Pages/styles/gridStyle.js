@@ -23,22 +23,24 @@ export const gridStyle = StyleSheet.create({
 		fontSize: 14,
 	},
 	titleWrapper:{
-		flex: 1,
+		height: 20,
 		alignSelf: 'stretch',
 		alignItems: 'center',
-		justifyContent: 'flex-start',
+		justifyContent: 'flex-end',
 	},
 	imageWrapper:{
 		flex: 4,
 		alignSelf: 'stretch',
 		alignItems: 'center',
 		justifyContent: 'center',
+
 	},
 	imagePlus:{
 		width: 30,
 	},
 	wrapperContainer:{
 		flex: 1,
+
 	},
 	wrapper:{
 		position: 'absolute', 
@@ -69,17 +71,13 @@ export const gridStyle = StyleSheet.create({
 		color: colors.white,
 		fontSize: 18,
 	},
-
-
 	gridActive:{
 		backgroundColor: colors.marine,
 		borderRadius: 8,
 	},
-
-
 	dropdownWrapper:{
 		position: 'absolute',
-		bottom: -90,
+		bottom: -73,
 		right: 0,
 		left: 0,
 		top: 0,
@@ -96,7 +94,5 @@ export const gridStyle = StyleSheet.create({
 		flex: 1, 
 	},
 	
-
-
 
 }); 

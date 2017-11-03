@@ -51,7 +51,7 @@ export default class SmallTabbar extends React.Component{
 					</View>
 					<View style={smallTabStyle.filter}>
 						{this.props.filter && 
-							<TouchableOpacity>
+							<TouchableOpacity onPress={this.props.onFilter}>
 								<Image source={this.props.filter} resizeMode='contain' style={smallTabStyle.filterIcon} />
 							</TouchableOpacity>
 						}

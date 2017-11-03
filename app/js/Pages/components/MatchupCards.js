@@ -16,7 +16,6 @@ export default class MatchupCards extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			won: 2,
 			activeTab: 0,
 			showDetails: false,
 		}
@@ -52,7 +51,7 @@ export default class MatchupCards extends React.Component {
 			
 				<View style={matchupCardsStyle.headsLeftWrapper}>
 					<View style={matchupCardsStyle.headsLeft}>
-						{this.state.won == 1 && <View style={matchupCardsStyle.won}>
+						{this.props.won == 1 && <View style={matchupCardsStyle.won}>
 							<Text style={matchupCardsStyle.wonText}>WON!</Text>
 						</View>}
 						<Image source={this.props.leftHead} style={matchupCardsStyle.head}/>
@@ -73,7 +72,7 @@ export default class MatchupCards extends React.Component {
 				</View>
 				<View style={matchupCardsStyle.headsRightWrapper}>
 					<View style={matchupCardsStyle.headsRight}>
-						{this.state.won == 2 && <View style={matchupCardsStyle.won}>
+						{this.props.won == 2 && <View style={matchupCardsStyle.won}>
 							<Text style={matchupCardsStyle.wonText}>WON!</Text>
 						</View>}
 						<Image source={this.props.rightHead} style={matchupCardsStyle.head}/>
@@ -112,7 +111,7 @@ export default class MatchupCards extends React.Component {
 	}
 
 	_renderScoreBars(){
-		let rightComplete, leftComplete;
+		let rightComplete = '0%', leftComplete = '0%';
 		if(this.props.scoreLeft && this.props.scoreRight){
 			let max = Math.max(this.props.scoreLeft, this.props.scoreRight)
 			let multiplyBy = parseInt(max).toString().length;
@@ -224,7 +223,7 @@ export default class MatchupCards extends React.Component {
 						{this.state.showDetails && this._renderDetails()}
 						{this._renderInfoBet()}
 
-						{this._renderButtons()}
+						{this.props.buttons && this._renderButtons()}
 
 
 
