@@ -17,6 +17,7 @@ import BigTabbar from "../components/BigTabbar.js"
 import Tab from "../components/Tab.js"
 import MatchupCards from "../components/MatchupCards.js"
 import MatchHeader from "../components/MatchHeader.js"
+import ListItem from "../components/ListItem.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
@@ -35,6 +36,58 @@ export default class Test extends React.Component {
 
 		return(
 			<ScrollView style={styles.container}>
+
+				<ListItem
+					listItemNumber={1}
+
+					// backgroundColor={'black'}
+					// border={true}
+
+					// disabled
+
+					freePackTimer={'4h 38mins...'}
+
+					image={{uri: 'http://via.placeholder.com/30x30'}}
+
+					leftText={"FREE PACK"}
+					// leftTextBright
+
+					rightText={"4h 38mins..."}
+					// rightSmallText={"SMALL"}
+					// rightSmallText2={"SMALL2"}
+
+					// gradient // used on non button like in match header
+
+					onPress={()=>{}}
+				/>
+
+				<ListItem
+					backgroundColor={'black'}
+					// border={true}
+
+					// disabled
+
+					freePackTimer={'4h 38mins...'}
+
+					image={{uri: 'http://via.placeholder.com/30x30'}}
+
+					leftText={"FREE PACK"}
+					// leftTextBright
+
+					rightText={"4h 38mins..."}
+					// rightSmallText={"SMALL"}
+					// rightSmallText2={"SMALL2"}
+
+					// gradient // used on non button like in match header
+
+					onPress={()=>{}}
+				/>
+				
+
+				{/*
+
+					
+				
 				<MatchHeader 
 					username={"USERNAME"}
 					streak={8}
@@ -45,6 +98,7 @@ export default class Test extends React.Component {
 					freePackTimer={'4h 38mins...'}
 					getFreePack={()=>{}}
 				/>
+				
 				<MatchupCards 
 					leftHead={require('../../../assets/heads/h_gry_left.png')}
 					leftName={"You"}
@@ -63,7 +117,6 @@ export default class Test extends React.Component {
 					buttons
 				/>
 
-				{/*
 				<Header 
 					leftIcon={require('../../../assets/back.png')}
 					title={"BELIEVETHEHYPE"}

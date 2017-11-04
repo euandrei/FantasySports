@@ -86,8 +86,8 @@ export default class App extends React.Component {
 				AppStore={AppStore} 
 				hideNavBar={true}>
 				
-				<Scene key="test" component={Test}/>
-				<Scene key="OnBoard1_1" initial component={OnBoard1_1}/>
+				<Scene key="test" initial component={Test}/>
+				<Scene key="OnBoard1_1" component={OnBoard1_1}/>
 				<Scene key="OnBoard2_1" component={OnBoard2_1}/>
 				<Scene key="OnBoard3_1" component={OnBoard3_1}/>
 				<Scene key="OnBoard4_1" component={OnBoard4_1}/>
