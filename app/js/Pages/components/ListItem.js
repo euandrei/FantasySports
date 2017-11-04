@@ -71,7 +71,7 @@ export default class ListItem extends React.Component{
 								color: colors.white
 							}}
 						>
-							1
+							{this.props.listItemNumber}
 						</Text>
 					</View>
 				)}

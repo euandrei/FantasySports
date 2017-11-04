@@ -18,6 +18,7 @@ import Tab from "../components/Tab.js"
 import MatchupCards from "../components/MatchupCards.js"
 import MatchHeader from "../components/MatchHeader.js"
 import ListItem from "../components/ListItem.js"
+import ListTemplate from "../templates/ListTemplate.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
@@ -37,6 +38,27 @@ export default class Test extends React.Component {
 		return(
 			<ScrollView style={styles.container}>
 
+				<ListTemplate 
+					items={
+						[
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'}
+						]
+					}
+				/>
+				
+
+				{/*
+
 				<ListItem
 					listItemNumber={1}
 
@@ -45,8 +67,6 @@ export default class Test extends React.Component {
 
 					// disabled
 
-					freePackTimer={'4h 38mins...'}
-
 					image={{uri: 'http://via.placeholder.com/30x30'}}
 
 					leftText={"FREE PACK"}
@@ -60,31 +80,6 @@ export default class Test extends React.Component {
 
 					onPress={()=>{}}
 				/>
-
-				<ListItem
-					backgroundColor={'black'}
-					// border={true}
-
-					// disabled
-
-					freePackTimer={'4h 38mins...'}
-
-					image={{uri: 'http://via.placeholder.com/30x30'}}
-
-					leftText={"FREE PACK"}
-					// leftTextBright
-
-					rightText={"4h 38mins..."}
-					// rightSmallText={"SMALL"}
-					// rightSmallText2={"SMALL2"}
-
-					// gradient // used on non button like in match header
-
-					onPress={()=>{}}
-				/>
-				
-
-				{/*
 
 					
 				
