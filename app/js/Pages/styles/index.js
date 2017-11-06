@@ -18,6 +18,7 @@ import { listItemStyle } from "./listItemStyle.js"
 import { carouselStyle } from "./carouselStyle.js"
 import { userProfileHeaderStyle } from "./userProfileHeaderStyle.js"
 import { notificationListItemStyle } from "./notificationListItemStyle.js"
+import { storeTemplateStyle } from "./storeTemplateStyle.js"
 
 export {
 	colors,
@@ -35,7 +36,8 @@ export {
 	listItemStyle,
 	carouselStyle,
 	userProfileHeaderStyle,
-	notificationListItemStyle
+	notificationListItemStyle,
+	storeTemplateStyle
 }
 
 
