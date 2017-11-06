@@ -60,6 +60,7 @@ export const matchHeaderStyle = StyleSheet.create({
 	levelProgress:{
 		height: 4,
 		backgroundColor: colors.metallicBlue,
+		marginBottom: 30,
 	},
 	levelProgressComplete:{
 		height: 4,

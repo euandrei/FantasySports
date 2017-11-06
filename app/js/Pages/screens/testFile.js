@@ -21,6 +21,7 @@ import ListItem from "../components/ListItem.js"
 import ListTemplate from "../templates/ListTemplate.js"
 import Slider from "../components/Slider.js"
 import Carousel from "../components/Carousel.js"
+import UserProfileHeader from "../components/UserProfileHeader.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
@@ -46,6 +47,30 @@ export default class Test extends React.Component {
 			<View style={styles.carouselWrapper}>
 				<Carousel />
 			</View>
+
+
+			<UserProfileHeader
+				wins={'2,478'}
+				followers={'2,478'}
+				following={'2,478'}
+
+				button1={"CHALLENGE"}
+				onButton1={()=>{}}
+
+				graph
+				actualLevel={'7629'}
+				totalLevel={'10000'}
+				user={'ROOKIE'}
+				gold={'34.6K'}
+				onAdd={()=>{}}
+
+				button2={"UNFOLLOW"}
+				onButton2={()=>{}}
+				//button2={"FOLLOW"}
+			>
+				
+			</UserProfileHeader>
+
 			
 
 				{/*

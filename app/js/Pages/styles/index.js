@@ -16,6 +16,7 @@ import { teamTemplateStyle } from "./teamTemplateStyle.js"
 import { selectionTemplateStyle } from "./selectionTemplateStyle.js"
 import { listItemStyle } from "./listItemStyle.js"
 import { carouselStyle } from "./carouselStyle.js"
+import { userProfileHeaderStyle } from "./userProfileHeaderStyle.js"
 
 export {
 	colors,
@@ -32,6 +33,7 @@ export {
 	selectionTemplateStyle,
 	listItemStyle,
 	carouselStyle,
+	userProfileHeaderStyle,
 }
 
 

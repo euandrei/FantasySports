@@ -28,6 +28,8 @@ export const colors = {
   "sunnyYellow": 'rgba(255, 244, 33, 1)',
 
   // BACKGROUND COLORS
+  "whiteBg": 'rgba(255,255,255,0.3)',
+  "darkGreyBlueBg": 'rgba(43, 75, 102, 0.3)',
   "neonBlueBg": 'rgba(0, 229, 255, 0.3)',
   "watermelonBg": 'rgba(255, 75, 106, 0.3)',
   "greenishTurquoiseBg": 'rgba(0, 233, 172, 0.3)',
