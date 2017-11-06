@@ -22,6 +22,7 @@ import ListTemplate from "../templates/ListTemplate.js"
 import Slider from "../components/Slider.js"
 import Carousel from "../components/Carousel.js"
 import UserProfileHeader from "../components/UserProfileHeader.js"
+import NotificationListItem from "../components/NotificationListItem.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
@@ -40,40 +41,59 @@ export default class Test extends React.Component {
 
 		return(
 			<ScrollView style={styles.container}>
-			
-			<View style={styles.contentWrapper}>
-				<Slider />
-			</View>
-			<View style={styles.carouselWrapper}>
-				<Carousel />
-			</View>
 
+				<NotificationListItem 
+					title1={'Text 1 start'}
+					text1={'finishing ...'}
 
-			<UserProfileHeader
-				wins={'2,478'}
-				followers={'2,478'}
-				following={'2,478'}
+					title2={'Text 2 start'}
+					text2={'finishing ...'}
+				/>
 
-				button1={"CHALLENGE"}
-				onButton1={()=>{}}
+				<NotificationListItem 
+					title1={'Text 1 start'}
+					text1={'finishing ...'}
 
-				graph
-				actualLevel={'7629'}
-				totalLevel={'10000'}
-				user={'ROOKIE'}
-				gold={'34.6K'}
-				onAdd={()=>{}}
+					title2={'Text 2 start'}
+					text2={'finishing ...'}
 
-				button2={"UNFOLLOW"}
-				onButton2={()=>{}}
-				//button2={"FOLLOW"}
-			>
-				
-			</UserProfileHeader>
+					team 
+				/>
+		
 
 			
 
 				{/*
+
+					<View style={styles.contentWrapper}>
+						<Slider />
+					</View>
+					<View style={styles.carouselWrapper}>
+						<Carousel />
+					</View>
+
+
+					<UserProfileHeader
+						wins={'2,478'}
+						followers={'2,478'}
+						following={'2,478'}
+
+						button1={"CHALLENGE"}
+						onButton1={()=>{}}
+
+						graph
+						actualLevel={'7629'}
+						totalLevel={'10000'}
+						user={'ROOKIE'}
+						gold={'34.6K'}
+						onAdd={()=>{}}
+
+						button2={"UNFOLLOW"}
+						onButton2={()=>{}}
+						//button2={"FOLLOW"}
+					>
+						
+					</UserProfileHeader>
 
 				<ListTemplate 
 					items={
