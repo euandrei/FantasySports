@@ -26,6 +26,7 @@ export const colors = {
 
   // YELLOW
   "sunnyYellow": 'rgba(255, 244, 33, 1)',
+  "sunnyYellowBg": 'rgba(255, 244, 33, 0.3)',
 
   // BACKGROUND COLORS
   "whiteBg": 'rgba(255,255,255,0.3)',

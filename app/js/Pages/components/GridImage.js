@@ -12,7 +12,6 @@ export default class GridImage extends React.Component {
 	render(){
 		let windowWidth = Dimensions.get("window").width;
 		let newWidth =  (windowWidth) / 4.5 ;
-
 		switch(this.props.type){
 			case "buff": 
 				return (<View style={gridStyle.imageWrapper}>

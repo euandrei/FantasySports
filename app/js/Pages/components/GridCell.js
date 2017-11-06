@@ -13,8 +13,6 @@ import { gridStyle, colors } from "../styles";
 export default class GridCell extends React.Component {
 
 	render(){
-
-		
 		return(
 			<View style={gridStyle.container}>
 				<LinearGradient colors={[colors.transparent, this.props.bgColor]} style={gridStyle.linearGradient}>

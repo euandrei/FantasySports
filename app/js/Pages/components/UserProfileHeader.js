@@ -4,6 +4,7 @@ import {
     Image,
     View,
     TouchableOpacity,
+    Dimensions,
 } from 'react-native';
 
 import { userProfileHeaderStyle, colors } from "../styles";
@@ -23,7 +24,7 @@ export default class UserProfileHeader extends React.Component {
 		if(this.props.graph){
 			levelProgress = parseInt(( parseInt(this.props.actualLevel) / parseInt(this.props.totalLevel) ) * 100);
 			levelProgress = levelProgress + '%';
-				
+			let width = Dimensions.get('window').width;
 			let data = [
     [{
       "x": -10,
@@ -92,18 +93,11 @@ export default class UserProfileHeader extends React.Component {
   ]
 
   let options = {
-    width: 280,
-    height: 280,
-    color: '#FFFFFF',
-    margin: {
+    width: width-30,
+    height: 45,
+    color: '#5B724A',
+    margin:{
       top: 20,
-      left: 45,
-      bottom: 25,
-      right: 20
-    },
-    animate: {
-      type: 'delayed',
-      duration: 200
     },
     axisX: {
       showAxis: false,
@@ -155,9 +149,14 @@ export default class UserProfileHeader extends React.Component {
 							</LinearGradient>
 						</TouchableOpacity>
 					</View>
-					<View>
-				      <SmoothLine data={data} options={options} xKey='x' yKey='y' />
-				    </View>
+					<View style={{paddingBottom: 0,}}>
+			      <SmoothLine data={data} options={options} xKey='x' yKey='y' />
+            <View style={{position: 'absolute', height: 35, bottom: 0, left: -15, right: -15,}} >
+              <LinearGradient colors={[colors.transparent, colors.darkGreyBlue]} style={{height: 40}}  >
+
+              </LinearGradient>
+            </View>
+			    </View>
 				</View>
 			)
 		}

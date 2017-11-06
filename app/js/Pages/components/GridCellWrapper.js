@@ -32,7 +32,6 @@ export default class GridCellWrapper extends React.Component {
 		}
 	}
 	render(){
-		
 		return(
 			<View style={[gridStyle.wrapperContainer ]}>
 				{this.props.tutorial && (this.props.overPlayer || this.props.overBuff || this.props.overNerf) && <View style={{height:30,width:30,position:'absolute',top:-10,right:0,borderRadius:20,backgroundColor:'rgba(255,244,33,.5)'}}/>}

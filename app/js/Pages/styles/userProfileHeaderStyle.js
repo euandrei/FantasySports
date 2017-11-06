@@ -14,7 +14,7 @@ export const userProfileHeaderStyle = StyleSheet.create({
 	},
 	bottomPart:{
 		flex: 1,
-		marginBottom: 30,
+		// marginBottom: 30,
 	},
 
 	avatarWrapper:{

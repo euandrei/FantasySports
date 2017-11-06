@@ -41,13 +41,26 @@ export default class Test extends React.Component {
 		return(
 			<ScrollView style={styles.container}>
 			
-			<View style={styles.contentWrapper}>
+			{/*<View style={styles.contentWrapper}>
 				<Slider />
 			</View>
 			<View style={styles.carouselWrapper}>
 				<Carousel />
-			</View>
-
+			</View>*/}
+			{/*<View style={{height: 400, width: 400, backgroundColor:'red'}}>
+				<GridCellWrapper
+	               bgColor={colors.watermelonBg}
+	               title={"Test"}
+	               image={require('../../../assets/buffs/cannon.png')}
+	               type={"buff"}
+	             />
+	             <GridCellWrapper
+					bgColor={colors.watermelonBg}
+					title={"Test"}
+					image={require('../../../assets/nerfs/bear_trap.png')}
+					type={"power-up"}
+				/>
+             </View>*/}
 
 			<UserProfileHeader
 				wins={'2,478'}
@@ -67,9 +80,36 @@ export default class Test extends React.Component {
 				button2={"UNFOLLOW"}
 				onButton2={()=>{}}
 				//button2={"FOLLOW"}
-			>
-				
+				>
 			</UserProfileHeader>
+			
+			{/*<GridSection
+					title={"Title"}
+					titlePosition={"center"}
+					lines
+				>
+					<GridCellWrapper
+						bgColor={colors.watermelonBg}
+						title={"Test"}
+						image={require('../../../assets/nerfs/bear_trap.png')}
+						type={"power-up"}
+					/>
+					
+					<GridCellWrapper
+						bgColor={colors.greenishTurquoiseBg}
+						title={"Test"}
+						image={require('../../../assets/nerfs/bear_trap.png')}
+						type={"power-up"}
+					/>
+					<GridCellWrapper
+						bgColor={colors.greenishTurquoiseBg}
+						title={"Test"}
+						image={require('../../../assets/buffs/cannon.png')}
+						type={"power-up"}
+					/>
+				</GridSection>
+				*/}
+			
 
 			
 
