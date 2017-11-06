@@ -19,6 +19,7 @@ import MatchupCards from "../components/MatchupCards.js"
 import MatchHeader from "../components/MatchHeader.js"
 import ListItem from "../components/ListItem.js"
 import ListTemplate from "../templates/ListTemplate.js"
+import Slider from "../components/Slider.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
@@ -38,6 +39,11 @@ export default class Test extends React.Component {
 		return(
 			<ScrollView style={styles.container}>
 
+				<Slider />
+				
+
+				{/*
+
 				<ListTemplate 
 					items={
 						[
@@ -55,9 +61,6 @@ export default class Test extends React.Component {
 						]
 					}
 				/>
-				
-
-				{/*
 
 				<ListItem
 					listItemNumber={1}
