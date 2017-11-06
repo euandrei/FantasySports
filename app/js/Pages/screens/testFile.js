@@ -20,6 +20,7 @@ import MatchHeader from "../components/MatchHeader.js"
 import ListItem from "../components/ListItem.js"
 import ListTemplate from "../templates/ListTemplate.js"
 import Slider from "../components/Slider.js"
+import Carousel from "../components/Carousel.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
@@ -38,9 +39,14 @@ export default class Test extends React.Component {
 
 		return(
 			<ScrollView style={styles.container}>
-
+			
+			<View style={styles.contentWrapper}>
 				<Slider />
-				
+			</View>
+			<View style={styles.carouselWrapper}>
+				<Carousel />
+			</View>
+			
 
 				{/*
 
@@ -210,10 +216,15 @@ export default class Test extends React.Component {
 
 const styles = StyleSheet.create({
 	container: {
-
 		backgroundColor: colors.marine,
+	},
+	contentWrapper:{
 		paddingRight: 10,
 		paddingLeft: 10,
+	},
+	carouselWrapper:{
+		marginTop: 20,
+		marginBottom: 20,
 	},
 	test:{
 		flex: 0.7,

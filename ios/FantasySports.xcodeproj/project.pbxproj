@@ -44,6 +44,7 @@
 		D158EDD64AD04DADB7FC1CDE /* Miller Type Foundry - UniformItalicXcon-Med.otf in Resources */ = {isa = PBXBuildFile; fileRef = 095AA6E4E9994AAD8FAFFE9D /* Miller Type Foundry - UniformItalicXcon-Med.otf */; };
 		115A2390AFCA40D2BF4B4852 /* Miller Type Foundry - UniformItalicXcon-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE116FDEADE440358FCF01E9 /* Miller Type Foundry - UniformItalicXcon-Reg.otf */; };
 		4842699F1CDC45E5BF655D35 /* Miller Type Foundry - UniformItalicXcon-Ult.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8EB28EFF159A4F2AA8287BDD /* Miller Type Foundry - UniformItalicXcon-Ult.otf */; };
+		83F0606CA2CD4EEB8DF824E7 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A86A47D42714E66928AD163 /* libRCTActionSheet.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +282,8 @@
 		095AA6E4E9994AAD8FAFFE9D /* Miller Type Foundry - UniformItalicXcon-Med.otf */ = {isa = PBXFileReference; name = "Miller Type Foundry - UniformItalicXcon-Med.otf"; path = "../app/assets/fonts/Miller Type Foundry - UniformItalicXcon-Med.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		DE116FDEADE440358FCF01E9 /* Miller Type Foundry - UniformItalicXcon-Reg.otf */ = {isa = PBXFileReference; name = "Miller Type Foundry - UniformItalicXcon-Reg.otf"; path = "../app/assets/fonts/Miller Type Foundry - UniformItalicXcon-Reg.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		8EB28EFF159A4F2AA8287BDD /* Miller Type Foundry - UniformItalicXcon-Ult.otf */ = {isa = PBXFileReference; name = "Miller Type Foundry - UniformItalicXcon-Ult.otf"; path = "../app/assets/fonts/Miller Type Foundry - UniformItalicXcon-Ult.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4FC0227E28A044D5B6167B77 /* ReactNativeGlobalProps.xcodeproj */ = {isa = PBXFileReference; name = "ReactNativeGlobalProps.xcodeproj"; path = "../node_modules/react-native-global-props/ios/ReactNativeGlobalProps.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		9A86A47D42714E66928AD163 /* libRCTActionSheet.a */ = {isa = PBXFileReference; name = "libRCTActionSheet.a"; path = "libRCTActionSheet.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +314,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				F7956D40E7E340CBA58D54F4 /* libBVLinearGradient.a in Frameworks */,
 				7428717ED46E4FB1B67596FA /* libRNSVG.a in Frameworks */,
+				83F0606CA2CD4EEB8DF824E7 /* libRCTActionSheet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +485,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				4A4F1AF60AC749D084686EF3 /* BVLinearGradient.xcodeproj */,
 				82EA5B73E5104344A6AA8A1A /* RNSVG.xcodeproj */,
+				4FC0227E28A044D5B6167B77 /* ReactNativeGlobalProps.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1051,11 +1056,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-global-props/ios/ReactNativeGlobalProps/**",
 				);
 			};
 			name = Debug;
@@ -1078,11 +1085,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-global-props/ios/ReactNativeGlobalProps/**",
 				);
 			};
 			name = Release;
@@ -1106,6 +1115,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-global-props/ios/ReactNativeGlobalProps/**",
 				);
 			};
 			name = Debug;
@@ -1128,6 +1138,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-global-props/ios/ReactNativeGlobalProps/**",
 				);
 			};
 			name = Release;
@@ -1159,11 +1170,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-global-props/ios/ReactNativeGlobalProps/**",
 				);
 			};
 			name = Debug;
@@ -1195,11 +1208,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-global-props/ios/ReactNativeGlobalProps/**",
 				);
 			};
 			name = Release;
@@ -1226,6 +1241,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1250,6 +1266,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);

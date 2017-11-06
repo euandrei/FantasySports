@@ -41,7 +41,9 @@ export default class ListTemplate extends React.Component {
 					
 					{this.props.items.map((item,i)=>{
 						return (
-							<View style={{
+							<View 
+								key={i}
+								style={{
 									marginBottom: 11
 								}}
 							>
@@ -54,13 +56,13 @@ export default class ListTemplate extends React.Component {
 
 									// disabled
 
-									// image={{uri: 'http://via.placeholder.com/30x30'}}
+									image={{uri: 'http://via.placeholder.com/30x30'}}
 
 									leftText={item.left}
-									// leftTextBright
+									leftTextBright
 
-									rightText={item.right}
-									// rightSmallText={"SMALL"}
+									// rightText={item.right}
+									rightSmallText={"SMALL"}
 									// rightSmallText2={"SMALL2"}
 
 									// gradient // used on non button like in match header

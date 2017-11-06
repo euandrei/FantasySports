@@ -30,6 +30,7 @@ export default class GridImage extends React.Component {
 					  		{<Image style={{width: newWidth}} source={this.props.image ? this.props.image : require('../../../assets/players/plus.png')} resizeMode='contain' />}
 						</View>
 					)
+			default: return (<View/>)
 			
 		}
 	}

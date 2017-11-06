@@ -35,5 +35,6 @@ export const colors = {
   "blueyGreyBg": 'rgba(155, 170, 183, 0.3)',
   "marineBg": 'rgba(6, 44, 75, 0.62)',
   "marine50": 'rgba(6, 44, 75, 0.5)',
+  "metallicBlue50": 'rgba(81, 107, 129, 0.5)',
   
 };

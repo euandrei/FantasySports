@@ -15,6 +15,7 @@ import { matchTemplateStyle } from "./matchTemplateStyle.js"
 import { teamTemplateStyle } from "./teamTemplateStyle.js"
 import { selectionTemplateStyle } from "./selectionTemplateStyle.js"
 import { listItemStyle } from "./listItemStyle.js"
+import { carouselStyle } from "./carouselStyle.js"
 
 export {
 	colors,
@@ -29,7 +30,8 @@ export {
 	matchTemplateStyle,
 	teamTemplateStyle,
 	selectionTemplateStyle,
-	listItemStyle
+	listItemStyle,
+	carouselStyle,
 }
 
 
