@@ -39,7 +39,7 @@ export default class GridSection extends React.Component {
 				{ this.props.title && this._renderTitle() }
 
 				{this.props.empty ? 
-					<View style={gridSectionStyle.sectoinEmpty}>
+					<View style={gridSectionStyle.sectionEmpty}>
 						{this.props.children}
 					</View>
 				:

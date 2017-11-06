@@ -23,7 +23,7 @@ import { colors, teamTemplateStyle,storeTemplateStyle } from "../../Pages/styles
 
 
 
-export default class StoreTemplate extends React.Component {
+export default class DumyTemplate extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
@@ -163,45 +163,51 @@ export default class StoreTemplate extends React.Component {
 					/>
 				</View>
 
-				<View style={storeTemplateStyle.carousel}>
-					<Carousel />
-				</View>
 
-				<View>
-					<SmallTabbar
-						activeTab={this.state.activeTab}
-						onChange={(id)=>{this.setState({activeTab: id})}}
-						filter={require('../../../assets/filter.png')}
-						onFilter={()=>{}}
-					>	
-						
-						<Tab 
-							tabTitle={"All"}
-						>
-							{this._renderAllTab()}
-						</Tab>
 
-						<Tab 
-							tabTitle={"Buffs"}
-						>
-							{this._renderBuffsTab()}
-						</Tab>	
+					<View style={storeTemplateStyle.carousel}>
+						<Carousel />
+					</View>
+		
+					<View>
+						<SmallTabbar
+							activeTab={this.state.activeTab}
+							onChange={(id)=>{this.setState({activeTab: id})}}
+							filter={require('../../../assets/filter.png')}
+							onFilter={()=>{}}
+						>	
+							
+							<Tab 
+								tabTitle={"All"}
+							>
+								{this._renderAllTab()}
+							</Tab>
 
-						<Tab 
-							tabTitle={"Nerfs"}
-						>
-							{this._renderNerfsTab()}
-						</Tab>	
+							<Tab 
+								tabTitle={"Buffs"}
+							>
+								{this._renderBuffsTab()}
+							</Tab>	
 
-						<Tab 
-							tabTitle={"Gold"}
-						>
-							{this._renderGoldTab()}
-						</Tab>	
-						
-										
-					</SmallTabbar>
-				</View>
+							<Tab 
+								tabTitle={"Nerfs"}
+							>
+								{this._renderNerfsTab()}
+							</Tab>	
+
+							<Tab 
+								tabTitle={"Gold"}
+							>
+								{this._renderGoldTab()}
+							</Tab>	
+							
+											
+						</SmallTabbar>
+					</View>
+
+					
+				
+
 				
 			</ScrollView>
 		)

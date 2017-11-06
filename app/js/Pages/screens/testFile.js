@@ -24,6 +24,8 @@ import Carousel from "../components/Carousel.js"
 import UserProfileHeader from "../components/UserProfileHeader.js"
 import NotificationListItem from "../components/NotificationListItem.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
+import TeamTemplate from "../templates/TeamTemplate.js"
+import DumyTemplate from "../templates/DumyTemplate.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 

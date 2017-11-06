@@ -18,7 +18,6 @@ export default class Header extends React.Component{
 		this._renderRightButton = this._renderRightButton.bind(this);
 	}
 	_renderTitle(){
-		console.log("th", this.props.logo)
 		if(this.props.logo){
 			return (
 				<Image style={{width: 10}} source={this.props.logo} resizeMode='contain' style={headerStyle.logo} />

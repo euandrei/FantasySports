@@ -29,6 +29,7 @@ export default class SmallTabbar extends React.Component{
 		this.setState({
 			tabTitle,
 		})
+		console.log("IT GOT HERE", children[0])
 
 	}
 
