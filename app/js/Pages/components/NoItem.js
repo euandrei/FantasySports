@@ -40,6 +40,7 @@ const styles = StyleSheet.create ({
 		backgroundColor: colors.marineTwo,
 		paddingTop: 30,
 		paddingBottom: 30,
+		borderRadius: 10
 	},
 	contentWrapper:{
 		width: '40%',

@@ -29,6 +29,8 @@ import DropdownComponent from "../components/DropdownComponent.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
 import TeamTemplate from "../templates/TeamTemplate.js"
 import GalleryTemplate from "../templates/GalleryTemplate.js"
+import ProfileTemplate from "../templates/ProfileTemplate.js"
+
 
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
@@ -47,9 +49,16 @@ export default class Test extends React.Component {
 	render() {
 
 		return (
-			<StoreTemplate />
+			<ProfileTemplate />
 		)
 	}
+
+	// render() {
+
+	// 	return (
+	// 		<StoreTemplate />
+	// 	)
+	// }
 
 	// render() {
 
@@ -415,11 +424,11 @@ export default class Test extends React.Component {
 	// 				titlePosition={"center"}
 	// 				empty
 	// 			>
-	// 				<NoItem 
-	// 					message={"No buffs availablle…"}
-	// 					buttonText={"SHOP"}
-	// 					onPress={()=>{}}
-	// 				/>
+					// <NoItem 
+					// 	message={"No buffs availablle…"}
+					// 	buttonText={"SHOP"}
+					// 	onPress={()=>{}}
+					// />
 	// 			</GridSection>
 
 
