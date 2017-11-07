@@ -5,7 +5,12 @@ import {
     Image,
     View,
     Platform,
+    ScrollView,
+    Dimensions,
+    TouchableOpacity
 } from 'react-native';
+
+import LinearGradient from 'react-native-linear-gradient';
 
 import AppStore from './Store/AppStore.js';
 import {setCustomText,setCustomTextInput} from 'react-native-global-props';
@@ -35,8 +40,6 @@ import {
 // import Login from "./Pages/Login/Login";
 
 import Test from "./Pages/screens/testFile";
-import MatchTemplate from "./Pages/templates/MatchTemplate";
-import TeamTemplate from "./Pages/templates/TeamTemplate";
 
 // Opponent versus message screens
 import OnBoard1_1 from "./Pages/screens/OnBoarding/OnBoard1_1";
@@ -77,6 +80,25 @@ import OnBoard2_3 from "./Pages/screens/OnBoarding/OnBoard2_3";
 import OnBoard4_7 from "./Pages/screens/OnBoarding/OnBoard4_7";
 
 
+
+// DEMO OF TEMPLATES
+import ListItem from "./Pages/components/ListItem.js"
+import NotificationListItem from "./Pages/components/NotificationListItem.js"
+import DropdownComponent from "./Pages/components/DropdownComponent.js"
+import Slider from "./Pages/components/Slider.js"
+
+import ListTemplate from "./Pages/templates/ListTemplate.js"
+import StoreTemplate from "./Pages/templates/StoreTemplate.js"
+import ProfileTemplate from "./Pages/templates/ProfileTemplate.js"
+import TeamTemplate from "./Pages/templates/TeamTemplate.js"
+import MatchTemplate from "./Pages/templates/MatchTemplate"
+import SelectionTemplate from "./Pages/templates/SelectionTemplate"
+import GalleryTemplate from "./Pages/templates/GalleryTemplate"
+import AccountTemplate from "./Pages/templates/AccountTemplate"
+
+import { colors } from "./Pages/styles";
+
+
 export default class App extends React.Component {
 	
 	render() {
@@ -86,7 +108,7 @@ export default class App extends React.Component {
 				AppStore={AppStore} 
 				hideNavBar={true}>
 				
-				<Scene key="test" initial component={Test}/>
+				<Scene key="test" component={Test}/>
 				<Scene key="OnBoard1_1" component={OnBoard1_1}/>
 				<Scene key="OnBoard2_1" component={OnBoard2_1}/>
 				<Scene key="OnBoard3_1" component={OnBoard3_1}/>
@@ -124,7 +146,19 @@ export default class App extends React.Component {
 
 				<Scene key="OnBoard4_7" component={OnBoard4_7}/>
 
+				{/* DEMO OF TEMPLATES*/}
 
+				<Scene key="template1" initial component={Template1}/>
+				<Scene key="template2" component={Template2}/>
+				<Scene key="template3" component={Template3}/>
+				<Scene key="template4" component={Template4}/>
+				<Scene key="template5" component={Template5}/>
+				<Scene key="template6" component={Template6}/>
+				<Scene key="template7" component={Template7}/>
+				<Scene key="template8" component={Template8}/>
+				<Scene key="template9" component={Template9}/>
+				<Scene key="template10" component={Template10}/>
+				<Scene key="template11" component={Template11}/>
 
 		    </Scene>
 		);
@@ -139,3 +173,446 @@ const styles = StyleSheet.create({
 	
 	
 });
+
+class Template1 extends React.Component {
+	render() {
+		return (
+			<View>
+				<TouchableOpacity
+					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					onPress={()=>{Actions.template2()}}
+				></TouchableOpacity>
+				<ListTemplate 
+					items={
+						[
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'},
+							{left: 'FREE PACK', right: '4h 38mins...'}
+						]
+					}
+				/>
+			</View>
+		)
+	}
+}
+
+class Template2 extends React.Component {
+	render() {
+
+		let height = Dimensions.get('window').height;
+
+		return (
+			<ScrollView style={{backgroundColor: colors.marine}}>
+
+				<TouchableOpacity
+					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					onPress={()=>{Actions.template3()}}
+				></TouchableOpacity>
+				<LinearGradient colors={[colors.marine, colors.blueyGreyBg]} style={{flex: 1, padding: 10, minHeight: height}}>
+					<View style={{paddingLeft: 17, paddingRight: 17}}>
+						<ListItem
+							// listItemNumber={i + 1}
+
+							// backgroundColor={'black'}
+							// border={true}
+
+							// disabled
+
+							image={{uri: 'http://via.placeholder.com/30x30'}}
+
+							leftText={"TEXT"}
+							leftTextBright
+
+							// rightText={item.right}
+							rightSmallText={"SMALL"}
+							// rightSmallText2={"SMALL2"}
+
+							// gradient // used on non button like in match header
+
+							onPress={()=>{}}
+						/>
+
+						<View style={{height: 10}}></View>
+
+						<ListItem
+							// listItemNumber={i + 1}
+
+							// backgroundColor={'black'}
+							// border={true}
+
+							disabled
+
+							image={{uri: 'http://via.placeholder.com/30x30'}}
+
+							leftText={"TEXT"}
+							leftTextBright
+
+							// rightText={item.right}
+							rightSmallText={"SMALL"}
+							// rightSmallText2={"SMALL2"}
+
+							// gradient // used on non button like in match header
+
+							onPress={()=>{}}
+						/>
+
+						<View style={{height: 10}}></View>
+
+						<ListItem
+							// listItemNumber={i + 1}
+
+							// backgroundColor={'black'}
+							// border={true}
+
+							// disabled
+
+							image={{uri: 'http://via.placeholder.com/30x30'}}
+
+							leftText={"TEXT"}
+							// leftTextBright
+
+							// rightText={item.right}
+							rightSmallText={"SMALL"}
+							// rightSmallText2={"SMALL2"}
+
+							// gradient // used on non button like in match header
+
+							onPress={()=>{}}
+						/>
+
+						<View style={{height: 10}}></View>
+
+						<ListItem
+							// listItemNumber={i + 1}
+
+							// backgroundColor={'black'}
+							// border={true}
+
+							// disabled
+
+							// image={{uri: 'http://via.placeholder.com/30x30'}}
+
+							leftText={"TEXT"}
+							// leftTextBright
+
+							rightText={"TEXT"}
+							// rightSmallText={"SMALL"}
+							// rightSmallText2={"SMALL2"}
+
+							// gradient // used on non button like in match header
+
+							onPress={()=>{}}
+						/>
+
+						<View style={{height: 10}}></View>
+
+						<ListItem
+							// listItemNumber={i + 1}
+
+							// backgroundColor={'black'}
+							// border={true}
+
+							// disabled
+
+							// image={{uri: 'http://via.placeholder.com/30x30'}}
+
+							leftText={"TEXT"}
+							// leftTextBright
+
+							// rightText={"TEXT"}
+							rightSmallText={"SMALL"}
+							rightSmallText2={"SMALL2"}
+
+							// gradient // used on non button like in match header
+
+							onPress={()=>{}}
+						/>
+
+						<View style={{height: 10}}></View>
+
+						<ListItem
+							// listItemNumber={i + 1}
+
+							// backgroundColor={'black'}
+							// border={true}
+
+							// disabled
+
+							image={{uri: 'http://via.placeholder.com/30x30'}}
+
+							leftText={"TEXT"}
+							// leftTextBright
+
+							// rightText={"TEXT"}
+							rightSmallText={"SMALL"}
+							rightSmallText2={"SMALL2"}
+
+							gradient // used on non button like in match header
+
+							onPress={()=>{}}
+						/>
+					</View>
+				</LinearGradient>
+			</ScrollView>
+		)
+	}
+}
+
+class Template3 extends React.Component {
+	render() {
+		return (
+			<View>
+				<TouchableOpacity
+					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					onPress={()=>{Actions.template4()}}
+				></TouchableOpacity>
+			<StoreTemplate />
+			</View>
+		)
+	}
+}
+
+class Template4 extends React.Component {
+	render() {
+		return (
+			<View>
+				<TouchableOpacity
+					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					onPress={()=>{Actions.template5()}}
+				></TouchableOpacity>
+			<ProfileTemplate />
+			</View>
+		)
+	}
+}
+
+class Template5 extends React.Component {
+	render() {
+		return (
+			<View>
+				<TouchableOpacity
+					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					onPress={()=>{Actions.template6()}}
+				></TouchableOpacity>
+			<TeamTemplate />
+			</View>
+		)
+	}
+}
+
+class Template6 extends React.Component {
+	render() {
+		return (
+			<View>
+				<TouchableOpacity
+					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					onPress={()=>{Actions.template7()}}
+				></TouchableOpacity>
+			<MatchTemplate />
+			</View>
+		)
+	}
+}
+
+class Template7 extends React.Component {
+	render() {
+		let cards = [
+			{
+				name: "Main Player",
+				image: '',
+			},
+			{
+				name: "Player1",
+				image: '',
+				tutorial: "OnBoard2_4",
+			},
+			{
+				name: "Player2",
+				image: '',
+			},
+			{
+				name: "Player3",
+				image: '',
+			},
+			{
+				name: "Player4",
+				image: '',
+			},
+			{
+				name: "Player5",
+				image: '',
+			},
+			{
+				name: "Player6",
+				image: '',
+			},
+			{
+				name: "Player7",
+				image: '',
+			},
+			{
+				name: "Player8",
+				image: '',
+			},
+			{
+				name: "Player9",
+				image: '',
+			},
+			
+		]
+
+		return (
+			<View>
+				<TouchableOpacity
+					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					onPress={()=>{Actions.template8()}}
+				></TouchableOpacity>
+			<SelectionTemplate 
+				main
+				title={"select nerfs"}
+				// leftIcon={require('../../../../assets/back.png')}
+				type={'player'}
+				cards={cards}
+			/>
+			</View>
+		)
+	}
+}
+
+class Template8 extends React.Component {
+	render() {
+		return (
+			<View>
+				<TouchableOpacity
+					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					onPress={()=>{Actions.template9()}}
+				></TouchableOpacity>
+			<GalleryTemplate />
+			</View>
+		)
+	}
+}
+
+class Template9 extends React.Component {
+	render() {
+		return (
+			<View>
+				<TouchableOpacity
+					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					onPress={()=>{Actions.template10()}}
+				></TouchableOpacity>
+			<AccountTemplate />
+			</View>
+		)
+	}
+}
+
+class Template10 extends React.Component {
+	render() {
+		return (
+			<ScrollView style={{backgroundColor: colors.marine}}>
+			<View>
+				<TouchableOpacity
+					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					onPress={()=>{Actions.template11()}}
+				></TouchableOpacity>
+
+				<NotificationListItem 
+					specialOffer
+				/>
+
+				<NotificationListItem 
+					title1={'Text 1 start'}
+					text1={'finishing ...'}
+				/>
+
+				<NotificationListItem 
+					title1={'Text 1 start'}
+					text1={'finishing ...'}
+
+					title2={'Text 2 start'}
+					text2={'finishing ...'}
+
+					buttons
+				/>
+
+				<NotificationListItem 
+					title1={'Text 1 start'}
+					text1={'finishing ...'}
+
+					title2={'Text 2 start'}
+					text2={'finishing ...'}
+
+					team 
+				/>
+
+				<NotificationListItem 
+					title1={'Text 1 start'}
+					text1={'finishing ...'}
+
+					title2={'Text 2 start'}
+					text2={'finishing ...'}
+
+					arrowed
+				/>
+			</View>
+			</ScrollView>
+		)
+	}
+}
+
+class Template11 extends React.Component {
+	render() {
+		return (
+			<ScrollView style={{backgroundColor: colors.marine}}>
+			<View>
+				<TouchableOpacity
+					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					// onPress={()=>{Actions.template10()}}
+				></TouchableOpacity>
+
+				<View style={{marginTop: 20, paddingRight: 15, paddingLeft: 15}}>
+					<Slider 
+						topTitle={"Top Title"}
+						bottomTitle={"Bottom Title"}
+
+						minLabel={"Something small"}
+						maxLabel={"Big"}
+
+
+						minimumValue={0}
+						maximumValue={1}
+						value={0.5}
+					/>
+				</View>
+				
+				<View style={{marginTop: 20, paddingRight: 15, paddingLeft: 15}}>
+					<View style={{paddingLeft: 39, paddingRight: 39}}>
+					
+						<DropdownComponent
+							data={[{
+							      value: 'Banana',
+							    }, {
+							      value: 'Mango',
+							    }, {
+							      value: 'Pear',
+							    }]}
+							title={'TITLE'}
+						 />
+					 </View>
+				 </View>
+			</View>
+			</ScrollView>
+		)
+	}
+}
+
+

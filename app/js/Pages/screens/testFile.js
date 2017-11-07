@@ -118,20 +118,20 @@ export default class Test extends React.Component {
 	// 				arrowed
 	// 			/>
 
-	// 			<View style={{marginTop: 20, paddingRight: 15, paddingLeft: 15}}>
-	// 				<Slider 
-	// 					topTitle={"Top Title"}
-	// 					bottomTitle={"Bottom Title"}
+			// 	<View style={{marginTop: 20, paddingRight: 15, paddingLeft: 15}}>
+			// 		<Slider 
+			// 			topTitle={"Top Title"}
+			// 			bottomTitle={"Bottom Title"}
 
-	// 					minLabel={"Something small"}
-	// 					maxLabel={"Big"}
+			// 			minLabel={"Something small"}
+			// 			maxLabel={"Big"}
 
 
-	// 					minimumValue={0}
-	// 					maximumValue={1}
-				// 		value={0.5}
-				// 	/>
-				// </View>
+			// 			minimumValue={0}
+			// 			maximumValue={1}
+			// 			value={0.5}
+			// 		/>
+			// 	</View>
 				
 			// <DropdownComponent
 			// 	data={[{

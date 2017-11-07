@@ -29,11 +29,11 @@ export default class ListTemplate extends React.Component {
 
 				<View style={selectionTemplateStyle.header}>
 					<Header 
-						title={this.props.title}
-						leftIcon={this.props.leftIcon || null}
+						title={"List"}
+						leftIcon={require('../../../assets/back.png')}
 						onBack={()=>{}}
-						button={this.props.button || null}
-						onPress={()=>{}}
+						// button={this.props.button || null}
+						// onPress={()=>{}}
 					/>
 				</View>
 

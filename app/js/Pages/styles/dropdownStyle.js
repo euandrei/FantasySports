@@ -8,7 +8,7 @@ export const dropdownStyle = StyleSheet.create({
 		backgroundColor: colors.marine
 	},
 	title:{
-		color: colors.white,
+		color: colors.bluishGrey,
 		fontWeight: 'bold',
 		fontSize: 16,
 	}
