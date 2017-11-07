@@ -34,7 +34,7 @@ export default class TeamTemplate extends React.Component {
 						button={this.props.button || null}
 						onPress={()=>{this.props.onPress()}}
 					/>
-					{this.props.tutorial && this.props.overSave && <View style={{height:30,width:30,position:'absolute',top:5,right:30,borderRadius:20,backgroundColor:'rgba(255,244,33,.5)'}}/>}
+					{this.props.tutorial && this.props.overSave && <Image source={require('../../../assets/click-indicator.png')} style={{height:55,width:55,position:'absolute',top: -5, right: 30 ,}}/>}
 				</View>
 				<View style={teamTemplateStyle.grid}>
 					<GridSection

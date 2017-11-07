@@ -26,6 +26,7 @@ import NotificationListItem from "../components/NotificationListItem.js"
 import Gallery from "../components/Gallery.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
 import TeamTemplate from "../templates/TeamTemplate.js"
+import GalleryTemplate from "../templates/GalleryTemplate.js"
 
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
@@ -46,7 +47,7 @@ export default class Test extends React.Component {
 		
 
 		return(
-			<Gallery />
+			<GalleryTemplate />
 		)
 			
 		

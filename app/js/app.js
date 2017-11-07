@@ -86,7 +86,7 @@ export default class App extends React.Component {
 				AppStore={AppStore} 
 				hideNavBar={true}>
 				
-				<Scene key="test" initial component={Test}/>
+				<Scene key="test"  component={Test}/>
 				<Scene key="OnBoard1_1" component={OnBoard1_1}/>
 				<Scene key="OnBoard2_1" component={OnBoard2_1}/>
 				<Scene key="OnBoard3_1" component={OnBoard3_1}/>
@@ -111,7 +111,7 @@ export default class App extends React.Component {
 
 				<Scene key="OnBoard1_2" component={OnBoard1_2}/>
 				<Scene key="OnBoard2_2" component={OnBoard2_2}/>
-				<Scene key="OnBoard2_4" component={OnBoard2_4}/>
+				<Scene key="OnBoard2_4" initial component={OnBoard2_4}/>
 				<Scene key="OnBoard3_2" component={OnBoard3_2}/>
 				<Scene key="OnBoard3_4" component={OnBoard3_4}/>
 				<Scene key="OnBoard4_2" component={OnBoard4_2}/>
