@@ -2,7 +2,8 @@ import React from 'react';
 import {
     Text,
     View,
-    TouchableOpacity
+    TouchableOpacity,
+    Image
 } from 'react-native';
 
 import GridCell from "./GridCell.js"
@@ -34,7 +35,7 @@ export default class GridCellWrapper extends React.Component {
 	render(){
 		return(
 			<View style={[gridStyle.wrapperContainer ]}>
-				{this.props.tutorial && (this.props.overPlayer || this.props.overBuff || this.props.overNerf) && <View style={{height:30,width:30,position:'absolute',top:-10,right:0,borderRadius:20,backgroundColor:'rgba(255,244,33,.5)'}}/>}
+				{this.props.tutorial && (this.props.overPlayer || this.props.overBuff || this.props.overNerf) && <Image source={require('../../../assets/click-indicator.png')} style={{height:55,width:55,position:'absolute',top: -10, right: -15 ,}}/>}
 				<TouchableOpacity style={[gridStyle.topPart, this.state.active ? gridStyle.gridActive : '']} onPress={this.handleCellClick}>
 					<GridCell
 						bgColor={this.props.bgColor ? this.props.bgColor : null}
