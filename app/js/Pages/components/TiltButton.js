@@ -16,7 +16,9 @@ export default class TiltButton extends React.Component {
 		return(
 			<View style={[tiltButton.tiltButtonWrapper]}>
 				<LinearGradient colors={[colors.transparent, this.props.backgroundColor]} style={[gridStyle.linearGradient,tiltButton.gradient]}>
-					<TouchableOpacity onPress={()=>{this.props.onPress()}} style={[tiltButton.button,{borderColor: this.props.borderColor}]}>
+					<TouchableOpacity 
+						onPress={()=>{this.props.onPress()}} 
+						style={[tiltButton.button, this.props.style,{borderColor: this.props.borderColor, paddingTop: 7, paddingBottom: 7}]}>
 						<Text style={tiltButton.buttonText}>{this.props.text}</Text>
 					</TouchableOpacity>
 				</LinearGradient>

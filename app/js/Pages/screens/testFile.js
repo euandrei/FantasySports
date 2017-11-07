@@ -52,6 +52,45 @@ export default class Test extends React.Component {
 
 			<ScrollView style={styles.container}>
 
+				<NotificationListItem 
+					specialOffer
+				/>
+
+				<NotificationListItem 
+					title1={'Text 1 start'}
+					text1={'finishing ...'}
+				/>
+
+				<NotificationListItem 
+					title1={'Text 1 start'}
+					text1={'finishing ...'}
+
+					title2={'Text 2 start'}
+					text2={'finishing ...'}
+
+					buttons
+				/>
+
+				<NotificationListItem 
+					title1={'Text 1 start'}
+					text1={'finishing ...'}
+
+					title2={'Text 2 start'}
+					text2={'finishing ...'}
+
+					team 
+				/>
+
+				<NotificationListItem 
+					title1={'Text 1 start'}
+					text1={'finishing ...'}
+
+					title2={'Text 2 start'}
+					text2={'finishing ...'}
+
+					arrowed
+				/>
+
 				<View style={{marginTop: 20, paddingRight: 15, paddingLeft: 15}}>
 					<Slider 
 						topTitle={"Top Title"}
@@ -187,23 +226,7 @@ export default class Test extends React.Component {
 				</GridSection>
 
 
-				<NotificationListItem 
-					title1={'Text 1 start'}
-					text1={'finishing ...'}
-
-					title2={'Text 2 start'}
-					text2={'finishing ...'}
-				/>
-
-				<NotificationListItem 
-					title1={'Text 1 start'}
-					text1={'finishing ...'}
-
-					title2={'Text 2 start'}
-					text2={'finishing ...'}
-
-					team 
-				/>
+				
 
 
 				

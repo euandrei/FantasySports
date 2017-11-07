@@ -10,8 +10,13 @@ export const notificationListItemStyle = StyleSheet.create({
     	borderBottomWidth: 1,
     	paddingTop: 29,
     	paddingBottom: 24,
-    	paddingLeft: 15,
-    	paddingRight: 15
+    	marginLeft: 15,
+    	marginRight: 15
+	},
+	containerMinimal:{
+		flex: 1,
+    	marginLeft: 15,
+    	marginRight: 15
 	},
 	notificationHeader:{
 		flex: 1,
@@ -39,6 +44,57 @@ export const notificationListItemStyle = StyleSheet.create({
 	headerTitlePost:{
 		color: colors.white
 	},
+
+	// special offer
+	specialOfferHeaderWrapper:{
+
+	},
+	specialOfferHeaderTitle:{
+		color: colors.neonBlue, 
+		fontSize: 14, 
+		marginBottom: 3
+	},
+	specialOfferHeaderLine:{
+		height: 2, 
+		flex: 1, 
+		backgroundColor: colors.neonBlue
+	},
+	specialOfferContainer:{
+		flex: 1, 
+		alignItems: 'center', 
+		paddingBottom: 30
+	},
+	cellComponentsWrapper:{
+		flex: 1, 
+		alignItems: 'center', 
+		paddingBottom: 30
+	},
+	cellWrapper:{
+		flex: 1,
+		width: 108,
+		height: 140,
+	},
+	actualPriceLabel:{
+		fontSize: 18,
+        lineHeight: 12,
+        fontWeight: 'bold',
+        color: colors.bluishGrey,
+        paddingTop: 17,
+        textDecorationLine: 'line-through'
+	},
+	discountPriceLabel:{
+		fontSize: 20,
+		lineHeight: 14,
+		fontWeight: 'bold',
+		color: colors.white,
+		paddingTop: 15,
+	},
+	buttonsContainer:{
+		flex: 1, 
+		flexDirection: 'row', 
+		width: 220
+	},
+
 
 
 	// arrow notification container
