@@ -21,6 +21,7 @@ import { notificationListItemStyle } from "./notificationListItemStyle.js"
 import { storeTemplateStyle } from "./storeTemplateStyle.js"
 import { galleryStyle } from "./galleryStyle.js"
 import { galleryTemplateStyle } from "./galleryTemplateStyle.js"
+import { dropdownStyle } from "./dropdownStyle.js"
 
 export {
 	colors,
@@ -42,6 +43,7 @@ export {
 	storeTemplateStyle,
 	galleryStyle,
 	galleryTemplateStyle,
+	dropdownStyle,
 }
 
 
