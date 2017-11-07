@@ -24,6 +24,7 @@ import Carousel from "../components/Carousel.js"
 import UserProfileHeader from "../components/UserProfileHeader.js"
 import NotificationListItem from "../components/NotificationListItem.js"
 import Gallery from "../components/Gallery.js"
+import TextField from "../components/TextField.js"
 import DropdownComponent from "../components/DropdownComponent.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
 import TeamTemplate from "../templates/TeamTemplate.js"
@@ -75,6 +76,17 @@ export default class Test extends React.Component {
 				    }]}
 				title={'TITLE'}
 			 />
+
+			<TextField 
+				title={"Name"}
+				placeholder={"Your name"}
+
+				type={"account"} // may be account or password or default
+				//If type='account' and account is missing it will assume there is no account and wont show the change button
+
+				account={'myawesomeaccount'}
+				onAccountPress={()=>{}}
+			/>
 		
 
 			{/*
