@@ -30,6 +30,7 @@ import DropdownComponent from "../components/DropdownComponent.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
 import TeamTemplate from "../templates/TeamTemplate.js"
 import GalleryTemplate from "../templates/GalleryTemplate.js"
+import AccountTemplate from "../templates/AccountTemplate.js"
 
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
@@ -47,6 +48,12 @@ export default class Test extends React.Component {
 
 	render(){
 		
+		return(
+			<AccountTemplate
+				onLogin={()=>{}}
+				onSingup={()=>{}}
+			/>
+		)
 
 		return(
 

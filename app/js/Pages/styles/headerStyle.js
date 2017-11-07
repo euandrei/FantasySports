@@ -5,7 +5,7 @@ import { colors } from "./colors.js"
 export const headerStyle = StyleSheet.create({
 	container:{
 		alignSelf: 'stretch',
-		height: 50,
+		height: 54,
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'center',

@@ -27,6 +27,7 @@ import { galleryTemplateStyle } from "./galleryTemplateStyle.js"
 import { dropdownStyle } from "./dropdownStyle.js"
 import { textFieldStyle } from "./textFieldStyle.js"
 import { menuComponentStyle } from "./menuComponentStyle.js"
+import { accountTemplateStyle } from "./accountTemplateStyle.js"
 
 
 export {
@@ -55,6 +56,7 @@ export {
 	dropdownStyle,
 	textFieldStyle,
 	menuComponentStyle,
+	accountTemplateStyle,
 }
 
 
