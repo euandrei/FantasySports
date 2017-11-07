@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import { dropdownStyle, colors } from "../styles";
-import { Dropdown } from 'react-native-material-dropdown';
+import { Dropdown } from './react-native-dropdown';
 
 
 export default class DropdownComponent extends React.Component {
