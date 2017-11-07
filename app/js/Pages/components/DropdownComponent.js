@@ -22,7 +22,6 @@ export default class DropdownComponent extends React.Component {
 
     render(){
         let {data, title} = this.props;
-        console.log(data,title)
         return(
             <View style={dropdownStyle.container}>
                 {title && <Text style={[dropdownStyle.title,{zIndex:2,}]}>{title}</Text>}

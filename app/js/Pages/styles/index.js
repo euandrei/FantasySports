@@ -22,6 +22,7 @@ import { storeTemplateStyle } from "./storeTemplateStyle.js"
 import { galleryStyle } from "./galleryStyle.js"
 import { galleryTemplateStyle } from "./galleryTemplateStyle.js"
 import { dropdownStyle } from "./dropdownStyle.js"
+import { textFieldStyle } from "./dropdownStyle.js"
 
 export {
 	colors,
@@ -44,6 +45,7 @@ export {
 	galleryStyle,
 	galleryTemplateStyle,
 	dropdownStyle,
+	textFieldStyle,
 }
 
 
