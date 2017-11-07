@@ -56,7 +56,7 @@ export default class TextField extends React.Component{
 				                value={this.state.text}
 				                onFocus={()=>{this.setState({focus: true,})}}
 				                onBlur={()=>{this.setState({focus: false,})}}
-				                placeholder={this.props.type == 'password' ? "": "Some nice placeholder"}
+				                placeholder={this.props.type == 'password' ? "": this.props.placeholder}
 				                placeholderTextColor={colors.blueyGrey}
 				                editable={this.props.type != 'account'}
 				                secureTextEntry={this.props.type == 'password'}

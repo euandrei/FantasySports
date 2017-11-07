@@ -22,7 +22,6 @@ export default class GridCellWrapper extends React.Component {
 
 	handleCellClick(){
 		if(this.props.tutorial && (this.props.overPlayer || this.props.overBuff || this.props.overNerf)){
-			console.log("this.props.tutorial",this.props.tutorial)
 			Actions[this.props.tutorial]();
 		}
 		// TODO HANDLE IF THE CARD IS EMPTY

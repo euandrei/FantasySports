@@ -256,7 +256,6 @@ class Tabbar extends React.Component {
 	componentDidMount(){
 		if(!this.props.children) return;
 		let children = this.props.children;
-		console.log("children",children);
 
 		let tabTitle = [];
 

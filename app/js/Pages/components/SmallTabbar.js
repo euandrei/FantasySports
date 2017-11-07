@@ -19,7 +19,6 @@ export default class SmallTabbar extends React.Component{
 	componentDidMount(){
 		if(!this.props.children) return;
 		let children = this.props.children;
-		console.log("children",children);
 
 		let tabTitle = [];
 
@@ -29,7 +28,6 @@ export default class SmallTabbar extends React.Component{
 		this.setState({
 			tabTitle,
 		})
-		console.log("IT GOT HERE", children[0])
 
 	}
 

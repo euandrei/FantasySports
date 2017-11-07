@@ -25,13 +25,15 @@ import UserProfileHeader from "../components/UserProfileHeader.js"
 import NotificationListItem from "../components/NotificationListItem.js"
 import Gallery from "../components/Gallery.js"
 import TextField from "../components/TextField.js"
+import MenuComponent from "../components/MenuComponent.js"
 import DropdownComponent from "../components/DropdownComponent.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
 import TeamTemplate from "../templates/TeamTemplate.js"
 import GalleryTemplate from "../templates/GalleryTemplate.js"
+
 import ProfileTemplate from "../templates/ProfileTemplate.js"
 
-
+import AccountTemplate from "../templates/AccountTemplate.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
@@ -63,6 +65,12 @@ export default class Test extends React.Component {
 	// render() {
 
 		
+		// return(
+		// 	<AccountTemplate
+		// 		onLogin={()=>{}}
+		// 		onSingup={()=>{}}
+		// 	/>
+		// )
 
 	// 	return(
 	// 		<ScrollView style={styles.container}>
@@ -118,8 +126,45 @@ export default class Test extends React.Component {
 	// 					minLabel={"Something small"}
 	// 					maxLabel={"Big"}
 
+
 	// 					minimumValue={0}
 	// 					maximumValue={1}
+				// 		value={0.5}
+				// 	/>
+				// </View>
+				
+			// <DropdownComponent
+			// 	data={[{
+			// 	      value: 'Banana',
+			// 	    }, {
+			// 	      value: 'Mango',
+			// 	    }, {
+			// 	      value: 'Pear',
+			// 	    }]}
+			// 	title={'TITLE'}
+			//  />
+
+			// <TextField 
+			// 	title={"Name"}
+			// 	placeholder={"Your name"}
+
+			// 	type={"account"} // may be account or password or default
+			// 	//If type='account' and account is missing it will assume there is no account and wont show the change button
+
+			// 	account={'myawesomeaccount'}
+			// 	onAccountPress={()=>{}}
+			// />
+
+			// <MenuComponent 
+			// 	title={'Header'}
+			// 	menus={[
+			// 		{title: 'Lorem', onPress: "location"},
+			// 		{title: 'Lorem', onPress: "location"},
+			// 		{title: 'Lorem', onPress: "location"},
+			// 	]}
+
+			// />
+		
 
 	// 					value={0.5}
 	// 				/>
