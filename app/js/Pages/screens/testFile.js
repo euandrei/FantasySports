@@ -23,9 +23,10 @@ import Slider from "../components/Slider.js"
 import Carousel from "../components/Carousel.js"
 import UserProfileHeader from "../components/UserProfileHeader.js"
 import NotificationListItem from "../components/NotificationListItem.js"
+import Gallery from "../components/Gallery.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
 import TeamTemplate from "../templates/TeamTemplate.js"
-import DumyTemplate from "../templates/DumyTemplate.js"
+
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
@@ -45,7 +46,7 @@ export default class Test extends React.Component {
 		
 
 		return(
-			<StoreTemplate />
+			<Gallery />
 		)
 			
 		

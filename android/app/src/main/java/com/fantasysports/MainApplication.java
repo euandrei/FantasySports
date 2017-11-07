@@ -13,6 +13,8 @@ import com.facebook.soloader.SoLoader;
 import java.util.Arrays;
 import java.util.List;
 
+import com.RNFetchBlob.RNFetchBlobPackage;    
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
@@ -26,7 +28,8 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new SvgPackage(),
-            new LinearGradientPackage()
+            new LinearGradientPackage(),
+            new RNFetchBlobPackage()
       );
     }
 
