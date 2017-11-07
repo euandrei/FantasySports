@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import { dropdownStyle, colors } from "../styles";
-import { Dropdown } from 'react-native-material-dropdown';
+import { Dropdown } from './react-native-dropdown';
 
 
 export default class DropdownComponent extends React.Component {
@@ -22,7 +22,6 @@ export default class DropdownComponent extends React.Component {
 
     render(){
         let {data, title} = this.props;
-        console.log(data,title)
         return(
             <View style={dropdownStyle.container}>
                 {title && <Text style={[dropdownStyle.title,{zIndex:2,}]}>{title}</Text>}

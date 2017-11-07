@@ -25,6 +25,7 @@ import { sliderStyle } from "./sliderStyle.js"
 
 import { galleryTemplateStyle } from "./galleryTemplateStyle.js"
 import { dropdownStyle } from "./dropdownStyle.js"
+import { textFieldStyle } from "./textFieldStyle.js"
 
 
 export {
@@ -51,6 +52,7 @@ export {
 
 	galleryTemplateStyle,
 	dropdownStyle,
+	textFieldStyle,
 }
 
 
