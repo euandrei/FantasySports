@@ -20,9 +20,13 @@ import { userProfileHeaderStyle } from "./userProfileHeaderStyle.js"
 import { notificationListItemStyle } from "./notificationListItemStyle.js"
 import { storeTemplateStyle } from "./storeTemplateStyle.js"
 import { galleryStyle } from "./galleryStyle.js"
+
+import { sliderStyle } from "./sliderStyle.js"
+
 import { galleryTemplateStyle } from "./galleryTemplateStyle.js"
 import { dropdownStyle } from "./dropdownStyle.js"
 import { textFieldStyle } from "./dropdownStyle.js"
+
 
 export {
 	colors,
@@ -43,6 +47,9 @@ export {
 	notificationListItemStyle,
 	storeTemplateStyle,
 	galleryStyle,
+
+	sliderStyle,
+
 	galleryTemplateStyle,
 	dropdownStyle,
 	textFieldStyle,
