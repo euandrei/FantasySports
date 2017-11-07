@@ -15,7 +15,6 @@ export default class Tab extends React.Component{
 	}
 
 	render(){
-		console.log("ths", this.props.children)
 		return (
 			<View style={smallTabStyle.tabContainer}>
 				{this.props.children}

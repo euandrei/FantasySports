@@ -57,7 +57,7 @@ export default class Gallery extends React.Component {
 
     onPhotosFetchError(err) {
         // Handle error here
-        console.log(err);
+
     }
 
     fetchPhotos(count = PHOTOS_COUNT_BY_FETCH, after) {
@@ -72,7 +72,6 @@ export default class Gallery extends React.Component {
     }
     
     onEndReached() {
-        console.log("GET MORE PICTURES!!!")
         this.fetchPhotos(PHOTOS_COUNT_BY_FETCH, this.lastPhotoFetched);
     }
 	render(){	

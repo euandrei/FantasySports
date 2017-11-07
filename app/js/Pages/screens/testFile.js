@@ -25,6 +25,7 @@ import UserProfileHeader from "../components/UserProfileHeader.js"
 import NotificationListItem from "../components/NotificationListItem.js"
 import Gallery from "../components/Gallery.js"
 import TextField from "../components/TextField.js"
+import MenuComponent from "../components/MenuComponent.js"
 import DropdownComponent from "../components/DropdownComponent.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
 import TeamTemplate from "../templates/TeamTemplate.js"
@@ -86,6 +87,16 @@ export default class Test extends React.Component {
 
 				account={'myawesomeaccount'}
 				onAccountPress={()=>{}}
+			/>
+
+			<MenuComponent 
+				title={'Header'}
+				menus={[
+					{title: 'Lorem', onPress: "location"},
+					{title: 'Lorem', onPress: "location"},
+					{title: 'Lorem', onPress: "location"},
+				]}
+
 			/>
 		
 
