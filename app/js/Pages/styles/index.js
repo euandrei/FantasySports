@@ -20,6 +20,7 @@ import { userProfileHeaderStyle } from "./userProfileHeaderStyle.js"
 import { notificationListItemStyle } from "./notificationListItemStyle.js"
 import { storeTemplateStyle } from "./storeTemplateStyle.js"
 import { galleryStyle } from "./galleryStyle.js"
+import { sliderStyle } from "./sliderStyle.js"
 
 export {
 	colors,
@@ -40,6 +41,7 @@ export {
 	notificationListItemStyle,
 	storeTemplateStyle,
 	galleryStyle,
+	sliderStyle
 }
 
 
