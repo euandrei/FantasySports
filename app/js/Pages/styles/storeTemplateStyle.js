@@ -8,11 +8,13 @@ export const storeTemplateStyle = StyleSheet.create({
 		backgroundColor: colors.marine,
 	},
 	header:{
-		marginBottom: 30,
+		// marginBottom: 30,
+		paddingLeft: 20,
+		paddingRight: 20
 	},
 	carousel:{
-		marginTop: 20,
-		marginBottom: 20,
+		// marginTop: 20,
+		marginBottom: 30,
 	},
 	
 })

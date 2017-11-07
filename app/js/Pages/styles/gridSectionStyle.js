@@ -47,11 +47,11 @@ export const gridSectionStyle = StyleSheet.create({
 		marginRight: -8,
 	},
 	sectionCellWrapper:{
-		marginBottom: 10,
+		marginBottom: 10, // inline style too
 		flexDirection: 'row',
     	flexGrow: 0,
     	width: '33%',
-    	height: 140,
+    	height: 140, // inline style too
     	paddingLeft: 8,
     	paddingRight: 8,
 	},

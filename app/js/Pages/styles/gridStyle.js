@@ -70,6 +70,7 @@ export const gridStyle = StyleSheet.create({
 	underText:{
 		color: colors.white,
 		fontSize: 18,
+		fontWeight: 'bold'
 	},
 	gridActive:{
 		backgroundColor: colors.marine,

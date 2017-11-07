@@ -17,11 +17,8 @@ import SmallTabbar from "../../Pages/components/SmallTabbar";
 import Tab from "../../Pages/components/Tab";
 
 import Carousel from "../../Pages/components/Carousel";
-import TeamTemplate from "./TeamTemplate.js";
 
-import { colors, teamTemplateStyle,storeTemplateStyle } from "../../Pages/styles";
-
-
+import { colors, storeTemplateStyle } from "../../Pages/styles";
 
 export default class StoreTemplate extends React.Component {
 	constructor(props){
@@ -40,56 +37,46 @@ export default class StoreTemplate extends React.Component {
 			<GridSection
 				title={"Title"}
 				titlePosition={"center"}
-				lines
+				line
+
+				withUnderText
 			>
-				<GridCellWrapper
-					bgColor={colors.watermelonBg}
-					title={"RB NERF"}
-					image={this.props.nerf2}
-					type={"nerf"}
-				/>
-				<GridCellWrapper
-					bgColor={colors.watermelonBg}
-					title={"RB NERF"}
-					image={this.props.nerf2}
-					type={"nerf"}
-				/>
-				<GridCellWrapper
-					bgColor={colors.watermelonBg}
-					title={"RB NERF"}
-					image={this.props.nerf2}
-					type={"nerf"}
-				/>
+				{[1,1,1,1,1,1,1,1,1,1,1,1,1,1].map((value, i) => {
+					return (
+						<GridCellWrapper
+							key={i}
+							bgColor={colors.watermelonBg}
+							title={"Test"}
+							image={require('../../../assets/nerfs/bear_trap.png')}
+							type={"buff"}
+							underText={0.99}
+						/>
+					)
+				})}
 			</GridSection>
 		)
 	}
 	_renderBuffsTab(){
 		return (
-
 			<GridSection
 				title={"Title"}
 				titlePosition={"center"}
-				lines
+				line
+
+				withUnderText
 			>
-				<GridCellWrapper
-					bgColor={colors.watermelonBg}
-					title={"Test"}
-					image={require('../../../assets/nerfs/bear_trap.png')}
-					type={"buff"}
-				/>
-				
-				<GridCellWrapper
-					bgColor={colors.greenishTurquoiseBg}
-					title={"Test"}
-					image={require('../../../assets/nerfs/bear_trap.png')}
-					type={"buff"}
-				/>
-				<GridCellWrapper
-					bgColor={colors.greenishTurquoiseBg}
-					title={"Test"}
-					image={require('../../../assets/buffs/cannon.png')}
-					type={"buff"}
-				/>
+				{[1,1,1,1,1,1,1,1,1,1,1,1,1,1].map((value, i) => {
+					return (
+						<GridCellWrapper
+							key={i}
+							bgColor={colors.watermelonBg}
+							title={"Test"}
+							image={require('../../../assets/nerfs/bear_trap.png')}
+							type={"nerfs"}
+							underText={0.99}
+						/>
+					)
+				})}
 			</GridSection>
 		)
 	}
@@ -98,27 +85,22 @@ export default class StoreTemplate extends React.Component {
 			<GridSection
 				title={"Title"}
 				titlePosition={"center"}
-				lines
+				line
+
+				withUnderText
 			>
-				<GridCellWrapper
-					bgColor={colors.watermelonBg}
-					title={"Test"}
-					image={require('../../../assets/nerfs/bear_trap.png')}
-					type={"buff"}
-				/>
-				
-				<GridCellWrapper
-					bgColor={colors.greenishTurquoiseBg}
-					title={"Test"}
-					image={require('../../../assets/nerfs/bear_trap.png')}
-					type={"buff"}
-				/>
-				<GridCellWrapper
-					bgColor={colors.greenishTurquoiseBg}
-					title={"Test"}
-					image={require('../../../assets/buffs/cannon.png')}
-					type={"buff"}
-				/>
+				{[1,1,1,1,1,1,1,1,1,1,1,1,1,1].map((value, i) => {
+					return (
+						<GridCellWrapper
+							key={i}
+							bgColor={colors.watermelonBg}
+							title={"Test"}
+							image={require('../../../assets/nerfs/bear_trap.png')}
+							type={"buff"}
+							underText={0.99}
+						/>
+					)
+				})}
 			</GridSection>
 		)
 	}
@@ -127,39 +109,37 @@ export default class StoreTemplate extends React.Component {
 			<GridSection
 				title={"Title"}
 				titlePosition={"center"}
-				lines
+				line
+
+				withUnderText
 			>
-				<GridCellWrapper
-					bgColor={colors.watermelonBg}
-					title={"RB NERF"}
-					image={this.props.nerf2}
-					type={"nerf"}
-				/>
-				<GridCellWrapper
-					bgColor={colors.watermelonBg}
-					title={"RB NERF"}
-					image={this.props.nerf2}
-					type={"nerf"}
-				/>
-				<GridCellWrapper
-					bgColor={colors.watermelonBg}
-					title={"RB NERF"}
-					image={this.props.nerf2}
-					type={"nerf"}
-				/>
+				{[1,1,1,1,1,1,1,1,1,1,1,1,1,1].map((value, i) => {
+					return (
+						<GridCellWrapper
+							key={i}
+							bgColor={colors.watermelonBg}
+							title={"Test"}
+							image={require('../../../assets/nerfs/bear_trap.png')}
+							type={"nerfs"}
+							underText={0.99}
+						/>
+					)
+				})}
 			</GridSection>
 		)
 	}
 
 	render(){
 		let height = Dimensions.get('window').height;
+
 		return(
 			<ScrollView style={[storeTemplateStyle.container,{minHeight: height}]}>
 				<View style={storeTemplateStyle.header}>
 					<Header 
-						leftIcon={require('../../../assets/trophy.png')}
-						logo={require('../../../assets/logo.png')}
-						circle={"4"}
+						leftIcon={require('../../../assets/back.png')}
+						// logo={require('../../../assets/logo.png')}
+						title={"store"}
+						// circle={"4"}
 					/>
 				</View>
 
@@ -167,34 +147,34 @@ export default class StoreTemplate extends React.Component {
 					<Carousel />
 				</View>
 
-				<View>
+				<View style={{paddingLeft: 10, paddingRight: 10}}>
 					<SmallTabbar
 						activeTab={this.state.activeTab}
 						onChange={(id)=>{this.setState({activeTab: id})}}
-						filter={require('../../../assets/filter.png')}
-						onFilter={()=>{}}
+						// filter={require('../../../assets/filter.png')}
+						// onFilter={()=>{}}
 					>	
 						
 						<Tab 
-							tabTitle={"All"}
+							tabTitle={"ALL"}
 						>
 							{this._renderAllTab()}
 						</Tab>
 
 						<Tab 
-							tabTitle={"Buffs"}
+							tabTitle={"BUFFS"}
 						>
 							{this._renderBuffsTab()}
 						</Tab>	
 
 						<Tab 
-							tabTitle={"Nerfs"}
+							tabTitle={"NERFS"}
 						>
 							{this._renderNerfsTab()}
 						</Tab>	
 
 						<Tab 
-							tabTitle={"Gold"}
+							tabTitle={"GOLD"}
 						>
 							{this._renderGoldTab()}
 						</Tab>	
