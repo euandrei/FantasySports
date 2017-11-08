@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import SelectionTemplate from "../../templates/SelectionTemplate"
-
+import ProgressLoader from "../../components/ProgressLoader.js"
 export default class OnBoard3_3 extends React.Component {
 	constructor(props){
 		super(props);
@@ -86,7 +86,12 @@ export default class OnBoard3_3 extends React.Component {
 				<View style={{position:'absolute',top: 220, bottom: 0, right: 0, left: 0, zIndex: 4}}/>
 				<View style={{position:'absolute',top: 0, bottom: 0, right: '33%', left: 0, zIndex: 4}}/>
 				<View style={{position:'absolute',top: 0, paddingTop: 50 ,right: 0, left: 0, zIndex: 4}}/>
-
+				<View style={{position: 'absolute', bottom: 0, right: 0, left: 0}}>
+					<ProgressLoader
+						step={2}
+						text={"select a qb buff"}
+					/>
+				</View>
 			</View>
 		)
 	}

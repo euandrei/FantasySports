@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import SelectionTemplate from "../../templates/SelectionTemplate"
-
+import ProgressLoader from "../../components/ProgressLoader.js"
 export default class OnBoard2_3 extends React.Component {
 	constructor(props){
 		super(props);
@@ -24,7 +24,7 @@ export default class OnBoard2_3 extends React.Component {
 				image: '',
 			},
 			{
-				name: "Player1",
+				name: "A.RODGERS",
 				image: '',
 				tutorial: "OnBoard2_4",
 			},
@@ -74,7 +74,12 @@ export default class OnBoard2_3 extends React.Component {
 				<View style={{position:'absolute',top: 370, bottom: 0, right: 0, left: 0, zIndex: 4}}/>
 				<View style={{position:'absolute',top: 0, bottom: 0, right: 0, left: '33%', zIndex: 4}}/>
 				<View style={{position:'absolute',top: 0, paddingTop: 50 ,right: 0, left: 0, zIndex: 4}}/>
-
+				<View style={{position: 'absolute', bottom: 0, right: 0, left: 0}}>
+					<ProgressLoader
+						step={2}
+						text={"select A.rodgers"}
+					/>
+				</View>
 			</View>
 		)
 	}

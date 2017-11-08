@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import TeamTemplate from "../../templates/TeamTemplate"
-
+import ProgressLoader from "../../components/ProgressLoader.js"
 export default class OnBoard2_2 extends React.Component {
 	constructor(props){
 		super(props);
@@ -45,7 +45,12 @@ export default class OnBoard2_2 extends React.Component {
 				<View style={{position:'absolute',top: 500, bottom: 0, right: 0, left: 0, zIndex: 4}}/>
 				<View style={{position:'absolute',top: 0, bottom: 0, right: 0, left: '33%', zIndex: 4}}/>
 				<View style={{position:'absolute',top: 0, paddingTop: 300, right: 0, left: 0, zIndex: 4}}/>
-
+				<View style={{position: 'absolute', bottom: 0, right: 0, left: 0}}>
+					<ProgressLoader
+						step={1}
+						text={"tap on your qb's buff"}
+					/>
+				</View>
 			</View>
 		)
 	}

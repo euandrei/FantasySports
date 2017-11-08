@@ -13,7 +13,7 @@ export const teamTemplateStyle = StyleSheet.create({
 		marginBottom: 20,
 	},
 	grid:{
-		marginBottom: 30,
+		marginBottom: 20,
 	}
 
 })

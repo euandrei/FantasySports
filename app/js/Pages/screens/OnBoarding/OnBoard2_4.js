@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import TeamTemplate from "../../templates/TeamTemplate"
-
+import ProgressLoader from "../../components/ProgressLoader.js"
 export default class OnBoard2_2 extends React.Component {
 	constructor(props){
 		super(props);
@@ -43,6 +43,12 @@ export default class OnBoard2_2 extends React.Component {
 					overSave
 				/>
 				<View style={{position:'absolute',top: 50, bottom: 0, right: 0, left: 0, zIndex: 4}}/>
+				<View style={{position: 'absolute', bottom: 0, right: 0, left: 0}}>
+					<ProgressLoader
+						step={3}
+						text={"save your team"}
+					/>
+				</View>
 			</View>
 		)
 	}

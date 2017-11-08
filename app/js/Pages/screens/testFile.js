@@ -27,6 +27,7 @@ import Gallery from "../components/Gallery.js"
 import TextField from "../components/TextField.js"
 import MenuComponent from "../components/MenuComponent.js"
 import DropdownComponent from "../components/DropdownComponent.js"
+import ProgressLoader from "../components/ProgressLoader.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
 import TeamTemplate from "../templates/TeamTemplate.js"
 import GalleryTemplate from "../templates/GalleryTemplate.js"
@@ -47,7 +48,13 @@ export default class Test extends React.Component {
 	}
 
 	render(){
-		
+		return (
+			<ProgressLoader
+				step={1}
+				text={"lineup is ready. let's go!"}
+				active={1}
+			/>
+		)
 		return(
 			<AccountTemplate
 				onLogin={()=>{}}
@@ -59,6 +66,8 @@ export default class Test extends React.Component {
 
 			<ScrollView style={styles.container}>
 
+
+				{/*
 				<NotificationListItem 
 					specialOffer
 				/>
@@ -146,7 +155,7 @@ export default class Test extends React.Component {
 			/>
 		
 
-			{/*
+			
 
 				<StoreTemplate />
 
