@@ -16,68 +16,78 @@ import GridCellWrapper from "../../Pages/components/GridCellWrapper";
 import SmallTabbar from "../../Pages/components/SmallTabbar";
 import Tab from "../../Pages/components/Tab";
 
-import Carousel from "../../Pages/components/Carousel";
+import NoItem from "../../Pages/components/NoItem";
+
+import UserProfileHeader from "../../Pages/components/UserProfileHeader";
 
 import { colors, storeTemplateStyle } from "../../Pages/styles";
 
-export default class StoreTemplate extends React.Component {
+export default class ProfileTemplate extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
 			activeTab: 0,
 			activeBigTab: 0,
 		}
-		this._renderAllTab = this._renderAllTab.bind(this);
 		this._renderBuffsTab = this._renderBuffsTab.bind(this);
 		this._renderNerfsTab = this._renderNerfsTab.bind(this);
-		this._renderGoldTab = this._renderGoldTab.bind(this);
-	}
-	_renderAllTab(){
-		return (
-			<GridSection
-				title={"Title"}
-				titlePosition={"center"}
-				line
-
-				withUnderText
-			>
-				{[1,1,1,1,1,1,1,1,1,1,1,1,1,1].map((value, i) => {
-					return (
-						<GridCellWrapper
-							key={i}
-							bgColor={colors.watermelonBg}
-							title={"Test"}
-							image={require('../../../assets/nerfs/bear_trap.png')}
-							type={"buff"}
-							underText={0.99}
-						/>
-					)
-				})}
-			</GridSection>
-		)
 	}
 	_renderBuffsTab(){
 		return (
-			<GridSection
-				title={"Title"}
-				titlePosition={"center"}
-				line
+			<View>
+				<GridSection
+					title={"Title"}
+					titlePosition={"center"}
+					line
+				>
+					{[1,1,1].map((value, i) => {
+						return (
+							<GridCellWrapper
+								key={i}
+								bgColor={colors.watermelonBg}
+								title={"Test"}
+								image={require('../../../assets/nerfs/bear_trap.png')}
+								type={"buff"}
+							/>
+						)
+					})}
+				</GridSection>
 
-				withUnderText
-			>
-				{[1,1,1,1,1,1,1,1,1,1,1,1,1,1].map((value, i) => {
-					return (
-						<GridCellWrapper
-							key={i}
-							bgColor={colors.watermelonBg}
-							title={"Test"}
-							image={require('../../../assets/nerfs/bear_trap.png')}
-							type={"nerfs"}
-							underText={0.99}
+				<View style={{marginBottom: 10}}>
+					<GridSection
+						title={"Title"}
+						titlePosition={"center"}
+						line
+
+						empty
+					>
+						<NoItem 
+							message={"No buffs availablle…"}
+							buttonText={"SHOP"}
+							onPress={()=>{}}
 						/>
-					)
-				})}
-			</GridSection>
+					</GridSection>
+				</View>
+
+				<GridSection
+					title={"Title"}
+					titlePosition={"center"}
+					line
+				>
+					{[1,1,1].map((value, i) => {
+						return (
+							<GridCellWrapper
+								key={i}
+								bgColor={colors.watermelonBg}
+								title={"Test"}
+								image={require('../../../assets/nerfs/bear_trap.png')}
+								type={"buff"}
+							/>
+						)
+					})}
+				</GridSection>
+
+			</View>
 		)
 	}
 	_renderNerfsTab(){
@@ -86,10 +96,8 @@ export default class StoreTemplate extends React.Component {
 				title={"Title"}
 				titlePosition={"center"}
 				line
-
-				withUnderText
 			>
-				{[1,1,1,1,1,1,1,1,1,1,1,1,1,1].map((value, i) => {
+				{[1,1,1].map((value, i) => {
 					return (
 						<GridCellWrapper
 							key={i}
@@ -97,31 +105,6 @@ export default class StoreTemplate extends React.Component {
 							title={"Test"}
 							image={require('../../../assets/nerfs/bear_trap.png')}
 							type={"buff"}
-							underText={0.99}
-						/>
-					)
-				})}
-			</GridSection>
-		)
-	}
-	_renderGoldTab(){
-		return (
-			<GridSection
-				title={"Title"}
-				titlePosition={"center"}
-				line
-
-				withUnderText
-			>
-				{[1,1,1,1,1,1,1,1,1,1,1,1,1,1].map((value, i) => {
-					return (
-						<GridCellWrapper
-							key={i}
-							bgColor={colors.watermelonBg}
-							title={"Test"}
-							image={require('../../../assets/nerfs/bear_trap.png')}
-							type={"nerfs"}
-							underText={0.99}
 						/>
 					)
 				})}
@@ -144,7 +127,26 @@ export default class StoreTemplate extends React.Component {
 				</View>
 
 				<View style={storeTemplateStyle.carousel}>
-					<Carousel />
+					<UserProfileHeader
+						wins={'2,478'}
+						followers={'2,478'}
+						following={'2,478'}
+
+						button1={"CHALLENGE"}
+						onButton1={()=>{}}
+
+						graph
+						actualLevel={'7629'}
+						totalLevel={'10000'}
+						user={'ROOKIE'}
+						gold={'34.6K'}
+						onAdd={()=>{}}
+
+						button2={"UNFOLLOW"}
+						onButton2={()=>{}}
+						//button2={"FOLLOW"}
+						>
+					</UserProfileHeader>
 				</View>
 
 				<View style={{paddingLeft: 10, paddingRight: 10}}>
@@ -154,12 +156,6 @@ export default class StoreTemplate extends React.Component {
 						// filter={require('../../../assets/filter.png')}
 						// onFilter={()=>{}}
 					>	
-						
-						<Tab 
-							tabTitle={"ALL"}
-						>
-							{this._renderAllTab()}
-						</Tab>
 
 						<Tab 
 							tabTitle={"BUFFS"}
@@ -173,11 +169,6 @@ export default class StoreTemplate extends React.Component {
 							{this._renderNerfsTab()}
 						</Tab>	
 
-						<Tab 
-							tabTitle={"GOLD"}
-						>
-							{this._renderGoldTab()}
-						</Tab>	
 						
 										
 					</SmallTabbar>

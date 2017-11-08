@@ -31,8 +31,10 @@ import ProgressLoader from "../components/ProgressLoader.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
 import TeamTemplate from "../templates/TeamTemplate.js"
 import GalleryTemplate from "../templates/GalleryTemplate.js"
-import AccountTemplate from "../templates/AccountTemplate.js"
 
+import ProfileTemplate from "../templates/ProfileTemplate.js"
+
+import AccountTemplate from "../templates/AccountTemplate.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
@@ -47,6 +49,7 @@ export default class Test extends React.Component {
 		}
 	}
 
+
 	render(){
 		return (
 			<ProgressLoader
@@ -60,11 +63,24 @@ export default class Test extends React.Component {
 				onLogin={()=>{}}
 				onSingup={()=>{}}
 			/>
+
+	render() {
+
+		return (
+			<ProfileTemplate />
+
 		)
+	}
 
-		return(
+	// render() {
 
-			<ScrollView style={styles.container}>
+	// 	return (
+	// 		<StoreTemplate />
+	// 	)
+	// }
+
+	// render() {
+
 
 
 				{/*
@@ -72,174 +88,219 @@ export default class Test extends React.Component {
 					specialOffer
 				/>
 
-				<NotificationListItem 
-					title1={'Text 1 start'}
-					text1={'finishing ...'}
-				/>
+		
+		// return(
+		// 	<AccountTemplate
+		// 		onLogin={()=>{}}
+		// 		onSingup={()=>{}}
+		// 	/>
+		// )
 
-				<NotificationListItem 
-					title1={'Text 1 start'}
-					text1={'finishing ...'}
 
-					title2={'Text 2 start'}
-					text2={'finishing ...'}
+	// 	return(
+	// 		<ScrollView style={styles.container}>
 
-					buttons
-				/>
+	// 		{
 
-				<NotificationListItem 
-					title1={'Text 1 start'}
-					text1={'finishing ...'}
-
-					title2={'Text 2 start'}
-					text2={'finishing ...'}
-
-					team 
-				/>
-
-				<NotificationListItem 
-					title1={'Text 1 start'}
-					text1={'finishing ...'}
-
-					title2={'Text 2 start'}
-					text2={'finishing ...'}
-
-					arrowed
-				/>
-
-				<View style={{marginTop: 20, paddingRight: 15, paddingLeft: 15}}>
-					<Slider 
-						topTitle={"Top Title"}
-						bottomTitle={"Bottom Title"}
-
-						minLabel={"Something small"}
-						maxLabel={"Big"}
-
-						minimumValue={0}
-						maximumValue={1}
-
-						value={0.5}
-					/>
-				</View>
 				
-			<DropdownComponent
-				data={[{
-				      value: 'Banana',
-				    }, {
-				      value: 'Mango',
-				    }, {
-				      value: 'Pear',
-				    }]}
-				title={'TITLE'}
-			 />
 
-			<TextField 
-				title={"Name"}
-				placeholder={"Your name"}
+	// 			<NotificationListItem 
+	// 				specialOffer
+	// 			/>
 
-				type={"account"} // may be account or password or default
-				//If type='account' and account is missing it will assume there is no account and wont show the change button
+	// 			<NotificationListItem 
+	// 				title1={'Text 1 start'}
+	// 				text1={'finishing ...'}
+	// 			/>
 
-				account={'myawesomeaccount'}
-				onAccountPress={()=>{}}
-			/>
+	// 			<NotificationListItem 
+	// 				title1={'Text 1 start'}
+	// 				text1={'finishing ...'}
 
-			<MenuComponent 
-				title={'Header'}
-				menus={[
-					{title: 'Lorem', onPress: "location"},
-					{title: 'Lorem', onPress: "location"},
-					{title: 'Lorem', onPress: "location"},
-				]}
+	// 				title2={'Text 2 start'}
+	// 				text2={'finishing ...'}
 
-			/>
+	// 				buttons
+	// 			/>
+
+	// 			<NotificationListItem 
+	// 				title1={'Text 1 start'}
+	// 				text1={'finishing ...'}
+
+	// 				title2={'Text 2 start'}
+	// 				text2={'finishing ...'}
+
+	// 				team 
+	// 			/>
+
+	// 			<NotificationListItem 
+	// 				title1={'Text 1 start'}
+	// 				text1={'finishing ...'}
+
+	// 				title2={'Text 2 start'}
+	// 				text2={'finishing ...'}
+
+	// 				arrowed
+	// 			/>
+
+			// 	<View style={{marginTop: 20, paddingRight: 15, paddingLeft: 15}}>
+			// 		<Slider 
+			// 			topTitle={"Top Title"}
+			// 			bottomTitle={"Bottom Title"}
+
+			// 			minLabel={"Something small"}
+			// 			maxLabel={"Big"}
+
+
+			// 			minimumValue={0}
+			// 			maximumValue={1}
+			// 			value={0.5}
+			// 		/>
+			// 	</View>
+				
+			// <DropdownComponent
+			// 	data={[{
+			// 	      value: 'Banana',
+			// 	    }, {
+			// 	      value: 'Mango',
+			// 	    }, {
+			// 	      value: 'Pear',
+			// 	    }]}
+			// 	title={'TITLE'}
+			//  />
+
+			// <TextField 
+			// 	title={"Name"}
+			// 	placeholder={"Your name"}
+
+			// 	type={"account"} // may be account or password or default
+			// 	//If type='account' and account is missing it will assume there is no account and wont show the change button
+
+			// 	account={'myawesomeaccount'}
+			// 	onAccountPress={()=>{}}
+			// />
+
+			// <MenuComponent 
+			// 	title={'Header'}
+			// 	menus={[
+			// 		{title: 'Lorem', onPress: "location"},
+			// 		{title: 'Lorem', onPress: "location"},
+			// 		{title: 'Lorem', onPress: "location"},
+			// 	]}
+
+			// />
 		
 
+	// 					value={0.5}
+	// 				/>
+	// 			</View>
+				
+	// 		<DropdownComponent
+	// 			data={[{
+	// 			      value: 'Banana',
+	// 			    }, {
+	// 			      value: 'Mango',
+	// 			    }, {
+	// 			      value: 'Pear',
+	// 			    }]}
+	// 			title={'TITLE'}
+	// 		 />
+
+	// 		<TextField 
+	// 			title={"Name"}
+	// 			placeholder={"Your name"}
+
+	// 			type={"account"} // may be account or password or default
+	// 			//If type='account' and account is missing it will assume there is no account and wont show the change button
+
+	// 			account={'myawesomeaccount'}
+	// 			onAccountPress={()=>{}}
+	// 		/>
+
+
+				
+
+	// 			<View style={styles.contentWrapper}>
+	// 				<Slider />
+	// 			</View>
+
+
+	// 			<View style={styles.carouselWrapper}>
+	// 				<Carousel />
+	// 			</View>
+
+
+	// 			<View style={{height: 400, width: 400, backgroundColor:'red'}}>
+	// 				<GridCellWrapper
+	// 	               bgColor={colors.watermelonBg}
+	// 	               title={"Test"}
+	// 	               image={require('../../../assets/buffs/cannon.png')}
+	// 	               type={"buff"}
+	// 	             />
+	// 	             <GridCellWrapper
+	// 					bgColor={colors.watermelonBg}
+	// 					title={"Test"}
+	// 					image={require('../../../assets/nerfs/bear_trap.png')}
+	// 					type={"power-up"}
+	// 				/>
+	//              </View>
+
+
+
+			
+			
 			
 
-				<StoreTemplate />
-
-				<View style={styles.contentWrapper}>
-					<Slider />
-				</View>
 
 
-				<View style={styles.carouselWrapper}>
-					<Carousel />
-				</View>
+	// 		<UserProfileHeader
+	// 			wins={'2,478'}
+	// 			followers={'2,478'}
+	// 			following={'2,478'}
 
+	// 			button1={"CHALLENGE"}
+	// 			onButton1={()=>{}}
 
-				<View style={{height: 400, width: 400, backgroundColor:'red'}}>
-					<GridCellWrapper
-		               bgColor={colors.watermelonBg}
-		               title={"Test"}
-		               image={require('../../../assets/buffs/cannon.png')}
-		               type={"buff"}
-		             />
-		             <GridCellWrapper
-						bgColor={colors.watermelonBg}
-						title={"Test"}
-						image={require('../../../assets/nerfs/bear_trap.png')}
-						type={"power-up"}
-					/>
-	             </View>
+	// 			graph
+	// 			actualLevel={'7629'}
+	// 			totalLevel={'10000'}
+	// 			user={'ROOKIE'}
+	// 			gold={'34.6K'}
+	// 			onAdd={()=>{}}
+
+	// 			button2={"UNFOLLOW"}
+	// 			onButton2={()=>{}}
+	// 			//button2={"FOLLOW"}
+	// 			>
+	// 		</UserProfileHeader>
 
 
 
-			
-			
-			
-
-
-
-			<UserProfileHeader
-				wins={'2,478'}
-				followers={'2,478'}
-				following={'2,478'}
-
-				button1={"CHALLENGE"}
-				onButton1={()=>{}}
-
-				graph
-				actualLevel={'7629'}
-				totalLevel={'10000'}
-				user={'ROOKIE'}
-				gold={'34.6K'}
-				onAdd={()=>{}}
-
-				button2={"UNFOLLOW"}
-				onButton2={()=>{}}
-				//button2={"FOLLOW"}
-				>
-			</UserProfileHeader>
-
-
-
-			<GridSection
-					title={"Title"}
-					titlePosition={"center"}
-					lines
-				>
-					<GridCellWrapper
-						bgColor={colors.watermelonBg}
-						title={"Test"}
-						image={require('../../../assets/nerfs/bear_trap.png')}
-						type={"power-up"}
-					/>
+	// 		<GridSection
+	// 				title={"Title"}
+	// 				titlePosition={"center"}
+	// 				lines
+	// 			>
+	// 				<GridCellWrapper
+	// 					bgColor={colors.watermelonBg}
+	// 					title={"Test"}
+	// 					image={require('../../../assets/nerfs/bear_trap.png')}
+	// 					type={"power-up"}
+	// 				/>
 					
-					<GridCellWrapper
-						bgColor={colors.greenishTurquoiseBg}
-						title={"Test"}
-						image={require('../../../assets/nerfs/bear_trap.png')}
-						type={"power-up"}
-					/>
-					<GridCellWrapper
-						bgColor={colors.greenishTurquoiseBg}
-						title={"Test"}
-						image={require('../../../assets/buffs/cannon.png')}
-						type={"power-up"}
-					/>
-				</GridSection>
+	// 				<GridCellWrapper
+	// 					bgColor={colors.greenishTurquoiseBg}
+	// 					title={"Test"}
+	// 					image={require('../../../assets/nerfs/bear_trap.png')}
+	// 					type={"power-up"}
+	// 				/>
+	// 				<GridCellWrapper
+	// 					bgColor={colors.greenishTurquoiseBg}
+	// 					title={"Test"}
+	// 					image={require('../../../assets/buffs/cannon.png')}
+	// 					type={"power-up"}
+	// 				/>
+	// 			</GridSection>
 
 
 				
@@ -257,198 +318,198 @@ export default class Test extends React.Component {
 
 				
 
-					<View style={styles.contentWrapper}>
-						<Slider />
-					</View>
-					<View style={styles.carouselWrapper}>
-						<Carousel />
-					</View>
+	// 				<View style={styles.contentWrapper}>
+	// 					<Slider />
+	// 				</View>
+	// 				<View style={styles.carouselWrapper}>
+	// 					<Carousel />
+	// 				</View>
 
 
-					<UserProfileHeader
-						wins={'2,478'}
-						followers={'2,478'}
-						following={'2,478'}
+	// 				<UserProfileHeader
+	// 					wins={'2,478'}
+	// 					followers={'2,478'}
+	// 					following={'2,478'}
 
-						button1={"CHALLENGE"}
-						onButton1={()=>{}}
+	// 					button1={"CHALLENGE"}
+	// 					onButton1={()=>{}}
 
-						graph
-						actualLevel={'7629'}
-						totalLevel={'10000'}
-						user={'ROOKIE'}
-						gold={'34.6K'}
-						onAdd={()=>{}}
+	// 					graph
+	// 					actualLevel={'7629'}
+	// 					totalLevel={'10000'}
+	// 					user={'ROOKIE'}
+	// 					gold={'34.6K'}
+	// 					onAdd={()=>{}}
 
-						button2={"UNFOLLOW"}
-						onButton2={()=>{}}
-						//button2={"FOLLOW"}
-					>
+	// 					button2={"UNFOLLOW"}
+	// 					onButton2={()=>{}}
+	// 					//button2={"FOLLOW"}
+	// 				>
 						
-					</UserProfileHeader>
+	// 				</UserProfileHeader>
 
-				<ListTemplate 
-					items={
-						[
-							{left: 'FREE PACK', right: '4h 38mins...'},
-							{left: 'FREE PACK', right: '4h 38mins...'},
-							{left: 'FREE PACK', right: '4h 38mins...'},
-							{left: 'FREE PACK', right: '4h 38mins...'},
-							{left: 'FREE PACK', right: '4h 38mins...'},
-							{left: 'FREE PACK', right: '4h 38mins...'},
-							{left: 'FREE PACK', right: '4h 38mins...'},
-							{left: 'FREE PACK', right: '4h 38mins...'},
-							{left: 'FREE PACK', right: '4h 38mins...'},
-							{left: 'FREE PACK', right: '4h 38mins...'},
-							{left: 'FREE PACK', right: '4h 38mins...'}
-						]
-					}
-				/>
+	// 			<ListTemplate 
+	// 				items={
+	// 					[
+	// 						{left: 'FREE PACK', right: '4h 38mins...'},
+	// 						{left: 'FREE PACK', right: '4h 38mins...'},
+	// 						{left: 'FREE PACK', right: '4h 38mins...'},
+	// 						{left: 'FREE PACK', right: '4h 38mins...'},
+	// 						{left: 'FREE PACK', right: '4h 38mins...'},
+	// 						{left: 'FREE PACK', right: '4h 38mins...'},
+	// 						{left: 'FREE PACK', right: '4h 38mins...'},
+	// 						{left: 'FREE PACK', right: '4h 38mins...'},
+	// 						{left: 'FREE PACK', right: '4h 38mins...'},
+	// 						{left: 'FREE PACK', right: '4h 38mins...'},
+	// 						{left: 'FREE PACK', right: '4h 38mins...'}
+	// 					]
+	// 				}
+	// 			/>
 
-				<ListItem
-					listItemNumber={1}
+	// 			<ListItem
+	// 				listItemNumber={1}
 
-					// backgroundColor={'black'}
-					// border={true}
+	// 				// backgroundColor={'black'}
+	// 				// border={true}
 
-					// disabled
+	// 				// disabled
 
-					image={{uri: 'http://via.placeholder.com/30x30'}}
+	// 				image={{uri: 'http://via.placeholder.com/30x30'}}
 
-					leftText={"FREE PACK"}
-					// leftTextBright
+	// 				leftText={"FREE PACK"}
+	// 				// leftTextBright
 
-					rightText={"4h 38mins..."}
-					// rightSmallText={"SMALL"}
-					// rightSmallText2={"SMALL2"}
+	// 				rightText={"4h 38mins..."}
+	// 				// rightSmallText={"SMALL"}
+	// 				// rightSmallText2={"SMALL2"}
 
-					// gradient // used on non button like in match header
+	// 				// gradient // used on non button like in match header
 
-					onPress={()=>{}}
-				/>
+	// 				onPress={()=>{}}
+	// 			/>
 
 					
 				
-				<MatchHeader 
-					username={"USERNAME"}
-					streak={8}
+	// 			<MatchHeader 
+	// 				username={"USERNAME"}
+	// 				streak={8}
 
-					gold={'43.6K'}
-					level={"ROOKIE"}
-					levelProgress={'80%'}
-					freePackTimer={'4h 38mins...'}
-					getFreePack={()=>{}}
-				/>
+	// 				gold={'43.6K'}
+	// 				level={"ROOKIE"}
+	// 				levelProgress={'80%'}
+	// 				freePackTimer={'4h 38mins...'}
+	// 				getFreePack={()=>{}}
+	// 			/>
 				
-				<MatchupCards 
-					leftHead={require('../../../assets/heads/h_gry_left.png')}
-					leftName={"You"}
-					rightHead={require('../../../assets/heads/h_red_right.png')}
-					rightName={"Somedude"}
+	// 			<MatchupCards 
+	// 				leftHead={require('../../../assets/heads/h_gry_left.png')}
+	// 				leftName={"You"}
+	// 				rightHead={require('../../../assets/heads/h_red_right.png')}
+	// 				rightName={"Somedude"}
 
-					week={14}
-					bet={'25,000'}
+	// 				week={14}
+	// 				bet={'25,000'}
 
-					scoreLeft={'248.8'}
-					scoreRight={'124.2'}
+	// 				scoreLeft={'248.8'}
+	// 				scoreRight={'124.2'}
 
-					gameStatus={'live'}
-					gameTime={'2d 4hr'}
+	// 				gameStatus={'live'}
+	// 				gameTime={'2d 4hr'}
 
-					buttons
-				/>
+	// 				buttons
+	// 			/>
 
-				<Header 
-					leftIcon={require('../../../assets/back.png')}
-					title={"BELIEVETHEHYPE"}
-					subtitle={"LEGENDARY"}
-					circle={"12"}
-				/>
+	// 			<Header 
+	// 				leftIcon={require('../../../assets/back.png')}
+	// 				title={"BELIEVETHEHYPE"}
+	// 				subtitle={"LEGENDARY"}
+	// 				circle={"12"}
+	// 			/>
 				
 				
 				
-				<SmallTabbar
-					activeTab={this.state.activeTab}
-					onChange={(id)=>{this.setState({activeTab: id})}}
-				>
-					<Tab 
-						tabTitle={"PLS WORK"}
-					>
-						<Image source={require('../../../assets/back.png')} style={{width: 200 ,height: 200, backgroundColor: 'red', alignItems: 'center',
-		justifyContent: 'center',}}><Text style={{color: 'white'}}>IS working</Text></Image>
-					</Tab>
+	// 			<SmallTabbar
+	// 				activeTab={this.state.activeTab}
+	// 				onChange={(id)=>{this.setState({activeTab: id})}}
+	// 			>
+	// 				<Tab 
+	// 					tabTitle={"PLS WORK"}
+	// 				>
+	// 					<Image source={require('../../../assets/back.png')} style={{width: 200 ,height: 200, backgroundColor: 'red', alignItems: 'center',
+	// 	justifyContent: 'center',}}><Text style={{color: 'white'}}>IS working</Text></Image>
+	// 				</Tab>
 
-					<Tab 
-						tabTitle={"Is WORKING BUOII"}
-					>
-						<Text style={{color: 'white'}}>SOmething nice</Text>
-					</Tab>					
-				</SmallTabbar>
+	// 				<Tab 
+	// 					tabTitle={"Is WORKING BUOII"}
+	// 				>
+	// 					<Text style={{color: 'white'}}>SOmething nice</Text>
+	// 				</Tab>					
+	// 			</SmallTabbar>
 
-				<BigTabbar 
-					activeTab={this.state.activeBigTab}
-					onChange={(id)=>{this.setState({activeBigTab: id})}}
-				>
-					<Tab 
-						tabTitle={"PUBLIC"}
-					>
-						<Text style={{color: 'white'}}>SOmething PUBLIC</Text>
-					</Tab>
-					<Tab 
-						tabTitle={"PRIVATE"}
-					>
-						<Text style={{color: 'white'}}>SOmething PRIVATE</Text>
-					</Tab>
+	// 			<BigTabbar 
+	// 				activeTab={this.state.activeBigTab}
+	// 				onChange={(id)=>{this.setState({activeBigTab: id})}}
+	// 			>
+	// 				<Tab 
+	// 					tabTitle={"PUBLIC"}
+	// 				>
+	// 					<Text style={{color: 'white'}}>SOmething PUBLIC</Text>
+	// 				</Tab>
+	// 				<Tab 
+	// 					tabTitle={"PRIVATE"}
+	// 				>
+	// 					<Text style={{color: 'white'}}>SOmething PRIVATE</Text>
+	// 				</Tab>
 
-				</BigTabbar>
+	// 			</BigTabbar>
 
 
-				<GridSection
-					title={"Title"}
-					titlePosition={"center"}
-					lines
-				>
-					<GridCellWrapper
-						bgColor={colors.watermelonBg}
-						title={"Test"}
-						image={require('../../../assets/nerfs/bear_trap.png')}
-						type={"power-up"}
-					/>
+	// 			<GridSection
+	// 				title={"Title"}
+	// 				titlePosition={"center"}
+	// 				lines
+	// 			>
+	// 				<GridCellWrapper
+	// 					bgColor={colors.watermelonBg}
+	// 					title={"Test"}
+	// 					image={require('../../../assets/nerfs/bear_trap.png')}
+	// 					type={"power-up"}
+	// 				/>
 					
-					<GridCellWrapper
-						bgColor={colors.greenishTurquoiseBg}
-						title={"Test"}
-						image={require('../../../assets/nerfs/bear_trap.png')}
-						type={"power-up"}
-					/>
-					<GridCellWrapper
-						bgColor={colors.greenishTurquoiseBg}
-						title={"Test"}
-						image={require('../../../assets/buffs/cannon.png')}
-						type={"power-up"}
-					/>
-				</GridSection>
+	// 				<GridCellWrapper
+	// 					bgColor={colors.greenishTurquoiseBg}
+	// 					title={"Test"}
+	// 					image={require('../../../assets/nerfs/bear_trap.png')}
+	// 					type={"power-up"}
+	// 				/>
+	// 				<GridCellWrapper
+	// 					bgColor={colors.greenishTurquoiseBg}
+	// 					title={"Test"}
+	// 					image={require('../../../assets/buffs/cannon.png')}
+	// 					type={"power-up"}
+	// 				/>
+	// 			</GridSection>
 
-				<GridSection
-					title={"Title"}
-					titlePosition={"center"}
-					empty
-				>
-					<NoItem 
-						message={"No buffs availablle…"}
-						buttonText={"SHOP"}
-						onPress={()=>{}}
-					/>
-				</GridSection>
+	// 			<GridSection
+	// 				title={"Title"}
+	// 				titlePosition={"center"}
+	// 				empty
+	// 			>
+					// <NoItem 
+					// 	message={"No buffs availablle…"}
+					// 	buttonText={"SHOP"}
+					// 	onPress={()=>{}}
+					// />
+	// 			</GridSection>
 
 
-				*/}
+	// 			}
 
-			</ScrollView>
-		)
+	// 		</ScrollView>
+	// 	)
 			
 		
-	}
+	// }
 }
 
 
