@@ -58,19 +58,21 @@ export default class Test extends React.Component {
 				active={1}
 			/>
 		)
-		return(
-			<AccountTemplate
-				onLogin={()=>{}}
-				onSingup={()=>{}}
-			/>
-
-	render() {
-
-		return (
-			<ProfileTemplate />
-
-		)
+		// return(
+		// 	<AccountTemplate
+		// 		onLogin={()=>{}}
+		// 		onSingup={()=>{}}
+		// 	/>
 	}
+
+}
+	// render() {
+
+	// 	return (
+	// 		<ProfileTemplate />
+
+	// 	)
+	// }
 
 	// render() {
 
@@ -83,10 +85,10 @@ export default class Test extends React.Component {
 
 
 
-				{/*
-				<NotificationListItem 
-					specialOffer
-				/>
+				
+				// <NotificationListItem 
+				// 	specialOffer
+				// />
 
 		
 		// return(
@@ -510,7 +512,7 @@ export default class Test extends React.Component {
 			
 		
 	// }
-}
+// }
 
 
 
