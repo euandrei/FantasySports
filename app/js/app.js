@@ -109,7 +109,7 @@ export default class App extends React.Component {
 				hideNavBar={true}>
 				
 
-				<Scene key="test"  component={Test}/>
+				<Scene key="test" initial component={Test}/>
 
 				<Scene key="OnBoard1_1" component={OnBoard1_1}/>
 				<Scene key="OnBoard2_1" component={OnBoard2_1}/>
@@ -146,7 +146,7 @@ export default class App extends React.Component {
 				<Scene key="OnBoard2_3" component={OnBoard2_3}/>
 
 
-				<Scene key="OnBoard4_7" initial component={OnBoard4_7}/>
+				<Scene key="OnBoard4_7" component={OnBoard4_7}/>
 
 				{/* DEMO OF TEMPLATES*/}
 

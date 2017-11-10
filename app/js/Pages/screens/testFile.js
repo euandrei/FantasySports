@@ -29,6 +29,8 @@ import MenuComponent from "../components/MenuComponent.js"
 import DropdownComponent from "../components/DropdownComponent.js"
 import ProgressLoader from "../components/ProgressLoader.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
+import LoadingLogo from "../templates/LoadingLogo.js"
+import LoadingOverlay from "../templates/LoadingOverlay.js"
 import TeamTemplate from "../templates/TeamTemplate.js"
 import GalleryTemplate from "../templates/GalleryTemplate.js"
 
@@ -52,6 +54,10 @@ export default class Test extends React.Component {
 
 	render(){
 		return (
+			<LoadingOverlay />
+			//<LoadingLogo />
+		)
+		return (
 			<ProgressLoader
 				step={1}
 				text={"lineup is ready. let's go!"}
@@ -63,14 +69,13 @@ export default class Test extends React.Component {
 				onLogin={()=>{}}
 				onSingup={()=>{}}
 			/>
-
-	render() {
-
+		)
+	
 		return (
 			<ProfileTemplate />
 
 		)
-	}
+	
 
 	// render() {
 
@@ -83,10 +88,10 @@ export default class Test extends React.Component {
 
 
 
-				{/*
-				<NotificationListItem 
-					specialOffer
-				/>
+
+		//		<NotificationListItem 
+		//			specialOffer
+		//		/>
 
 		
 		// return(
@@ -509,7 +514,7 @@ export default class Test extends React.Component {
 	// 	)
 			
 		
-	// }
+	}
 }
 
 
