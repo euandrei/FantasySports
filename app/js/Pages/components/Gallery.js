@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 
 import { galleryStyle, colors } from "../styles";
-import RNFetchBlob from 'react-native-fetch-blob';
+
 
 const { width } = Dimensions.get('window');
 let PHOTOS_COUNT_BY_FETCH = 60;

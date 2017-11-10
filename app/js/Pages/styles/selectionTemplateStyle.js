@@ -4,7 +4,8 @@ import { colors } from "./colors.js"
 
 export const selectionTemplateStyle = StyleSheet.create({
 	container:{
-		padding: 10,
+		paddingLeft: 10,
+		paddingRight: 10,
 		backgroundColor: colors.marine,
 	},
 	header:{

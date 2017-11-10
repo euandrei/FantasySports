@@ -111,7 +111,10 @@ export default class App extends React.Component {
 
 				<Scene key="test" initial component={Test}/>
 
-				<Scene key="OnBoard1_1" component={OnBoard1_1}/>
+
+				<Scene key="OnBoard1_1" 
+				// initial
+				component={OnBoard1_1}/>
 				<Scene key="OnBoard2_1" component={OnBoard2_1}/>
 				<Scene key="OnBoard3_1" component={OnBoard3_1}/>
 				<Scene key="OnBoard4_1" component={OnBoard4_1}/>
@@ -150,7 +153,9 @@ export default class App extends React.Component {
 
 				{/* DEMO OF TEMPLATES*/}
 
-				<Scene key="template1" component={Template1}/>
+				<Scene key="template1"
+					//initial
+				 component={Template1}/>
 				<Scene key="template2" component={Template2}/>
 				<Scene key="template3" component={Template3}/>
 				<Scene key="template4" component={Template4}/>
@@ -172,16 +177,18 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
-	
+	buttonTransition: {
+		position: 'absolute', top: 0, right: 0, width: 30, height: 10, backgroundColor: 'red', zIndex: 100
+	}
 	
 });
 
 class Template1 extends React.Component {
 	render() {
 		return (
-			<View>
+			<View style={{marginLeft: -10, marginRight: -10}}>
 				<TouchableOpacity
-					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					style={styles.buttonTransition}
 					onPress={()=>{Actions.template2()}}
 				></TouchableOpacity>
 				<ListTemplate 
@@ -215,7 +222,7 @@ class Template2 extends React.Component {
 			<ScrollView style={{backgroundColor: colors.marine}}>
 
 				<TouchableOpacity
-					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					style={styles.buttonTransition}
 					onPress={()=>{Actions.template3()}}
 				></TouchableOpacity>
 				<LinearGradient colors={[colors.marine, colors.blueyGreyBg]} style={{flex: 1, padding: 10, minHeight: height}}>
@@ -373,7 +380,7 @@ class Template3 extends React.Component {
 		return (
 			<View>
 				<TouchableOpacity
-					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					style={styles.buttonTransition}
 					onPress={()=>{Actions.template4()}}
 				></TouchableOpacity>
 			<StoreTemplate />
@@ -387,7 +394,7 @@ class Template4 extends React.Component {
 		return (
 			<View>
 				<TouchableOpacity
-					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					style={styles.buttonTransition}
 					onPress={()=>{Actions.template5()}}
 				></TouchableOpacity>
 			<ProfileTemplate />
@@ -401,7 +408,7 @@ class Template5 extends React.Component {
 		return (
 			<View>
 				<TouchableOpacity
-					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					style={styles.buttonTransition}
 					onPress={()=>{Actions.template6()}}
 				></TouchableOpacity>
 			<TeamTemplate />
@@ -415,7 +422,7 @@ class Template6 extends React.Component {
 		return (
 			<View>
 				<TouchableOpacity
-					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					style={styles.buttonTransition}
 					onPress={()=>{Actions.template7()}}
 				></TouchableOpacity>
 			<MatchTemplate />
@@ -474,16 +481,18 @@ class Template7 extends React.Component {
 		return (
 			<View>
 				<TouchableOpacity
-					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					style={styles.buttonTransition}
 					onPress={()=>{Actions.template8()}}
 				></TouchableOpacity>
-			<SelectionTemplate 
-				main
-				title={"select nerfs"}
-				// leftIcon={require('../../../../assets/back.png')}
-				type={'player'}
-				cards={cards}
-			/>
+			<View style={{paddingLeft: 10, paddingRight: 10, backgroundColor: colors.marine}}>
+				<SelectionTemplate 
+					main
+					title={"select nerfs"}
+					// leftIcon={require('../../../../assets/back.png')}
+					type={'player'}
+					cards={cards}
+				/>
+			</View>
 			</View>
 		)
 	}
@@ -494,7 +503,7 @@ class Template8 extends React.Component {
 		return (
 			<View>
 				<TouchableOpacity
-					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					style={styles.buttonTransition}
 					onPress={()=>{Actions.template9()}}
 				></TouchableOpacity>
 			<GalleryTemplate />
@@ -508,7 +517,7 @@ class Template9 extends React.Component {
 		return (
 			<View>
 				<TouchableOpacity
-					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					style={styles.buttonTransition}
 					onPress={()=>{Actions.template10()}}
 				></TouchableOpacity>
 			<AccountTemplate />
@@ -523,7 +532,7 @@ class Template10 extends React.Component {
 			<ScrollView style={{backgroundColor: colors.marine}}>
 			<View>
 				<TouchableOpacity
-					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					style={styles.buttonTransition}
 					onPress={()=>{Actions.template11()}}
 				></TouchableOpacity>
 
@@ -577,7 +586,7 @@ class Template11 extends React.Component {
 			<ScrollView style={{backgroundColor: colors.marine}}>
 			<View>
 				<TouchableOpacity
-					style={{position: 'absolute', top: 0, right: 0, width: 30, height: 30, backgroundColor: 'red', zIndex: 100}}
+					style={styles.buttonTransition}
 					// onPress={()=>{Actions.template10()}}
 				></TouchableOpacity>
 

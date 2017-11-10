@@ -28,7 +28,7 @@ export default class TeamTemplate extends React.Component {
 			<View style={[teamTemplateStyle.container,{minHeight: height}]}>
 				<View style={teamTemplateStyle.header}>
 					<Header 
-						title={this.props.title}
+						title={"TEAM"}
 						leftIcon={this.props.backIcon || null}
 						onBack={()=>{}}
 						button={this.props.button || null}

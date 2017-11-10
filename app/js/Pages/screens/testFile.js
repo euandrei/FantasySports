@@ -26,6 +26,7 @@ import NotificationListItem from "../components/NotificationListItem.js"
 import Gallery from "../components/Gallery.js"
 import TextField from "../components/TextField.js"
 import MenuComponent from "../components/MenuComponent.js"
+import Message from "../components/Message.js"
 import DropdownComponent from "../components/DropdownComponent.js"
 import ProgressLoader from "../components/ProgressLoader.js"
 import StoreTemplate from "../templates/StoreTemplate.js"
@@ -54,6 +55,32 @@ export default class Test extends React.Component {
 
 	render(){
 		return (
+			<View style={{backgroundColor: colors.marine, flex: 1,}}>
+				<Message
+					itemType={"QUARTERBACK"}
+					title={"LASERSCOPE"}
+
+					//type="buff"
+					//impact="84"
+					//description="Up your QB's accuracy to the next level with this Laser Scope!"
+					//yellowText="x100"
+
+					type="player"
+					rank="4"
+					points="64.88"
+					lastWeek="47.34"
+					impact="SUN 10:00AM @ SEA"
+
+					buttons={true} 
+					buy={'100,000'}
+					// STOCK OR BUTTONS !!!
+					//stock={15}
+
+					playerImage={require('../../../assets/buffs/tank.png')}
+				/>
+			</View>
+		)
+		return (
 			<LoadingOverlay />
 			//<LoadingLogo />
 		)
@@ -64,6 +91,7 @@ export default class Test extends React.Component {
 				active={1}
 			/>
 		)
+
 		return(
 			<AccountTemplate
 				onLogin={()=>{}}
@@ -77,6 +105,17 @@ export default class Test extends React.Component {
 		)
 	
 
+		// return(
+		// 	<AccountTemplate
+		// 		onLogin={()=>{}}
+		// 		onSingup={()=>{}}
+		// 	/>
+	}
+
+}
+	
+
+
 	// render() {
 
 	// 	return (
@@ -89,17 +128,13 @@ export default class Test extends React.Component {
 
 
 
+
 		//		<NotificationListItem 
 		//			specialOffer
 		//		/>
 
+
 		
-		// return(
-		// 	<AccountTemplate
-		// 		onLogin={()=>{}}
-		// 		onSingup={()=>{}}
-		// 	/>
-		// )
 
 
 	// 	return(
@@ -514,9 +549,9 @@ export default class Test extends React.Component {
 	// 	)
 			
 		
-	}
-}
 
+//	}
+//}
 
 
 const styles = StyleSheet.create({

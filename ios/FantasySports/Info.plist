@@ -39,7 +39,7 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string></string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
@@ -53,12 +53,13 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Miller Type Foundry - UniformItalicXcon-Blk.otf</string>
-		<string>Miller Type Foundry - UniformItalicXcon-Bold.otf</string>
-		<string>Miller Type Foundry - UniformItalicXcon-Lgt.otf</string>
-		<string>Miller Type Foundry - UniformItalicXcon-Med.otf</string>
-		<string>Miller Type Foundry - UniformItalicXcon-Reg.otf</string>
-		<string>Miller Type Foundry - UniformItalicXcon-Ult.otf</string>
+		<string>UniformItalicXcon-Blk.otf</string>
+		<string>UniformItalicXcon-Bold.otf</string>
+		<string>UniformItalicXcon-Lgt.otf</string>
+		<string>UniformItalicXcon-Med.otf</string>
+		<string>UniformItalicXcon-Reg.otf</string>
+		<string>UniformItalicXcon-Ult.otf</string>
+		<string>UniformItalicXcon.otf</string>
 	</array>
 </dict>
 </plist>

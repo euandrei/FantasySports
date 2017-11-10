@@ -28,6 +28,7 @@ import { dropdownStyle } from "./dropdownStyle.js"
 import { textFieldStyle } from "./textFieldStyle.js"
 import { menuComponentStyle } from "./menuComponentStyle.js"
 import { accountTemplateStyle } from "./accountTemplateStyle.js"
+import { messageStyle } from "./messageStyle.js"
 
 
 export {
@@ -57,6 +58,7 @@ export {
 	textFieldStyle,
 	menuComponentStyle,
 	accountTemplateStyle,
+	messageStyle,
 }
 
 
