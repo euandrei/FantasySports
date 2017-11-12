@@ -6,7 +6,8 @@ import {
     View,
     Platform,
     ScrollView,
-     findNodeHandle
+    findNodeHandle,
+    Dimensions,
 } from 'react-native';
 import { BlurView, VibrancyView } from 'react-native-blur';
 import GridCellWrapper from "../components/GridCellWrapper.js"
@@ -42,7 +43,34 @@ import AccountTemplate from "../templates/AccountTemplate.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
+import Parallelogram from "../components/Parallelogram.js"
+
 import { colors } from "../styles";
+
+import Svg,{
+    Circle,
+    Ellipse,
+    G,
+    LinearGradient,
+    RadialGradient,
+    Line,
+    Path,
+    Polygon,
+    Polyline,
+    Rect,
+    Symbol,
+    // Text,
+    Use,
+    Defs,
+    Stop
+} from 'react-native-svg';
+
+import axios from 'axios';
+
+var {width, height} = Dimensions.get('window');
+
+const BASE_PATH = 'https://us-central1-vfl-server-8.cloudfunctions.net/api/v1/NFL';
+const SOME_USER_ID = '9XgdUCdmhcPpAbnnIPa1q8mAtGu1'
 
 export default class Test extends React.Component {
 	constructor(props){
@@ -58,8 +86,72 @@ export default class Test extends React.Component {
 		})
 	}
 
+	// get – GET (if new user, backend will create a new one)
+	usersGET() {
+		return axios({
+            method: 'get',
+            url: `${BASE_PATH}/users/${SOME_USER_ID}`,
+            // data: {
+            //     "name": name,
+            //     "description": description
+            // },
+        })
+        .then((res) => {
+        	console.log("GET USERS RESPONSE:")
+            console.log(res.data.payload)
 
-	render(){
+            return res.data.payload;
+
+            /*
+				credits
+				:
+				17000
+				displayName
+				:
+				"David Uy"
+				email
+				:
+				"daviduy8@gmail.com"
+				exp
+				:
+				0
+				level
+				:
+				0
+				lost
+				:
+				0
+				photoURL
+				:
+				"https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg"
+				streak
+				:
+				0
+				totalGamesPlayed
+				:
+				0
+				uid
+				:
+				"9XgdUCdmhcPpAbnnIPa1q8mAtGu1"
+				username
+				:
+				"darkd"
+				won
+				:
+				0
+            */
+        })
+        .catch((error) => {
+        	console.log("GET USERS ERROR:")
+            console.log(error)
+        })
+	}
+
+	render() {
+		const user = this.usersGET();
+
+
+
 		return(
 			<AccountTemplate
 				login
@@ -141,19 +233,68 @@ export default class Test extends React.Component {
 			<LoadingOverlay />
 			//<LoadingLogo />
 		)
+
 		return (
-			<ProgressLoader
-				step={1}
-				text={"lineup is ready. let's go!"}
-				active={1}
+			<ProfileTemplate 
+				user={user}
 			/>
 		)
+	}
+}
+		// 	<View style={{backgroundColor: colors.marine, flex: 1,}}>
+		// 		<Message
+		// 			itemType={"QUARTERBACK"}
+		// 			title={"LASERSCOPE"}
+
+		// 			//type="buff"
+		// 			//impact="84"
+		// 			//description="Up your QB's accuracy to the next level with this Laser Scope!"
+		// 			//yellowText="x100"
+
+		// 			type="player"
+		// 			rank="4"
+		// 			points="64.88"
+		// 			lastWeek="47.34"
+		// 			impact="SUN 10:00AM @ SEA"
+
+		// 			buttons={true} 
+		// 			buy={'100,000'}
+		// 			// STOCK OR BUTTONS !!!
+		// 			//stock={15}
+
+		// 			playerImage={require('../../../assets/buffs/tank.png')}
+		// 		/>
+		// 	</View>
+		// )
+		// return (
+		// 	<LoadingOverlay />
+		// 	//<LoadingLogo />
+		// )
+		// return (
+		// 	<ProgressLoader
+		// 		step={1}
+		// 		text={"lineup is ready. let's go!"}
+		// 		active={1}
+		// 	/>
+		// )
 
 
-		return (
-			<ProfileTemplate />
 
-		)
+		//return (
+		//	<ProfileTemplate />
+
+		// return(
+		// 	<AccountTemplate
+		// 		onLogin={()=>{}}
+		// 		onSingup={()=>{}}
+		// 	/>
+		// )
+	
+		// return (
+		// 	<ProfileTemplate />
+
+
+		// )
 	
 
 		// return(
@@ -161,9 +302,31 @@ export default class Test extends React.Component {
 		// 		onLogin={()=>{}}
 		// 		onSingup={()=>{}}
 		// 	/>
-	}
 
-}
+
+	// render() {
+	// 	return (
+	// 		<Parallelogram />
+	// 	)
+	// }
+
+
+	// render(){
+	// 	return (
+	// 		<ProgressLoader
+	// 			step={1}
+	// 			text={"lineup is ready. let's go!"}
+	// 			active={1}
+	// 		/>
+	// 	)
+	// 	// return(
+	// 	// 	<AccountTemplate
+	// 	// 		onLogin={()=>{}}
+	// 	// 		onSingup={()=>{}}
+	// 	// 	/>
+	// }
+
+
 	
 
 

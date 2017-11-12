@@ -32,7 +32,7 @@ export default class GalleryTemplate extends React.Component {
 					<Header 
 						title={"ALL PHOTOS"}
 						leftIcon={require('../../../assets/back.png')}
-						onBack={()=>{Actions.pop()}}
+						onPressLeft={()=>{Actions.pop()}}
 
 						button={"SAVE"}
 						onPress={()=>{}}

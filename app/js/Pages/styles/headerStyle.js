@@ -5,17 +5,18 @@ import { colors } from "./colors.js"
 export const headerStyle = StyleSheet.create({
 	container:{
 		alignSelf: 'stretch',
-		height: 54,
+		height: 56,
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'center',
+		paddingLeft: 20,
+		paddingRight: 20
 	},
 	leftComponent:{
 		flex: 1,
-		marginTop: -5,
+		// marginTop: -5,
 		alignItems: 'flex-start',
 		justifyContent: 'center',
-		paddingLeft: 20,
 	},
 	centerComponent:{
 		flex: 2,
@@ -33,6 +34,7 @@ export const headerStyle = StyleSheet.create({
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
+		// paddingTop: 15 // subtitle font height and space between title and subtitle
 	},
 	titleText:{
 		color: colors.white,
@@ -43,7 +45,7 @@ export const headerStyle = StyleSheet.create({
 		color: colors.sunnyYellow,
 		fontSize: 13,
 		fontWeight: 'bold',
-		marginTop: -5,
+		marginTop: -3,
 	},
 	logo:{
 		width: '50%',

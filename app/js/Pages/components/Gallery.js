@@ -74,7 +74,7 @@ export default class Gallery extends React.Component {
     }
     
     onEndReached() {
-        // this.fetchPhotos(PHOTOS_COUNT_BY_FETCH, this.lastPhotoFetched);
+        this.fetchPhotos(PHOTOS_COUNT_BY_FETCH, this.lastPhotoFetched);
     }
 
     takePicture() {

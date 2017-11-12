@@ -17,6 +17,7 @@ export default class Header extends React.Component{
 		this._renderTitle = this._renderTitle.bind(this);
 		this._renderRightButton = this._renderRightButton.bind(this);
 	}
+	
 	_renderTitle(){
 		if(this.props.logo){
 			return (
@@ -90,19 +91,16 @@ export default class Header extends React.Component{
 			)
 		}
 	}
+
 	render(){
 		return (
 			<View style={headerStyle.container}>
 				<View style={headerStyle.leftComponent}>
-					{this.props.onBack ? 
-						<TouchableOpacity onPress={this.props.onBack} style={{padding:10}}>
-							{this.props.leftIcon && <Image style={{width: 12, height: 12}} source={require('../../../assets/back.png')} resizeMode='contain' />}
-						</TouchableOpacity>
-					:
-						<TouchableOpacity onPress={this.props.onTrophy} style={{padding:10}}>
-							{this.props.leftIcon && <Image style={{width: 18, height: 18}} source={require('../../../assets/trophy.png')} resizeMode='contain' />}
-						</TouchableOpacity>
-					}
+
+				<TouchableOpacity onPress={this.props.onPressLeft}>
+					{this.props.leftIcon && <Image style={{width: 9, height: '100%',}} source={this.props.leftIcon} resizeMode='contain' />}
+				</TouchableOpacity>
+
 				</View>
 				<View style={headerStyle.centerComponent}>
 					{this._renderTitle()}

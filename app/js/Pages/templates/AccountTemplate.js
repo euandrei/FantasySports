@@ -35,7 +35,7 @@ export default class AccountTemplate extends React.Component {
 					<Header 
 						title={this.props.headerTitle}
 						leftIcon={require('../../../assets/back.png')}
-						onBack={()=>{Actions.pop()}}
+						onPressLeft={()=>{Actions.pop()}}
 					/>
 				</View>
 
