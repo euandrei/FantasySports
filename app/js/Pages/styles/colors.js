@@ -3,7 +3,7 @@ import React from "react";
 export const colors = {
   "transparent": 'rgba(0,0,0,0)',
   "white": 'rgba(255,255,255,1)',
-  "white2": 'rgba(216, 216, 216,0.2)',
+  "whiteTwo": 'rgba(216, 216, 216,0.2)',
 
   // GREEN
   "greenishTurquoise": 'rgba(0, 233, 172, 1)',

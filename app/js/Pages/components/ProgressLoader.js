@@ -16,12 +16,12 @@ export default class ProgressLoader extends React.Component{
 	render(){
 		return (
 			<View style={styles.container}>
-				<View style={styles.textRow}>
+				{this.props.text && <View style={styles.textRow}>
 					<View style={styles.yellowCircle}>
 						<Text style={styles.circleText}>{this.props.step}</Text>
 					</View>
 					<Text style={styles.text}>{this.props.text.toUpperCase()}</Text>
-				</View>
+				</View>}
 				<View>
 					<LineLoader active={this.props.step}/>
 				</View>

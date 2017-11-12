@@ -154,9 +154,7 @@ export default class App extends React.Component {
 
 				{/* DEMO OF TEMPLATES*/}
 
-				<Scene key="template1"
-					// initial
-				 component={Template1}/>
+				<Scene key="template1" component={Template1}/>
 				<Scene key="template2" component={Template2}/>
 				<Scene key="template3" component={Template3}/>
 				<Scene key="template4" component={Template4}/>
