@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import Header from "../../Pages/components/Header";
-
+import {Actions} from 'react-native-router-flux';
 
 import { colors, galleryTemplateStyle } from "../styles";
 import Gallery from "../components/Gallery.js";
@@ -32,7 +32,7 @@ export default class GalleryTemplate extends React.Component {
 					<Header 
 						title={"ALL PHOTOS"}
 						leftIcon={require('../../../assets/back.png')}
-						onBack={()=>{}}
+						onBack={()=>{Actions.pop()}}
 
 						button={"SAVE"}
 						onPress={()=>{}}

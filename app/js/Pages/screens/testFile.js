@@ -5,9 +5,10 @@ import {
     Image,
     View,
     Platform,
-    ScrollView
+    ScrollView,
+     findNodeHandle
 } from 'react-native';
-
+import { BlurView, VibrancyView } from 'react-native-blur';
 import GridCellWrapper from "../components/GridCellWrapper.js"
 import GridSection from "../components/GridSection.js"
 import NoItem from "../components/NoItem.js"
@@ -51,33 +52,89 @@ export default class Test extends React.Component {
 			activeBigTab: 0,
 		}
 	}
+	componentDidMount(){
+		this.setState({
+			viewRef: findNodeHandle(this.refs.backgroundImage),
+		})
+	}
 
 
 	render(){
-		return (
-			<View style={{backgroundColor: colors.marine, flex: 1,}}>
-				<Message
-					itemType={"QUARTERBACK"}
-					title={"LASERSCOPE"}
-
-					//type="buff"
-					//impact="84"
-					//description="Up your QB's accuracy to the next level with this Laser Scope!"
-					//yellowText="x100"
-
-					type="player"
-					rank="4"
-					points="64.88"
-					lastWeek="47.34"
-					impact="SUN 10:00AM @ SEA"
-
-					buttons={true} 
-					buy={'100,000'}
-					// STOCK OR BUTTONS !!!
-					//stock={15}
-
-					playerImage={require('../../../assets/buffs/tank.png')}
+		return(
+			<AccountTemplate
+				login
+				onLogin={()=>{}}
+				singup
+				onSingup={()=>{}}
+			>
+				<TextField 
+					title={"Name"}
+					placeholder={"First Lastname"}
+					type={"default"}
 				/>
+				<TextField 
+					title={"Username"}
+					placeholder={"Usernamegoeshere"}
+					type={"default"}
+				/>
+				<TextField 
+					title={"New Password"}
+					type={"password"}
+				/>
+				<TextField 
+					title={"New Password, again"}
+					type={"password"}
+				/>
+			</AccountTemplate>
+		)
+	
+		return (
+			<View style={{backgroundColor: colors.marine, flex: 1,}}>                                   
+				<View ref={(item) => this.renderItem = findNodeHandle(item)} style={{backgroundColor:'transparent', flex: 1 }}>
+					<Text style={{fontSize: 40,color: 'pink',zIndex: 1}}>HEY</Text>
+				</View>
+				<View style={{position: 'absolute', top: 0, right: 0, left: 0, bottom: 0, backgroundColor:'transparent', zIndex: 1}}>
+					<Message
+						itemType={"QUARTERBACK"}
+						title={"LASERSCOPE"}
+
+						type="buff"
+						impact="84"
+						description="Up your QB's accuracy to the next level with this Laser Scope!"
+						yellowText="x100"
+
+						type="player"
+						rank="4"
+						points="64.88"
+						lastWeek="47.34"
+						impact="SUN 10:00AM @ SEA"
+
+						buttons={true} 
+						buy={'100,000'}
+						// STOCK OR BUTTONS !!!
+						//stock={15}
+
+						playerImage={require('../../../assets/buffs/tank.png')}
+					/>
+				</View>
+					<BlurView 
+				      style={{position:'absolute',top:0,bottom:0,right:0,left:0}}
+				      blurType="dark"
+				      blurAmount={25}
+				      viewRef={this.renderItem}
+				    />
+				    <BlurView 
+				      style={{position:'absolute',top:0,bottom:0,right:0,left:0}}
+				      blurType="dark"
+				      blurAmount={25}
+				      viewRef={this.renderItem}
+				    />
+				    <BlurView 
+				      style={{position:'absolute',top:0,bottom:0,right:0,left:0}}
+				      blurType="dark"
+				      blurAmount={25}
+				      viewRef={this.renderItem}
+				    />
 			</View>
 		)
 		return (
@@ -92,13 +149,7 @@ export default class Test extends React.Component {
 			/>
 		)
 
-		return(
-			<AccountTemplate
-				onLogin={()=>{}}
-				onSingup={()=>{}}
-			/>
-		)
-	
+
 		return (
 			<ProfileTemplate />
 

@@ -62,7 +62,7 @@ export default class TextField extends React.Component{
 				                secureTextEntry={this.props.type == 'password'}
 				            />
 				        }
-			            { (this.props.type == 'account' && this.props.account ) && <TouchableOpacity onPress={this.props.onAccountPress} style={textFieldStyle.changeButton}><Text style={{color: colors.white}}>Change</Text></TouchableOpacity>}
+			            { (this.props.type == 'account' && this.props.account ) && <TouchableOpacity onPress={this.props.onAccountPress} style={textFieldStyle.changeButton}><Text style={{color: colors.neonBlue}}>Change</Text></TouchableOpacity>}
 		            </View>
 
 

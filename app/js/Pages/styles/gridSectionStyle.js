@@ -29,14 +29,14 @@ export const gridSectionStyle = StyleSheet.create({
 		flex: 1,
 		height: 1,
 		borderWidth: 1,
-		borderColor: colors.white2,
+		borderColor: colors.whiteTwo,
 		marginRight: 15,
 	},
 	rightLine:{
 		flex: 1,
 		height: 1,
 		borderWidth: 1,
-		borderColor: colors.white2,
+		borderColor: colors.whiteTwo,
 		marginLeft: 15,
 	},
 	sectionCells:{
