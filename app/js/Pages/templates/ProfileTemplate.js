@@ -18,14 +18,38 @@ import Tab from "../../Pages/components/Tab";
 
 import NoItem from "../../Pages/components/NoItem";
 
-import UserProfileHeader from "../../Pages/components/UserProfileHeader";
+import ProfileHeader from "../../Pages/components/UserProfileHeader";
 
 import { colors, storeTemplateStyle } from "../../Pages/styles";
+
+/*
+	user = {
+	  "credits": 17000,
+	  "exp": 0,
+	  "level": 0,
+	  "lost": 0,
+	  "streak": 0,
+	  "totalGamesPlayed": 0,
+	  "uid": "9XgdUCdmhcPpAbnnIPa1q8mAtGu1",
+	  "username": "darkd",
+	  "won": 0,
+	  "displayName": "David Uy",
+	  "email": "daviduy8@gmail.com",
+	  "photoURL": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg"
+	}
+
+	Users will need to gain experience to level up. 
+	Meaning that in order to get to level 5 status, you need to gain 50 experience points.
+
+	Levels are: Rookie, Star, All-Star, Superstar, Legend (to start and we will add more later)
+*/
 
 export default class ProfileTemplate extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
+			self: false,
+
 			activeTab: 0,
 			activeBigTab: 0,
 		}
@@ -35,13 +59,27 @@ export default class ProfileTemplate extends React.Component {
 
 	componentWillMount() {
 		// check if self
+
+		if (this.props.user.uid == '9XgdUCdmhcPpAbnnIPa1q8mAtGu1') {
+			this.setState({self: true})
+		}
+	}
+
+	getLevelDetails(exp, level) {
+		const levelNames = ['Rookie', 'Star', 'All-Star', 'Superstar', 'Legend']
+		const levelThreshold = 10
+
+		return {
+			levelName: levelNames[level],
+			goalExp: exp == 0 ? levelThreshold : Math.ceil(exp / levelThreshold) * levelThreshold,
+		}
 	}
 
 	_renderBuffsTab(){
 		return (
 			<View>
 				<GridSection
-					title={"Title"}
+					title={"quarterback buffs"}
 					titlePosition={"center"}
 					line
 				>
@@ -60,7 +98,7 @@ export default class ProfileTemplate extends React.Component {
 
 				<View style={{marginBottom: 10}}>
 					<GridSection
-						title={"Title"}
+						title={"running back buffs"}
 						titlePosition={"center"}
 						line
 
@@ -75,7 +113,7 @@ export default class ProfileTemplate extends React.Component {
 				</View>
 
 				<GridSection
-					title={"Title"}
+					title={"wide receiver buffs"}
 					titlePosition={"center"}
 					line
 				>
@@ -95,6 +133,7 @@ export default class ProfileTemplate extends React.Component {
 			</View>
 		)
 	}
+
 	_renderNerfsTab(){
 		return (
 			<GridSection
@@ -120,7 +159,12 @@ export default class ProfileTemplate extends React.Component {
 	render(){
 		let height = Dimensions.get('window').height;
 
-		const { credits, displayName, email, exp, level, lost, photoURL, streak, totalGamesPlayed, uid, username, won } = this.props.user
+		const { credits, displayName, email, exp, level, lost, photoURL, streak, totalGamesPlayed, uid, username, won,
+			followers, following // TODO are not in api
+		} = this.props.user
+
+		// progress line extra
+		const { levelName, goalExp } = this.getLevelDetails(exp, level)
 
 		return(
 			<View style={{backgroundColor: colors.marine}}>
@@ -128,61 +172,49 @@ export default class ProfileTemplate extends React.Component {
 				<Header 
 					leftIcon={require('../../../assets/back.png')}
 					// logo={require('../../../assets/logo.png')}
-					title={'displayName'}
-					subtitle={"sub"}
+					title={displayName}
+					subtitle={!this.state.self && levelName}
 					// circle={"4"}
 				/>
-
 
 				<ScrollView style={[storeTemplateStyle.container,{minHeight: height - 56}]}>
 					
 					<View style={{paddingTop: 11}}>
-						<UserProfileHeader
-							avatar={{uri: 'http://via.placeholder.com/100x100'}}
+						<ProfileHeader
+							self={this.state.self}
 
-							wins={'2,478'}
-							followers={'2,478'}
-							following={'2,478'}
+							avatar={{uri: photoURL}}
+
+							stats={{won, followers, following}}
+
+							progress={{levelName, goalExp, exp, credits}}
 
 							button1={"CHALLENGE"}
 							onButton1={()=>{}}
 
-							graph
-							actualLevel={'7629'}
-							totalLevel={'10000'}
-							user={'ROOKIE'}
-							gold={'34.6K'}
 							onAdd={()=>{}}
 
 							button2={"UNFOLLOW"}
 							onButton2={()=>{}}
 							//button2={"FOLLOW"}
 							>
-						</UserProfileHeader>
+						</ProfileHeader>
 					</View>
 
-					<View style={{paddingLeft: 10, paddingRight: 10}}>
+					<View style={{paddingLeft: 10, paddingRight: 10, paddingTop: 20}}>
 						<SmallTabbar
 							activeTab={this.state.activeTab}
 							onChange={(id)=>{this.setState({activeTab: id})}}
 							// filter={require('../../../assets/filter.png')}
 							// onFilter={()=>{}}
 						>	
-
-							<Tab 
-								tabTitle={"BUFFS"}
-							>
+							<Tab tabTitle={"BUFFS"}>
 								{this._renderBuffsTab()}
 							</Tab>	
 
-							<Tab 
-								tabTitle={"NERFS"}
-							>
+							<Tab tabTitle={"NERFS"}>
 								{this._renderNerfsTab()}
-							</Tab>	
-
-							
-											
+							</Tab>			
 						</SmallTabbar>
 					</View>
 					

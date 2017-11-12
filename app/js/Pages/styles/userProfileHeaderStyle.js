@@ -10,11 +10,10 @@ export const userProfileHeaderStyle = StyleSheet.create({
 	userStats:{
 		flex:1,
 		flexDirection: 'row',
-		marginBottom: 20,
+		// marginBottom: 20,
 	},
 	bottomPart:{
 		flex: 1,
-		// marginBottom: 30,
 	},
 
 	avatarWrapper:{
@@ -46,6 +45,9 @@ export const userProfileHeaderStyle = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'center',
+		paddingBottom: 30,
+		paddingTop: 30
+
 	},
 	buttonsWrapper:{
 		width: 115,
@@ -56,7 +58,8 @@ export const userProfileHeaderStyle = StyleSheet.create({
 	level:{
 		flex: 1,
 		// justifyContent: 'center',
-		paddingBottom: 20
+		paddingBottom: 20,
+		paddingTop: 20
 
 	},
 	levelTextWrapper:{

@@ -11,7 +11,9 @@ export const smallTabStyle = StyleSheet.create({
 	tabWrapper:{
 		flex: 1,
 		flexDirection: 'row',
-		marginBottom: 30,
+		marginBottom: 33,
+		paddingLeft: 5,
+		paddingRight: 5
 	},
 	tabs:{
 		flex: 2,

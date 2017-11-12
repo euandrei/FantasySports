@@ -32,7 +32,7 @@ export default class GridSection extends React.Component {
 			return (
 				<View style={gridSectionStyle.titleWrapper}>
 					{this.props.line && <View style={gridSectionStyle.leftLine} />}
-					<Text style={gridSectionStyle.titleText}>{this.props.title.toUpperCase()}</Text>
+					<Text style={gridSectionStyle.titleText}>{this.props.title.toUpperCase()} ({this.props.children.length ? this.props.children.length : 0})</Text>
 					{this.props.line && <View style={gridSectionStyle.rightLine} />}
 				</View>
 			)
@@ -48,7 +48,7 @@ export default class GridSection extends React.Component {
 	render(){
 		return(
 			<View style={gridSectionStyle.container}>
-				{ this.props.title && this._renderTitle() }
+				{this.props.title && this._renderTitle()}
 
 				{this.props.empty ? 
 					<View style={gridSectionStyle.sectionEmpty}>
@@ -60,10 +60,10 @@ export default class GridSection extends React.Component {
 
 							this.props.children.map((item,key)=>{
 								if(this.props.main && key == 0){
-									return <View key={key} style={{width: '100%',alignItems: 'center',justifyContent: 'center'}}><View style={[gridSectionStyle.sectionCellWrapper, {height: this.props.withUnderText ? 156 : 140, marginBottom: this.props.withUnderText ? 31 : 10}]}>{item}</View></View>
+									return <View key={key} style={{width: '100%',alignItems: 'center',justifyContent: 'center'}}><View style={[gridSectionStyle.sectionCellWrapper, {height: this.props.withUnderText ? 156 : 140, marginBottom: this.props.withUnderText ? 31 : 30}]}>{item}</View></View>
 								}
 								else {
-									return <View key={key} style={[gridSectionStyle.sectionCellWrapper, {height: this.props.withUnderText ? 156 : 140, marginBottom: this.props.withUnderText ? 31 : 10}]}>{item}</View>
+									return <View key={key} style={[gridSectionStyle.sectionCellWrapper, {height: this.props.withUnderText ? 156 : 140, marginBottom: this.props.withUnderText ? 31 : 30}]}>{item}</View>
 								}
 							})
 

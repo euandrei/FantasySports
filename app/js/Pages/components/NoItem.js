@@ -37,10 +37,10 @@ const styles = StyleSheet.create ({
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
-		backgroundColor: colors.marineTwo,
-		paddingTop: 30,
-		paddingBottom: 30,
-		borderRadius: 10
+		backgroundColor: 'rgba(6, 38, 63, 0.4)',
+		paddingTop: 33,
+		paddingBottom: 33,
+		borderRadius: 8,
 	},
 	contentWrapper:{
 		width: '40%',

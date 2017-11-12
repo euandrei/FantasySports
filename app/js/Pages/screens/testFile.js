@@ -142,7 +142,23 @@ export default class Test extends React.Component {
 	}
 
 	render() {
-		const user = this.usersGET();
+		const user = {
+		  "credits": 17000,
+		  "exp": 22,
+		  "level": 1,
+		  "lost": 0,
+		  "streak": 0,
+		  "totalGamesPlayed": 0,
+		  "uid": "9XgdUCdmhcPpAbnnIPa1q8mAtGu1",
+		  "username": "darkd",
+		  "won": 1324,
+		  "displayName": "David Uy",
+		  "email": "daviduy8@gmail.com",
+		  "photoURL": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg",
+
+		  "followers": 3423, // TODO not in api
+		  "following": 1231, // TODO not in api
+		};
 
 		return (
 			<ProfileTemplate 

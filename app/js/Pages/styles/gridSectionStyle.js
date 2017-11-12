@@ -12,7 +12,7 @@ export const gridSectionStyle = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'center',
-		marginBottom: 30,
+		marginBottom: 20,
 	},
 	titleText:{
 		color: colors.bluishGrey,
@@ -47,7 +47,7 @@ export const gridSectionStyle = StyleSheet.create({
 		marginRight: -8,
 	},
 	sectionCellWrapper:{
-		marginBottom: 10, // inline style too
+		marginBottom: 30, // inline style too
 		flexDirection: 'row',
     	flexGrow: 0,
     	width: '33%',
