@@ -98,6 +98,8 @@ import AccountTemplate from "./Pages/templates/AccountTemplate"
 
 import { colors } from "./Pages/styles";
 
+import ApiTests from "./Pages/screens/ApiTests"
+
 
 export default class App extends React.Component {
 	
@@ -109,7 +111,7 @@ export default class App extends React.Component {
 				hideNavBar={true}>
 				
 
-				<Scene key="test" component={Test}/>
+				<Scene key="test" initial component={Test}/>
 
 				<Scene key="OnBoard1_1" 
 				// initial
@@ -153,7 +155,7 @@ export default class App extends React.Component {
 				{/* DEMO OF TEMPLATES*/}
 
 				<Scene key="template1"
-					initial
+					// initial
 				 component={Template1}/>
 				<Scene key="template2" component={Template2}/>
 				<Scene key="template3" component={Template3}/>
@@ -165,6 +167,10 @@ export default class App extends React.Component {
 				<Scene key="template9" component={Template9}/>
 				<Scene key="template10" component={Template10}/>
 				<Scene key="template11" component={Template11}/>
+
+				<Scene key="apiTests" 
+				// initial 
+				component={ApiTests}/>
 
 		    </Scene>
 		);

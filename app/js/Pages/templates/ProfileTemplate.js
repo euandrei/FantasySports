@@ -32,6 +32,11 @@ export default class ProfileTemplate extends React.Component {
 		this._renderBuffsTab = this._renderBuffsTab.bind(this);
 		this._renderNerfsTab = this._renderNerfsTab.bind(this);
 	}
+
+	componentWillMount() {
+		// check if self
+	}
+
 	_renderBuffsTab(){
 		return (
 			<View>
@@ -115,66 +120,75 @@ export default class ProfileTemplate extends React.Component {
 	render(){
 		let height = Dimensions.get('window').height;
 
+		const { credits, displayName, email, exp, level, lost, photoURL, streak, totalGamesPlayed, uid, username, won } = this.props.user
+
 		return(
-			<ScrollView style={[storeTemplateStyle.container,{minHeight: height}]}>
-				<View style={storeTemplateStyle.header}>
-					<Header 
-						leftIcon={require('../../../assets/back.png')}
-						// logo={require('../../../assets/logo.png')}
-						title={"store"}
-						// circle={"4"}
-					/>
-				</View>
+			<View style={{backgroundColor: colors.marine}}>
 
-				<View style={storeTemplateStyle.carousel}>
-					<UserProfileHeader
-						wins={'2,478'}
-						followers={'2,478'}
-						following={'2,478'}
+				<Header 
+					leftIcon={require('../../../assets/back.png')}
+					// logo={require('../../../assets/logo.png')}
+					title={'displayName'}
+					subtitle={"sub"}
+					// circle={"4"}
+				/>
 
-						button1={"CHALLENGE"}
-						onButton1={()=>{}}
 
-						graph
-						actualLevel={'7629'}
-						totalLevel={'10000'}
-						user={'ROOKIE'}
-						gold={'34.6K'}
-						onAdd={()=>{}}
+				<ScrollView style={[storeTemplateStyle.container,{minHeight: height - 56}]}>
+					
+					<View style={{paddingTop: 11}}>
+						<UserProfileHeader
+							avatar={{uri: 'http://via.placeholder.com/100x100'}}
 
-						button2={"UNFOLLOW"}
-						onButton2={()=>{}}
-						//button2={"FOLLOW"}
-						>
-					</UserProfileHeader>
-				</View>
+							wins={'2,478'}
+							followers={'2,478'}
+							following={'2,478'}
 
-				<View style={{paddingLeft: 10, paddingRight: 10}}>
-					<SmallTabbar
-						activeTab={this.state.activeTab}
-						onChange={(id)=>{this.setState({activeTab: id})}}
-						// filter={require('../../../assets/filter.png')}
-						// onFilter={()=>{}}
-					>	
+							button1={"CHALLENGE"}
+							onButton1={()=>{}}
 
-						<Tab 
-							tabTitle={"BUFFS"}
-						>
-							{this._renderBuffsTab()}
-						</Tab>	
+							graph
+							actualLevel={'7629'}
+							totalLevel={'10000'}
+							user={'ROOKIE'}
+							gold={'34.6K'}
+							onAdd={()=>{}}
 
-						<Tab 
-							tabTitle={"NERFS"}
-						>
-							{this._renderNerfsTab()}
-						</Tab>	
+							button2={"UNFOLLOW"}
+							onButton2={()=>{}}
+							//button2={"FOLLOW"}
+							>
+						</UserProfileHeader>
+					</View>
 
-						
-										
-					</SmallTabbar>
-				</View>
-				
-			</ScrollView>
+					<View style={{paddingLeft: 10, paddingRight: 10}}>
+						<SmallTabbar
+							activeTab={this.state.activeTab}
+							onChange={(id)=>{this.setState({activeTab: id})}}
+							// filter={require('../../../assets/filter.png')}
+							// onFilter={()=>{}}
+						>	
+
+							<Tab 
+								tabTitle={"BUFFS"}
+							>
+								{this._renderBuffsTab()}
+							</Tab>	
+
+							<Tab 
+								tabTitle={"NERFS"}
+							>
+								{this._renderNerfsTab()}
+							</Tab>	
+
+							
+											
+						</SmallTabbar>
+					</View>
+					
+					
+				</ScrollView>
+			</View>
 		)
 	}
 }

@@ -20,6 +20,7 @@
     "react-native-slider": "^0.11.0",
     "react-native-snap-carousel": "^3.3.4",
     "react-native-svg-uri": "^1.2.1",
+    "react-native-viewport-units": "0.0.5",
     "react-navigation": "^1.0.0-beta.15"
   },
   "devDependencies": {

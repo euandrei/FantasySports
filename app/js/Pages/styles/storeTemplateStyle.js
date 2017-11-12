@@ -4,17 +4,17 @@ import { colors } from "./colors.js"
 
 export const storeTemplateStyle = StyleSheet.create({
 	container:{
-		flex: 1,
-		backgroundColor: colors.marine,
+		// flex: 1,
+		// backgroundColor: colors.marine,
 	},
-	header:{
-		// marginBottom: 30,
-		paddingLeft: 20,
-		paddingRight: 20
-	},
+	// header:{
+	// 	// marginBottom: 30,
+	// 	paddingLeft: 20,
+	// 	paddingRight: 20
+	// },
 	carousel:{
 		// marginTop: 20,
-		marginBottom: 30,
+		// marginBottom: 30,
 	},
 	
 })

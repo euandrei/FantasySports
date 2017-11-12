@@ -10,7 +10,7 @@ export const userProfileHeaderStyle = StyleSheet.create({
 	userStats:{
 		flex:1,
 		flexDirection: 'row',
-		marginBottom: 30,
+		marginBottom: 20,
 	},
 	bottomPart:{
 		flex: 1,
@@ -23,6 +23,8 @@ export const userProfileHeaderStyle = StyleSheet.create({
 	avatar:{
 		height: 64,
 		width: 64,
+
+		borderRadius: 5
 	},
 	stats:{
 		flex: 3,
@@ -53,32 +55,29 @@ export const userProfileHeaderStyle = StyleSheet.create({
 	},
 	level:{
 		flex: 1,
-
-		justifyContent: 'center',
+		// justifyContent: 'center',
+		paddingBottom: 20
 
 	},
 	levelTextWrapper:{
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		alignItems: 'center',
+		marginBottom: 10,
 	},
 	levelText:{
 		color: colors.white,
 		fontSize: 20,
 		fontWeight: 'bold',
-		marginBottom: 10,
-
 	},
 	levelValue:{
 		color: colors.blueyGrey,
 		fontSize: 13,
 		fontWeight: 'bold',
-		marginBottom: 10,
 	},
 	levelProgress:{
 		height: 4,
 		backgroundColor: colors.metallicBlue,
-		marginBottom: 30,
 	},
 	levelProgressComplete:{
 		height: 4,
@@ -89,32 +88,32 @@ export const userProfileHeaderStyle = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 	},
-	yellowCircle:{
-		marginRight: 4,
-		width: 16,
-		height: 16,
-	},
 	goldText:{
 		color: colors.white,
 		fontSize: 20,
 		fontWeight: 'bold',
+		marginLeft: 5
 	},
 	goldSubText:{
 		color: colors.blueyGrey,
+		fontWeight: 'bold',
 		fontSize: 15,
+		marginLeft: 5
 	},
 	circle:{
-		height: 30,
-		width: 30,
-		borderRadius: 30,
-		borderWidth: 1,
+		height: 28,
+		width: 28,
+		borderRadius: 28/2,
+		borderWidth: 2,
 		borderColor: colors.neonBlue,
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
 	circleText:{
 		color: colors.white,
-		fontSize: 22,
-		marginTop: -3,
+		fontSize: 21,
+		lineHeight: 27,
+		// fontWeight: 'bold',
+		fontFamily: 'Arial'
 	},
 })

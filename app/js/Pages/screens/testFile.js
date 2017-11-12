@@ -5,7 +5,8 @@ import {
     Image,
     View,
     Platform,
-    ScrollView
+    ScrollView,
+    Dimensions
 } from 'react-native';
 
 import GridCellWrapper from "../components/GridCellWrapper.js"
@@ -38,7 +39,34 @@ import AccountTemplate from "../templates/AccountTemplate.js"
 
 import OnBoardMessage from "../templates/OnBoardMessage.js"
 
+import Parallelogram from "../components/Parallelogram.js"
+
 import { colors } from "../styles";
+
+import Svg,{
+    Circle,
+    Ellipse,
+    G,
+    LinearGradient,
+    RadialGradient,
+    Line,
+    Path,
+    Polygon,
+    Polyline,
+    Rect,
+    Symbol,
+    // Text,
+    Use,
+    Defs,
+    Stop
+} from 'react-native-svg';
+
+import axios from 'axios';
+
+var {width, height} = Dimensions.get('window');
+
+const BASE_PATH = 'https://us-central1-vfl-server-8.cloudfunctions.net/api/v1/NFL';
+const SOME_USER_ID = '9XgdUCdmhcPpAbnnIPa1q8mAtGu1'
 
 export default class Test extends React.Component {
 	constructor(props){
@@ -49,21 +77,99 @@ export default class Test extends React.Component {
 		}
 	}
 
+	// get – GET (if new user, backend will create a new one)
+	usersGET() {
+		return axios({
+            method: 'get',
+            url: `${BASE_PATH}/users/${SOME_USER_ID}`,
+            // data: {
+            //     "name": name,
+            //     "description": description
+            // },
+        })
+        .then((res) => {
+        	console.log("GET USERS RESPONSE:")
+            console.log(res.data.payload)
 
-	render(){
+            return res.data.payload;
+
+            /*
+				credits
+				:
+				17000
+				displayName
+				:
+				"David Uy"
+				email
+				:
+				"daviduy8@gmail.com"
+				exp
+				:
+				0
+				level
+				:
+				0
+				lost
+				:
+				0
+				photoURL
+				:
+				"https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg"
+				streak
+				:
+				0
+				totalGamesPlayed
+				:
+				0
+				uid
+				:
+				"9XgdUCdmhcPpAbnnIPa1q8mAtGu1"
+				username
+				:
+				"darkd"
+				won
+				:
+				0
+            */
+        })
+        .catch((error) => {
+        	console.log("GET USERS ERROR:")
+            console.log(error)
+        })
+	}
+
+	render() {
+
+		const user = this.usersGET();
+
 		return (
-			<ProgressLoader
-				step={1}
-				text={"lineup is ready. let's go!"}
-				active={1}
+			<ProfileTemplate 
+				user={user}
 			/>
 		)
-		// return(
-		// 	<AccountTemplate
-		// 		onLogin={()=>{}}
-		// 		onSingup={()=>{}}
-		// 	/>
 	}
+
+	// render() {
+	// 	return (
+	// 		<Parallelogram />
+	// 	)
+	// }
+
+
+	// render(){
+	// 	return (
+	// 		<ProgressLoader
+	// 			step={1}
+	// 			text={"lineup is ready. let's go!"}
+	// 			active={1}
+	// 		/>
+	// 	)
+	// 	// return(
+	// 	// 	<AccountTemplate
+	// 	// 		onLogin={()=>{}}
+	// 	// 		onSingup={()=>{}}
+	// 	// 	/>
+	// }
 
 }
 	// render() {

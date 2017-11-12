@@ -17,6 +17,7 @@ export default class Header extends React.Component{
 		this._renderTitle = this._renderTitle.bind(this);
 		this._renderRightButton = this._renderRightButton.bind(this);
 	}
+	
 	_renderTitle(){
 		if(this.props.logo){
 			return (
@@ -90,12 +91,13 @@ export default class Header extends React.Component{
 			)
 		}
 	}
+
 	render(){
 		return (
 			<View style={headerStyle.container}>
 				<View style={headerStyle.leftComponent}>
 					<TouchableOpacity onPress={this.props.onPressLeft}>
-						{this.props.leftIcon && <Image style={{width: 18, height: 18,}} source={this.props.leftIcon} resizeMode='contain' />}
+						{this.props.leftIcon && <Image style={{width: 9, height: '100%',}} source={this.props.leftIcon} resizeMode='contain' />}
 					</TouchableOpacity>
 				</View>
 				<View style={headerStyle.centerComponent}>
