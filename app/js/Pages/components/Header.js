@@ -1,14 +1,16 @@
-import React from 'react';
+import React from 'react'
 import {
     Text,
     Image,
     View,
     Platform,
     TouchableOpacity
-} from 'react-native';
+} from 'react-native'
 
-import { colors, headerStyle } from "../styles";
-import LinearGradient from 'react-native-linear-gradient';
+import { colors, headerStyle } from "../styles"
+import LinearGradient from 'react-native-linear-gradient'
+
+import CircleButton from './CircleButton'
 
 export default class Header extends React.Component{ 
 	constructor(props){
@@ -55,25 +57,25 @@ export default class Header extends React.Component{
 					<TouchableOpacity onPress={this.props.onSettings}>
 						<Image source={this.props.settings} resizeMode='contain' style={headerStyle.settingsIcon} />
 					</TouchableOpacity>
-					<View style={{width:31, height: 31, marginLeft: 15}}>
-						<LinearGradient colors={[colors.transparent, colors.neonBlueBg]} style={{flex:1,borderRadius: 30}}>
-							<View style={headerStyle.circle}>
-								<Text style={headerStyle.circleText}>{this.props.circle}</Text>
-							</View>
-						</LinearGradient>
-					</View>
+					<CircleButton 
+						text={this.props.circle}
+						onPress={() => {
+							
+							// 
+						}}
+					/>
 				</View>
 			)
 		}
 		else if(this.props.circle){
 			return (
-				<View style={{width:31, height: 31}}>
-					<LinearGradient colors={[colors.transparent, colors.neonBlueBg]} style={{flex:1,borderRadius: 30}}>
-						<View style={headerStyle.circle}>
-							<Text style={headerStyle.circleText}>{this.props.circle}</Text>
-						</View>
-					</LinearGradient>
-				</View>
+				<CircleButton 
+					text={this.props.circle}
+					onPress={() => {
+						
+						// 
+					}}
+				/>
 			)
 		}
 		else if(this.props.button){

@@ -103,20 +103,20 @@ export const userProfileHeaderStyle = StyleSheet.create({
 		fontSize: 15,
 		marginLeft: 5
 	},
-	circle:{
-		height: 28,
-		width: 28,
-		borderRadius: 28/2,
-		borderWidth: 2,
-		borderColor: colors.neonBlue,
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	circleText:{
-		color: colors.white,
-		fontSize: 21,
-		lineHeight: 27,
-		// fontWeight: 'bold',
-		fontFamily: 'Arial'
-	},
+	// circle:{
+	// 	height: 28,
+	// 	width: 28,
+	// 	borderRadius: 28/2,
+	// 	borderWidth: 2,
+	// 	borderColor: colors.neonBlue,
+	// 	alignItems: 'center',
+	// 	justifyContent: 'center',
+	// },
+	// circleText:{
+	// 	color: colors.white,
+	// 	fontSize: 21,
+	// 	lineHeight: 27,
+	// 	// fontWeight: 'bold',
+	// 	fontFamily: 'Arial'
+	// },
 })

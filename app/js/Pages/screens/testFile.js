@@ -71,6 +71,10 @@ var {width, height} = Dimensions.get('window');
 const BASE_PATH = 'https://us-central1-vfl-server-8.cloudfunctions.net/api/v1/NFL';
 const SOME_USER_ID = '9XgdUCdmhcPpAbnnIPa1q8mAtGu1'
 
+const SOME_USER_ID_2 = 'JkQesBe0vZU0541iHmflgZih5Ln1'
+
+const SOME_USER_ID_3 = 'yvYimg5LnEQb2VWfwHeH8IOb4la2'
+
 export default class Test extends React.Component {
 	constructor(props){
 		super(props);
@@ -141,7 +145,71 @@ export default class Test extends React.Component {
         })
 	}
 
+	usersItemsGET() {
+		return axios({
+            method: 'get',
+            url: `${BASE_PATH}/items/inventory/${SOME_USER_ID_3}`,
+            // data: {
+            //     "name": name,
+            //     "description": description
+            // },
+        })
+        .then((res) => {
+        	console.log("GET USERS ITEMS RESPONSE:")
+            console.log(res)
+
+            // return res.data.payload;
+
+            /*
+				credits
+				:
+				17000
+				displayName
+				:
+				"David Uy"
+				email
+				:
+				"daviduy8@gmail.com"
+				exp
+				:
+				0
+				level
+				:
+				0
+				lost
+				:
+				0
+				photoURL
+				:
+				"https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg"
+				streak
+				:
+				0
+				totalGamesPlayed
+				:
+				0
+				uid
+				:
+				"9XgdUCdmhcPpAbnnIPa1q8mAtGu1"
+				username
+				:
+				"darkd"
+				won
+				:
+				0
+            */
+        })
+        .catch((error) => {
+        	console.log("GET USERS ERROR:")
+            console.log(error)
+        })
+	}
+
+
 	render() {
+
+		// ${BASE_PATH}/users/${SOME_USER_ID}
+		// res.data.payload
 		const user = {
 		  "credits": 17000,
 		  "exp": 22,

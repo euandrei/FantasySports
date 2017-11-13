@@ -31,6 +31,8 @@ export default class ApiTests extends React.Component {
 		// this.contestsGETofUser();
 		// this.contestsGET();
 		// this.contestsPUT();
+
+		// this.usersItemsGET();
 	}
 
 	// get – GET (if new user, backend will create a new one)
@@ -368,6 +370,66 @@ export default class ApiTests extends React.Component {
         })
         .catch((error) => {
         	console.log("post contests put ERROR:")
+            console.log(error)
+        })
+	}
+
+	usersItemsGET() {
+		return axios({
+            method: 'get',
+            url: `${BASE_PATH}/items/inventory/${SOME_USER_ID_3}`,
+            // data: {
+            //     "name": name,
+            //     "description": description
+            // },
+        })
+        .then((res) => {
+        	console.log("GET USERS ITEMS RESPONSE:")
+            console.log(res)
+
+            // return res.data.payload;
+
+            /*
+				credits
+				:
+				17000
+				displayName
+				:
+				"David Uy"
+				email
+				:
+				"daviduy8@gmail.com"
+				exp
+				:
+				0
+				level
+				:
+				0
+				lost
+				:
+				0
+				photoURL
+				:
+				"https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg"
+				streak
+				:
+				0
+				totalGamesPlayed
+				:
+				0
+				uid
+				:
+				"9XgdUCdmhcPpAbnnIPa1q8mAtGu1"
+				username
+				:
+				"darkd"
+				won
+				:
+				0
+            */
+        })
+        .catch((error) => {
+        	console.log("GET USERS ERROR:")
             console.log(error)
         })
 	}

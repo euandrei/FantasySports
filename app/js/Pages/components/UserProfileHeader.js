@@ -12,6 +12,9 @@ import TiltButton from './TiltButton';
 import LinearGradient from 'react-native-linear-gradient';
 // import { SmoothLine } from 'react-native-pathjs-charts'
 import SmoothLineChart from './SmoothLineChart/SmoothLineChart'
+
+import CircleButton from './CircleButton'
+
 export default class UserProfileHeader extends React.Component {
 
 	_renderCharts() {
@@ -141,21 +144,6 @@ class ProgressLine extends React.Component {
 	}
 }	
 
-// TODO adapt as global component
-class CircleButton extends React.Component {
-	render() {
-		return (
-			<TouchableOpacity onPress={this.props.onPress}>
-				<LinearGradient style={{flex: 1, borderRadius: 28/2}} colors={[colors.transparent, colors.neonBlueBg]}>
-					<View style={userProfileHeaderStyle.circle}>
-						<Text style={userProfileHeaderStyle.circleText}>{this.props.text}</Text>
-					</View>
-				</LinearGradient>
-			</TouchableOpacity>
-		)
-	}
-}
-
 class YellowCircle extends React.Component {
 	render() {
 		return (
@@ -270,8 +258,8 @@ class Graph extends React.Component {
 
 					<CircleButton 
 						text={"+"}
-						onSkip={() => {
-							// TODO and open gold tab
+						onPress={() => {
+							
 							// Actions.Store()
 						}}
 					/>

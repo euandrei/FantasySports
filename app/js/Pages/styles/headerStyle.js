@@ -26,7 +26,7 @@ export const headerStyle = StyleSheet.create({
 	},
 	rightComponent:{
 		flex: 1,
-		marginTop: -5,
+		// marginTop: -5,
 		alignItems: 'flex-end',
 		justifyContent: 'center',
 	},

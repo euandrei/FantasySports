@@ -33,7 +33,7 @@ export default class SmallTabbar extends React.Component{
 
 	render(){
 		return (
-			<View style={smallTabStyle.container}>
+			<View style={[smallTabStyle.container, this.props.style]}>
 				<View style={smallTabStyle.tabWrapper}>
 					<View style={smallTabStyle.tabs}>
 						{this.state.tabTitle ? 
@@ -41,7 +41,7 @@ export default class SmallTabbar extends React.Component{
 							this.state.tabTitle.map((title, key)=>{
 								return( 
 									<TouchableOpacity style={smallTabStyle.tabButton} key={key} onPress={() => this.props.onChange(key)}>
-										<Text style={[smallTabStyle.tabText, (this.props.activeTab == key) ? smallTabStyle.tabActiveText : '' ]}>{title}</Text>
+										<Text style={[smallTabStyle.tabText, (this.props.activeTab == key) ? smallTabStyle.tabActiveText : '' ]}>{title.toUpperCase()}</Text>
 									</TouchableOpacity>
 								)
 							})

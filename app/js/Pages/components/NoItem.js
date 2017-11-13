@@ -41,6 +41,8 @@ const styles = StyleSheet.create ({
 		paddingTop: 33,
 		paddingBottom: 33,
 		borderRadius: 8,
+		marginBottom: 30,
+
 	},
 	contentWrapper:{
 		width: '40%',
