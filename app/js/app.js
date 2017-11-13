@@ -96,6 +96,14 @@ import SelectionTemplate from "./Pages/templates/SelectionTemplate"
 import GalleryTemplate from "./Pages/templates/GalleryTemplate"
 import AccountTemplate from "./Pages/templates/AccountTemplate"
 
+
+// ACCOUNT SCREENS
+import Login from "./Pages/screens/Account/Login";
+import Settings from "./Pages/screens/Account/Settings";
+import ChangePassword from "./Pages/screens/Account/ChangePassword";
+import GalleryScreen from "./Pages/screens/Account/GalleryScreen";
+
+
 import { colors } from "./Pages/styles";
 
 import ApiTests from "./Pages/screens/ApiTests"
@@ -111,7 +119,7 @@ export default class App extends React.Component {
 				hideNavBar={true}>
 				
 
-				<Scene key="test" initial component={Test}/>
+				<Scene key="test" component={Test}/>
 
 				<Scene key="OnBoard1_1" 
 				// initial
@@ -166,9 +174,17 @@ export default class App extends React.Component {
 				<Scene key="template10" component={Template10}/>
 				<Scene key="template11" component={Template11}/>
 
+
+				{/* ACCOUNT SCREENS*/}
+				<Scene key="Login" component={Login}/>
+				<Scene key="Settings" initial component={Settings}/>
+				<Scene key="ChangePassword" component={ChangePassword}/>
+				<Scene key="GalleryScreen" component={GalleryScreen}/>
+
 				<Scene key="apiTests" 
 				// initial 
 				component={ApiTests}/>
+
 
 		    </Scene>
 		);

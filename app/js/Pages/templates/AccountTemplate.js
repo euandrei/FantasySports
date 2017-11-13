@@ -8,10 +8,11 @@ import {
     ScrollView,
     Dimensions
 } from 'react-native';
-
+import { Actions } from 'react-native-router-flux';
 import Header from "../../Pages/components/Header";
 import TextField from "../components/TextField.js";
 import TiltButton from "../components/TiltButton.js";
+import MenuComponent from "../components/MenuComponent.js";
 
 import { colors, accountTemplateStyle } from "../styles";
 
@@ -20,6 +21,7 @@ export default class AccountTemplate extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
+			selectedPicture: null,
 		}
 	}
 
@@ -31,47 +33,48 @@ export default class AccountTemplate extends React.Component {
 
 				<View style={accountTemplateStyle.header}>
 					<Header 
-						title={"ACCOUNT"}
+						title={this.props.headerTitle}
 						leftIcon={require('../../../assets/back.png')}
-						onBack={()=>{}}
+						onPressLeft={()=>{Actions.pop()}}
 					/>
 				</View>
-				<TextField 
-					title={"Name"}
-					placeholder={"First Lastname"}
-					type={"default"}
-				/>
-				<TextField 
-					title={"Username"}
-					placeholder={"Usernamegoeshere"}
-					type={"default"}
-				/>
-				<TextField 
-					title={"New Password"}
-					type={"password"}
-				/>
-				<TextField 
-					title={"New Password, again"}
-					type={"password"}
-				/>
+
+				{this.props.changePicture && <TouchableOpacity onPress={()=>{this.props.onChangePicture()}} style={accountTemplateStyle.changePicture}>
+					{this.state.selectedPicture ? <Image style={accountTemplateStyle.picture} source={this.state.selectedPicture}/> : <View style={accountTemplateStyle.picturePlaceholder}/>}
+					<Text style={accountTemplateStyle.changePictureText}>Change profile photo</Text>
+				</TouchableOpacity>}
+
+				{this.props.children.length >= 2 ? 
+					this.props.children.map((input) =>{
+						return input
+					})
+					:
+					this.props.children
+				}
+				{this.props.settingsButtons && 
+					<MenuComponent 
+						title={'Account'}
+					/>
+				}
+
 
 				<View style={accountTemplateStyle.buttons}>
-					<View style={{height: 44, width: 130, marginRight: 5}}>
+					{this.props.login && <View style={{height: 44, width: 130, marginRight: 5}}>
 						<TiltButton 
 				            text={"LOGIN"}
 				            borderColor={colors.neonBlue}
 				            backgroundColor={colors.neonBlueBg}
 				            onPress={this.props.onLogin}
 				        />
-				    </View>
-			        <View style={{height: 44, width: 130,}}>
+				    </View>}
+			        {this.props.singup && <View style={{height: 44, width: 130,}}>
 				        <TiltButton 
 				            text={"SING UP"}
 				            borderColor={colors.neonBlue}
 				            backgroundColor={colors.neonBlueBg}
 				            onPress={this.props.onSingup}
 				        />
-			        </View>
+			        </View>}
 				</View>
 				
 			</View>

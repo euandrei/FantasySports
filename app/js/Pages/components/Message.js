@@ -4,7 +4,8 @@ import {
     Image,
     View,
     Dimensions,
-    StyleSheet
+    StyleSheet,
+   
 } from 'react-native';
 import { messageStyle, colors } from "../styles";
 import TiltButton from "./TiltButton.js"
@@ -12,15 +13,16 @@ import TiltButton from "./TiltButton.js"
 export default class Message extends React.Component {
 	constructor(props){
 		super(props);
-
+		this.state = { viewRef: null };
 		this._renderPlayer = this._renderPlayer.bind(this)
 		this._renderItem = this._renderItem.bind(this)
 	}
+
 	_renderPlayer(){
 		let type = this.props.itemType == 'QUARTERBACK' ? 'QB' : '';
-		let width = Dimensions.get('window').width * 2/3;
+		let width = Dimensions.get('window').width * 1/2;
 		return (
-			<View style={messageStyle.playerWrapper}> 
+			<View style={messageStyle.playerWrapper} > 
 
 				<Image source={this.props.playerImage} style={{width: width, height: width}} />
 				<View style={messageStyle.playerStats}>
@@ -69,6 +71,7 @@ export default class Message extends React.Component {
 			</View> 
 		)
 	}
+	
 	render(){
 		let color;
 		let {itemType, title, type} = this.props;
@@ -83,8 +86,8 @@ export default class Message extends React.Component {
 		}
 		let width = Dimensions.get('window').width * 2/3;
 		return (
-			<View style={messageStyle.container}>
-				<View style={messageStyle.title}>
+			<View style={messageStyle.container} >
+				<View style={messageStyle.title} >
 					<Text style={[messageStyle.itemType, {color: color}]}>{itemType.toUpperCase()}</Text>
 					<Text style={messageStyle.titleText}>{title.toUpperCase()}</Text>
 				</View>
@@ -129,6 +132,8 @@ export default class Message extends React.Component {
 			        	<Text style={messageStyle.stockText}>{this.props.stock}</Text>
 					</View>}
 				</View>
+
+				
 			</View>
 		)
 	}

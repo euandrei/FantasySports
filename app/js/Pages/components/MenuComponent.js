@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import { colors, menuComponentStyle } from "../styles";
-
+import { Actions } from 'react-native-router-flux';
 export default class MenuComponent extends React.Component{ 
 	constructor(props){
 		super(props);
@@ -18,21 +18,30 @@ export default class MenuComponent extends React.Component{
 
 		}
 	}
-	
+	onChangePassword(){
+		Actions.ChangePassword();
+	}
+	onHelp(){
+
+	}
+	onLogout(){
+		Actions.Login();
+	}
 
 	render(){
 		return (
 			<View style={menuComponentStyle.container}>
 				<Text style={{color: colors.bluishGrey, fontSize: 11, marginBottom: 10,}}>{this.props.title}</Text>
-				{
-					this.props.menus && this.props.menus.map((menu) => {
-						return (
-							<TouchableOpacity style={{paddingBottom: 6, marginBottom: 11, borderColor: colors.metallicBlue, borderBottomWidth: 1,}} onPress={()=>{/*SOMETHING with each button*/}}>
-								<Text style={{color: colors.bluishGrey, fontSize: 14,}}>{menu.title}</Text>
-							</TouchableOpacity>
-						)
-					})
-				}
+
+				<TouchableOpacity style={{paddingBottom: 6, marginBottom: 11, borderColor: colors.metallicBlue, borderBottomWidth: 1,}} onPress={this.onChangePassword.bind(this)}>
+					<Text style={{color: colors.bluishGrey, fontSize: 14,}}>{'Change password'}</Text>
+				</TouchableOpacity>
+				<TouchableOpacity style={{paddingBottom: 6, marginBottom: 11, borderColor: colors.metallicBlue, borderBottomWidth: 1,}} onPress={this.onHelp.bind(this)}>
+					<Text style={{color: colors.bluishGrey, fontSize: 14,}}>{'Help'}</Text>
+				</TouchableOpacity>
+				<TouchableOpacity style={{paddingBottom: 6, marginBottom: 11, borderColor: colors.metallicBlue, borderBottomWidth: 1,}} onPress={this.onLogout.bind(this)}>
+					<Text style={{color: colors.bluishGrey, fontSize: 14,}}>{'Logout'}</Text>
+				</TouchableOpacity>
 			</View>
 		)
 	}

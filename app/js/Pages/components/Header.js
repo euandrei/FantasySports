@@ -98,9 +98,11 @@ export default class Header extends React.Component{
 		return (
 			<View style={headerStyle.container}>
 				<View style={headerStyle.leftComponent}>
-					<TouchableOpacity onPress={this.props.onPressLeft}>
-						{this.props.leftIcon && <Image style={{width: 9, height: '100%',}} source={this.props.leftIcon} resizeMode='contain' />}
-					</TouchableOpacity>
+
+				<TouchableOpacity onPress={this.props.onPressLeft}>
+					{this.props.leftIcon && <Image style={{width: 9, height: '100%',}} source={this.props.leftIcon} resizeMode='contain' />}
+				</TouchableOpacity>
+
 				</View>
 				<View style={headerStyle.centerComponent}>
 					{this._renderTitle()}

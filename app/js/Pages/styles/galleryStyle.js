@@ -8,6 +8,13 @@ export const galleryStyle = StyleSheet.create({
 	container:{
 		backgroundColor: colors.marine,
 		flex: 1,
-	}
+	},
+	camera:{
+        margin: 3,
+        marginBottom: 3,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: colors.darkGreyBlue,
+    }
 
 })

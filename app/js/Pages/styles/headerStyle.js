@@ -17,7 +17,6 @@ export const headerStyle = StyleSheet.create({
 		// marginTop: -5,
 		alignItems: 'flex-start',
 		justifyContent: 'center',
-		// paddingLeft: 20
 	},
 	centerComponent:{
 		flex: 2,
@@ -25,6 +24,7 @@ export const headerStyle = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	rightComponent:{
+		paddingRight: 15,
 		flex: 1,
 		// marginTop: -5,
 		alignItems: 'flex-end',
